@@ -1,12 +1,12 @@
 #![no_std]
 #![warn(missing_docs)]
-//! Event Registry smart contract for the Agora platform.
+//! Event Registry smart contract for the Wordpool platform.
 //!
 //! This contract manages the on-chain registry of events, including registration,
 //! inventory tracking, organizer governance, staking, and platform configuration.
 
 use crate::events::{
-    AdminProposalCancelledEvent, AdminProposedEvent, AdminTransferredEvent, AgoraEvent,
+    AdminProposalCancelledEvent, AdminProposedEvent, AdminTransferredEvent, WordpoolEvent,
     CollateralStakedEvent, CollateralUnstakedEvent, CustomFeeSetEvent, DisputeOpenedEvent,
     DisputeResolvedEvent, DisputeVotedEvent, EventArchivedEvent, EventCancelledEvent,
     EventPostponedEvent, EventRegisteredEvent, EventStatusUpdatedEvent, EventsSuspendedEvent,
@@ -204,7 +204,7 @@ impl EventRegistry {
         storage::set_initialized(&env, true);
 
         env.events().publish(
-            (AgoraEvent::ContractInitialized,),
+            (WordpoolEvent::ContractInitialized,),
             InitializationEvent {
                 admin_address: admin,
                 platform_wallet,
@@ -365,7 +365,7 @@ impl EventRegistry {
         storage::store_event(&env, event_info);
 
         env.events().publish(
-            (AgoraEvent::EventRegistered,),
+            (WordpoolEvent::EventRegistered,),
             EventRegisteredEvent {
                 event_id: args.event_id.clone(),
                 organizer_address: args.organizer_address.clone(),
@@ -430,7 +430,7 @@ impl EventRegistry {
 
                 // Emit status update event using contract event type
                 env.events().publish(
-                    (AgoraEvent::EventStatusUpdated,),
+                    (WordpoolEvent::EventStatusUpdated,),
                     EventStatusUpdatedEvent {
                         event_id,
                         is_active,
@@ -468,7 +468,7 @@ impl EventRegistry {
 
                 // Emit cancellation event
                 env.events().publish(
-                    (AgoraEvent::EventCancelled,),
+                    (WordpoolEvent::EventCancelled,),
                     EventCancelledEvent {
                         event_id,
                         cancelled_by: event_info.organizer_address,
@@ -506,7 +506,7 @@ impl EventRegistry {
                 storage::store_event_receipt(&env, receipt);
 
                 env.events().publish(
-                    (AgoraEvent::EventArchived,),
+                    (WordpoolEvent::EventArchived,),
                     EventArchivedEvent {
                         event_id,
                         organizer_address: event_info.organizer_address,
@@ -546,7 +546,7 @@ impl EventRegistry {
 
                 // Emit metadata update event so indexers can follow CID changes (#1561)
                 env.events().publish(
-                    (AgoraEvent::MetadataUpdated,),
+                    (WordpoolEvent::MetadataUpdated,),
                     MetadataUpdatedEvent {
                         event_id,
                         old_metadata_cid,
@@ -584,7 +584,7 @@ impl EventRegistry {
                 storage::update_event(&env, event_info.clone());
 
                 env.events().publish(
-                    (AgoraEvent::FeedbackCidSet,),
+                    (WordpoolEvent::FeedbackCidSet,),
                     FeedbackCidSetEvent {
                         event_id,
                         feedback_cid,
@@ -781,7 +781,7 @@ impl EventRegistry {
 
         // Emit fee update event using contract event type
         env.events().publish(
-            (AgoraEvent::FeeUpdated,),
+            (WordpoolEvent::FeeUpdated,),
             FeeUpdatedEvent { new_fee_percent },
         );
 
@@ -815,7 +815,7 @@ impl EventRegistry {
 
         // Emit custom fee set event
         env.events().publish(
-            (AgoraEvent::CustomFeeSet,),
+            (WordpoolEvent::CustomFeeSet,),
             CustomFeeSetEvent {
                 event_id,
                 custom_fee_bps,
@@ -848,7 +848,7 @@ impl EventRegistry {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::AdminProposed,),
+            (WordpoolEvent::AdminProposed,),
             AdminProposedEvent {
                 current_admin,
                 proposed_admin: new_admin,
@@ -891,7 +891,7 @@ impl EventRegistry {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::AdminTransferred,),
+            (WordpoolEvent::AdminTransferred,),
             AdminTransferredEvent {
                 previous_admin,
                 new_admin: proposed_admin.clone(),
@@ -915,7 +915,7 @@ impl EventRegistry {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::AdminProposalCancelled,),
+            (WordpoolEvent::AdminProposalCancelled,),
             AdminProposalCancelledEvent {
                 admin: current_admin,
                 cancelled_proposed_admin: proposed_admin,
@@ -1069,7 +1069,7 @@ impl EventRegistry {
         {
             event_info.goal_met = true;
             env.events().publish(
-                (AgoraEvent::GoalMet,),
+                (WordpoolEvent::GoalMet,),
                 GoalMetEvent {
                     event_id: event_id.clone(),
                     min_sales_target: event_info.min_sales_target,
@@ -1082,7 +1082,7 @@ impl EventRegistry {
         storage::update_event(&env, event_info);
 
         env.events().publish(
-            (AgoraEvent::InventoryIncremented,),
+            (WordpoolEvent::InventoryIncremented,),
             InventoryIncrementedEvent {
                 event_id,
                 new_supply,
@@ -1225,7 +1225,7 @@ impl EventRegistry {
         storage::update_event(&env, event_info);
 
         env.events().publish(
-            (crate::events::AgoraEvent::InventoryDecremented,),
+            (crate::events::WordpoolEvent::InventoryDecremented,),
             crate::events::InventoryDecrementedEvent {
                 event_id,
                 new_supply,
@@ -1248,7 +1248,7 @@ impl EventRegistry {
         storage::get_platform_wallet(&env).ok_or(EventRegistryError::NotInitialized)?;
 
         env.events().publish(
-            (AgoraEvent::ContractUpgraded,),
+            (WordpoolEvent::ContractUpgraded,),
             RegistryUpgradedEvent {
                 admin_address: verified_admin,
                 timestamp: env.ledger().timestamp(),
@@ -1289,7 +1289,7 @@ impl EventRegistry {
 
         // Emit blacklist event
         env.events().publish(
-            (AgoraEvent::OrganizerBlacklisted,),
+            (WordpoolEvent::OrganizerBlacklisted,),
             OrganizerBlacklistedEvent {
                 organizer_address: organizer_address.clone(),
                 admin_address: admin.clone(),
@@ -1335,7 +1335,7 @@ impl EventRegistry {
 
         // Emit removal event
         env.events().publish(
-            (AgoraEvent::OrganizerRemovedFromBlacklist,),
+            (WordpoolEvent::OrganizerRemovedFromBlacklist,),
             OrganizerRemovedFromBlacklistEvent {
                 organizer_address,
                 admin_address: admin,
@@ -1378,7 +1378,7 @@ impl EventRegistry {
         storage::set_promo_expiry(&env, promo_expiry);
 
         env.events().publish(
-            (AgoraEvent::GlobalPromoUpdated,),
+            (WordpoolEvent::GlobalPromoUpdated,),
             GlobalPromoUpdatedEvent {
                 global_promo_bps,
                 promo_expiry,
@@ -1444,7 +1444,7 @@ impl EventRegistry {
         storage::update_event(&env, event_info.clone());
 
         env.events().publish(
-            (AgoraEvent::EventPostponed,),
+            (WordpoolEvent::EventPostponed,),
             EventPostponedEvent {
                 event_id,
                 organizer_address: event_info.organizer_address,
@@ -1472,7 +1472,7 @@ impl EventRegistry {
         storage::authorize_scanner(&env, event_id.clone(), &scanner);
 
         env.events().publish(
-            (AgoraEvent::ScannerAuthorized,),
+            (WordpoolEvent::ScannerAuthorized,),
             ScannerAuthorizedEvent {
                 event_id,
                 scanner,
@@ -1505,7 +1505,7 @@ impl EventRegistry {
         storage::remove_scanner(&env, event_id.clone(), &scanner);
 
         env.events().publish(
-            (AgoraEvent::ScannerRevoked,),
+            (WordpoolEvent::ScannerRevoked,),
             ScannerRevokedEvent {
                 event_id,
                 scanner,
@@ -1542,7 +1542,7 @@ impl EventRegistry {
         storage::set_min_stake_amount(&env, min_amount);
 
         env.events().publish(
-            (AgoraEvent::StakingTokenUpdated,),
+            (WordpoolEvent::StakingTokenUpdated,),
             StakingTokenUpdatedEvent {
                 old_token,
                 new_token: token,
@@ -1551,7 +1551,7 @@ impl EventRegistry {
         );
 
         env.events().publish(
-            (AgoraEvent::MinStakeAmountUpdated,),
+            (WordpoolEvent::MinStakeAmountUpdated,),
             MinStakeAmountUpdatedEvent {
                 old_amount,
                 new_amount: min_amount,
@@ -1622,7 +1622,7 @@ impl EventRegistry {
         storage::add_to_stakers_list(&env, &organizer);
 
         env.events().publish(
-            (AgoraEvent::CollateralStaked,),
+            (WordpoolEvent::CollateralStaked,),
             CollateralStakedEvent {
                 organizer,
                 token,
@@ -1655,7 +1655,7 @@ impl EventRegistry {
         storage::remove_from_stakers_list(&env, &organizer);
 
         env.events().publish(
-            (AgoraEvent::CollateralUnstaked,),
+            (WordpoolEvent::CollateralUnstaked,),
             CollateralUnstakedEvent {
                 organizer,
                 token: stake.token,
@@ -1731,7 +1731,7 @@ impl EventRegistry {
         }
 
         env.events().publish(
-            (AgoraEvent::StakerRewardsDistributed,),
+            (WordpoolEvent::StakerRewardsDistributed,),
             StakerRewardsDistributedEvent {
                 total_reward,
                 staker_count,
@@ -1771,7 +1771,7 @@ impl EventRegistry {
         storage::set_organizer_stake(&env, &stake);
 
         env.events().publish(
-            (AgoraEvent::StakerRewardsClaimed,),
+            (WordpoolEvent::StakerRewardsClaimed,),
             StakerRewardsClaimedEvent {
                 organizer,
                 amount: reward_to_claim,
@@ -1886,7 +1886,7 @@ impl EventRegistry {
         storage::update_event(env, event_info);
 
         env.events().publish(
-            (AgoraEvent::InventoryIncremented,),
+            (WordpoolEvent::InventoryIncremented,),
             InventoryIncrementedEvent {
                 event_id,
                 new_supply,
@@ -1961,7 +1961,7 @@ impl EventRegistry {
         storage::set_guest_profile(&env, &profile);
 
         env.events().publish(
-            (AgoraEvent::LoyaltyScoreUpdated,),
+            (WordpoolEvent::LoyaltyScoreUpdated,),
             LoyaltyScoreUpdatedEvent {
                 guest,
                 new_score: profile.loyalty_score,
@@ -2376,7 +2376,7 @@ impl EventRegistry {
 
         // Emit WaitlistJoinedEvent
         env.events().publish(
-            (AgoraEvent::WaitlistJoined,),
+            (WordpoolEvent::WaitlistJoined,),
             WaitlistJoinedEvent {
                 event_id,
                 user,
@@ -2411,7 +2411,7 @@ impl EventRegistry {
 
         // Emit WaitlistLeftEvent
         env.events().publish(
-            (AgoraEvent::WaitlistLeft,),
+            (WordpoolEvent::WaitlistLeft,),
             WaitlistLeftEvent {
                 event_id,
                 user,
@@ -2460,7 +2460,7 @@ impl EventRegistry {
 
         // Emit ProposalCancelledEvent
         env.events().publish(
-            (AgoraEvent::ProposalCancelled,),
+            (WordpoolEvent::ProposalCancelled,),
             ProposalCancelledEvent {
                 proposal_id,
                 cancelled_by: proposer,
@@ -2630,7 +2630,7 @@ fn suspend_organizer_events(
         let admin = storage::get_admin(&env).ok_or(EventRegistryError::NotInitialized)?;
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::EventsSuspended,),
+            (WordpoolEvent::EventsSuspended,),
             EventsSuspendedEvent {
                 organizer_address,
                 suspended_event_count: suspended_count,

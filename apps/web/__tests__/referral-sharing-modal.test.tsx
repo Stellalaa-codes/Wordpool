@@ -7,7 +7,7 @@ vi.mock("sonner", () => ({
   toast: { success: vi.fn(), error: vi.fn() },
 }));
 
-const mockReferralUrl = "https://agora.app/events/42?ref=demo123";
+const mockReferralUrl = "https://Wordpool.app/events/42?ref=demo123";
 const mockShareText = "Join me at this event!";
 
 describe("ReferralSharingModal", () => {

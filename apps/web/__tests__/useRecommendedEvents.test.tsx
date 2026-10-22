@@ -28,7 +28,7 @@ function makeEvent(overrides: Partial<RecommendedEvent> = {}): RecommendedEvent 
     category_id: "cat_1",
     category_name: "Tech",
     organizer_id: "org_1",
-    organizer_name: "Agora",
+    organizer_name: "Wordpool",
     organizer_avatar: null,
     min_price: null,
     tickets_remaining: 50,

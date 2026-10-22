@@ -26,7 +26,7 @@ use crate::types::{
 use crate::{
     error::TicketPaymentError,
     events::{
-        AgoraEvent, AuctionClosedEvent, BidPlacedEvent, BulkRefundProcessedEvent,
+        WordpoolEvent, AuctionClosedEvent, BidPlacedEvent, BulkRefundProcessedEvent,
         ContractPausedEvent, ContractUpgraded, ContractVerificationFailedEvent,
         DiscountCodeAppliedEvent, DisputeStatusChangedEvent, EscrowWithdrawalApprovedEvent,
         EscrowWithdrawalExecutedEvent, EscrowWithdrawalProposedEvent, FeeSettledEvent,
@@ -125,7 +125,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ContractInitialized,),
+            (WordpoolEvent::ContractInitialized,),
             InitializationEvent {
                 usdc_token,
                 platform_wallet,
@@ -152,7 +152,7 @@ impl TicketPaymentContract {
         set_is_paused(&env, paused);
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ContractPaused,),
+            (WordpoolEvent::ContractPaused,),
             ContractPausedEvent {
                 paused,
                 timestamp: env.ledger().timestamp(),
@@ -182,7 +182,7 @@ impl TicketPaymentContract {
         require_admin(&env)?;
 
         env.events().publish(
-            (AgoraEvent::DisputeStatusChanged,),
+            (WordpoolEvent::DisputeStatusChanged,),
             DisputeStatusChangedEvent {
                 event_id,
                 is_disputed: disputed,
@@ -291,7 +291,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ContractUpgraded,),
+            (WordpoolEvent::ContractUpgraded,),
             ContractUpgraded {
                 old_wasm_hash,
                 new_wasm_hash,
@@ -352,7 +352,7 @@ impl TicketPaymentContract {
         set_proposal(&env, &proposal);
 
         env.events().publish(
-            (AgoraEvent::ProposalCreated,),
+            (WordpoolEvent::ProposalCreated,),
             ProposalCreatedEvent {
                 proposal_id,
                 proposer,
@@ -395,7 +395,7 @@ impl TicketPaymentContract {
         set_proposal(&env, &proposal);
 
         env.events().publish(
-            (AgoraEvent::ProposalVoted,),
+            (WordpoolEvent::ProposalVoted,),
             ProposalVotedEvent {
                 proposal_id,
                 voter,
@@ -479,7 +479,7 @@ impl TicketPaymentContract {
         set_proposal(&env, &proposal);
 
         env.events().publish(
-            (AgoraEvent::GovernanceActionExecuted,),
+            (WordpoolEvent::GovernanceActionExecuted,),
             GovernanceActionExecutedEvent {
                 proposal_id,
                 change: proposal.change.clone(),
@@ -747,7 +747,7 @@ impl TicketPaymentContract {
             set_price_switched(&env, event_id.clone(), ticket_tier_id.clone());
             #[allow(deprecated)]
             env.events().publish(
-                (AgoraEvent::PriceSwitched,),
+                (WordpoolEvent::PriceSwitched,),
                 PriceSwitchedEvent {
                     event_id: event_id.clone(),
                     tier_id: ticket_tier_id.clone(),
@@ -962,7 +962,7 @@ impl TicketPaymentContract {
 
         // 8. Emit payment event
         env.events().publish(
-            (AgoraEvent::PaymentProcessed,),
+            (WordpoolEvent::PaymentProcessed,),
             PaymentProcessedEvent {
                 payment_id: payment_id.clone(),
                 event_id: event_id.clone(),
@@ -988,7 +988,7 @@ impl TicketPaymentContract {
         if let Some(hash) = discount_code_hash {
             let discount_amount = total_amount.checked_sub(effective_total).unwrap_or(0);
             env.events().publish(
-                (AgoraEvent::DiscountCodeApplied,),
+                (WordpoolEvent::DiscountCodeApplied,),
                 DiscountCodeAppliedEvent {
                     payment_id: payment_id.clone(),
                     event_id: event_id.clone(),
@@ -1006,7 +1006,7 @@ impl TicketPaymentContract {
         if promo_applied_bps > 0 {
             let promo_discount_amount = total_amount.checked_sub(after_promo).unwrap_or(0);
             env.events().publish(
-                (AgoraEvent::GlobalPromoApplied,),
+                (WordpoolEvent::GlobalPromoApplied,),
                 GlobalPromoAppliedEvent {
                     payment_id: payment_id.clone(),
                     event_id: event_id.clone(),
@@ -1051,7 +1051,7 @@ impl TicketPaymentContract {
         // Emit confirmation event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::PaymentStatusChanged,),
+            (WordpoolEvent::PaymentStatusChanged,),
             PaymentStatusChangedEvent {
                 payment_id: payment_id.clone(),
                 old_status: PaymentStatus::Pending,
@@ -1308,7 +1308,7 @@ impl TicketPaymentContract {
         // Emit confirmation event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::PaymentStatusChanged,),
+            (WordpoolEvent::PaymentStatusChanged,),
             PaymentStatusChangedEvent {
                 payment_id: payment_id.clone(),
                 old_status,
@@ -1406,7 +1406,7 @@ impl TicketPaymentContract {
 
     //     #[allow(deprecated)]
     //     env.events().publish(
-    //         (AgoraEvent::TicketCheckedIn,),
+    //         (WordpoolEvent::TicketCheckedIn,),
     //         crate::events::TicketCheckedInEvent {
     //             payment_id,
     //             event_id: payment.event_id,
@@ -1486,7 +1486,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::TicketCheckedIn,),
+            (WordpoolEvent::TicketCheckedIn,),
             TicketCheckedInEvent {
                 payment_id: payment_id.clone(),
                 event_id: payment.event_id.clone(),
@@ -1501,7 +1501,7 @@ impl TicketPaymentContract {
             mark_poap_minted(&env, payment_id.clone(), &payment.buyer_address);
             #[allow(deprecated)]
             env.events().publish(
-                (AgoraEvent::PoapMinted,),
+                (WordpoolEvent::PoapMinted,),
                 PoapMintedEvent {
                     payment_id,
                     event_id: payment.event_id,
@@ -1540,7 +1540,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::PoapMinted,),
+            (WordpoolEvent::PoapMinted,),
             PoapMintedEvent {
                 payment_id,
                 event_id: payment.event_id,
@@ -1709,7 +1709,7 @@ impl TicketPaymentContract {
         // Emit settlement event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::FeeSettled,),
+            (WordpoolEvent::FeeSettled,),
             FeeSettledEvent {
                 event_id,
                 platform_wallet: get_platform_wallet(&env),
@@ -1870,7 +1870,7 @@ impl TicketPaymentContract {
         if platform_fee_amount > 0 {
             #[allow(deprecated)]
             env.events().publish(
-                (AgoraEvent::FeeSettled,),
+                (WordpoolEvent::FeeSettled,),
                 FeeSettledEvent {
                     event_id: event_id.clone(),
                     platform_wallet: platform_wallet.clone(),
@@ -1911,7 +1911,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::RevenueClaimed,),
+            (WordpoolEvent::RevenueClaimed,),
             RevenueClaimedEvent {
                 event_id,
                 organizer_address: event_info.organizer_address,
@@ -2122,7 +2122,7 @@ impl TicketPaymentContract {
         // Emit transfer event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::TicketTransferred,),
+            (WordpoolEvent::TicketTransferred,),
             TicketTransferredEvent {
                 payment_id,
                 from,
@@ -2209,7 +2209,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ResaleListed,),
+            (WordpoolEvent::ResaleListed,),
             crate::events::ResaleListedEvent {
                 payment_id,
                 seller: payment.buyer_address,
@@ -2243,7 +2243,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ResaleCancelled,),
+            (WordpoolEvent::ResaleCancelled,),
             crate::events::ResaleCancelledEvent {
                 payment_id,
                 seller: listing.seller,
@@ -2347,7 +2347,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::ResalePurchased,),
+            (WordpoolEvent::ResalePurchased,),
             crate::events::ResalePurchasedEvent {
                 payment_id,
                 seller,
@@ -2471,7 +2471,7 @@ impl TicketPaymentContract {
         // Emit bulk refund event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::BulkRefundProcessed,),
+            (WordpoolEvent::BulkRefundProcessed,),
             BulkRefundProcessedEvent {
                 event_id,
                 refund_count: processed_count,
@@ -2589,7 +2589,7 @@ impl TicketPaymentContract {
         // Emit partial refund event
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::PartialRefundProcessed,),
+            (WordpoolEvent::PartialRefundProcessed,),
             PartialRefundProcessedEvent {
                 event_id,
                 refund_count: processed_count,
@@ -2749,7 +2749,7 @@ impl TicketPaymentContract {
         set_highest_bid(&env, event_id.clone(), ticket_tier_id.clone(), new_bid);
 
         env.events().publish(
-            (AgoraEvent::BidPlaced,),
+            (WordpoolEvent::BidPlaced,),
             BidPlacedEvent {
                 event_id,
                 tier_id: ticket_tier_id,
@@ -2882,7 +2882,7 @@ impl TicketPaymentContract {
 
         // Emit events
         env.events().publish(
-            (AgoraEvent::AuctionClosed,),
+            (WordpoolEvent::AuctionClosed,),
             AuctionClosedEvent {
                 event_id: event_id.clone(),
                 tier_id: ticket_tier_id,
@@ -2893,7 +2893,7 @@ impl TicketPaymentContract {
         );
 
         env.events().publish(
-            (AgoraEvent::PaymentProcessed,),
+            (WordpoolEvent::PaymentProcessed,),
             PaymentProcessedEvent {
                 payment_id,
                 event_id,
@@ -2966,7 +2966,7 @@ impl TicketPaymentContract {
         crate::storage::set_event_cancelled_for_refund(&env, &event_id);
 
         env.events().publish(
-            (AgoraEvent::EventCancelled,),
+            (WordpoolEvent::EventCancelled,),
             crate::events::EventCancelledEvent {
                 event_id,
                 organizer: event_info.organizer_address,
@@ -3081,7 +3081,7 @@ impl TicketPaymentContract {
         subtract_from_active_escrow_by_token(&env, payment.token_address.clone(), refund_amount);
 
         env.events().publish(
-            (AgoraEvent::CancellationRefundClaimed,),
+            (WordpoolEvent::CancellationRefundClaimed,),
             crate::events::CancellationRefundClaimedEvent {
                 payment_id,
                 event_id: payment.event_id,
@@ -3156,7 +3156,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::EscrowWithdrawalProposed,),
+            (WordpoolEvent::EscrowWithdrawalProposed,),
             EscrowWithdrawalProposedEvent {
                 proposal_id,
                 event_id,
@@ -3194,7 +3194,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::EscrowWithdrawalApproved,),
+            (WordpoolEvent::EscrowWithdrawalApproved,),
             EscrowWithdrawalApprovedEvent {
                 proposal_id,
                 approver: admin,
@@ -3230,7 +3230,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::EscrowWithdrawalExecuted,),
+            (WordpoolEvent::EscrowWithdrawalExecuted,),
             EscrowWithdrawalExecutedEvent {
                 proposal_id,
                 event_id: String::from_str(&env, ""),
@@ -3313,7 +3313,7 @@ impl TicketPaymentContract {
 
         #[allow(deprecated)]
         env.events().publish(
-            (AgoraEvent::BulkRefundProcessed,),
+            (WordpoolEvent::BulkRefundProcessed,),
             BulkRefundProcessedEvent {
                 event_id,
                 refund_count: refunded,

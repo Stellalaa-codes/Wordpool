@@ -76,7 +76,7 @@ pub async fn send_ticket_email_with_retry(payload: TicketEmailPayload) -> Result
 async fn send_ticket_email(payload: &TicketEmailPayload) -> Result<(), String> {
     // If RESEND_API_KEY not set, we are in dev/test – just log and pretend success
     let api_key = std::env::var("RESEND_API_KEY").ok();
-    let from = std::env::var("EMAIL_FROM").unwrap_or_else(|_| "noreply@agora.events".to_string());
+    let from = std::env::var("EMAIL_FROM").unwrap_or_else(|_| "noreply@Wordpool.events".to_string());
 
     if api_key.is_none() {
         tracing::info!(
@@ -168,7 +168,7 @@ pub async fn dispatch_after_payment(pool: &sqlx::PgPool, ticket_id: Uuid) {
     };
 
     // Resolve recipient email – in real system we'd join users table; fallback to wallet-derived placeholder
-    let to_email = format!("{}@placeholder.agora.events", row.owner_wallet.as_deref().unwrap_or("attendee"));
+    let to_email = format!("{}@placeholder.Wordpool.events", row.owner_wallet.as_deref().unwrap_or("attendee"));
     let dtend = row.dtend.unwrap_or(row.dtstart + chrono::Duration::hours(2));
 
     // Generate PDF (reuse pdf util)
@@ -187,7 +187,7 @@ pub async fn dispatch_after_payment(pool: &sqlx::PgPool, ticket_id: Uuid) {
         event_title: row.event_title.clone().unwrap_or_else(|| "Event".to_string()),
         event_location: row.event_location.clone().unwrap_or_else(|| "Venue TBA".to_string()),
         event_description: row.event_description.clone(),
-        event_link: format!("https://agora.events/events/{}", row.event_id.map(|id| id.to_string()).unwrap_or_default()),
+        event_link: format!("https://Wordpool.events/events/{}", row.event_id.map(|id| id.to_string()).unwrap_or_default()),
         dtstart: row.dtstart,
         dtend,
         ticket_id,
@@ -230,7 +230,7 @@ mod tests {
             event_title: "Concert".to_string(),
             event_location: "Lagos".to_string(),
             event_description: Some("Great".to_string()),
-            event_link: "https://agora.events/e/1".to_string(),
+            event_link: "https://Wordpool.events/e/1".to_string(),
             dtstart: Utc.with_ymd_and_hms(2026, 6, 1, 10, 0, 0).unwrap(),
             dtend: Utc.with_ymd_and_hms(2026, 6, 1, 12, 0, 0).unwrap(),
             ticket_id: Uuid::new_v4(),
@@ -240,7 +240,7 @@ mod tests {
         assert!(ics.contains("SUMMARY:Concert"));
         assert!(ics.contains("LOCATION:Lagos"));
         assert!(ics.contains("DTSTART:20260601T100000Z"));
-        assert!(ics.contains("https://agora.events/e/1"));
+        assert!(ics.contains("https://Wordpool.events/e/1"));
     }
 
     #[tokio::test]
@@ -254,7 +254,7 @@ mod tests {
             event_title: "Concert".to_string(),
             event_location: "Lagos".to_string(),
             event_description: None,
-            event_link: "https://agora.events/e/1".to_string(),
+            event_link: "https://Wordpool.events/e/1".to_string(),
             dtstart: Utc::now(),
             dtend: Utc::now() + chrono::Duration::hours(2),
             ticket_id: Uuid::new_v4(),

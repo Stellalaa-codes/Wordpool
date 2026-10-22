@@ -39,7 +39,7 @@ fn build_content_stream(
     masked: &str,
     qr: &str,
 ) -> String {
-    let agora = "Agora - Ticket";
+    let Wordpool = "Wordpool - Ticket";
     // Use Helvetica (built-in) at various positions
     let mut y = 750;
     let push_line = |lines: &mut Vec<String>, y: i32, text: &str, size: u32| {
@@ -48,7 +48,7 @@ fn build_content_stream(
     };
 
     let mut content_lines = Vec::new();
-    push_line(&mut content_lines, y, agora, 18);
+    push_line(&mut content_lines, y, Wordpool, 18);
     y -= 30;
     push_line(&mut content_lines, y, &format!("Event: {title}"), 12);
     y -= 20;
@@ -62,7 +62,7 @@ fn build_content_stream(
     y -= 20;
     push_line(&mut content_lines, y, &format!("QR: {qr}"), 9);
     y -= 20;
-    push_line(&mut content_lines, y, "Branded with Agora colors #6C5CE7", 8);
+    push_line(&mut content_lines, y, "Branded with Wordpool colors #6C5CE7", 8);
 
     content_lines.join("\n")
 }
@@ -145,7 +145,7 @@ mod tests {
         let pdf = generate_ticket_pdf("My Event", "2026-06-01", "Lagos", "VIP", "GABC...WXYZ", "qr123");
         let s = String::from_utf8_lossy(&pdf);
         assert!(s.contains("My Event"));
-        assert!(s.contains("Agora"));
+        assert!(s.contains("Wordpool"));
     }
 
     #[test]

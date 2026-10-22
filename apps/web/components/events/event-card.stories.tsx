@@ -36,7 +36,7 @@ export const FreeEvent: Story = {
   args: {
     ...baseArgs,
     price: "free",
-    title: "Agora Community Hangout",
+    title: "Wordpool Community Hangout",
   },
 };
 

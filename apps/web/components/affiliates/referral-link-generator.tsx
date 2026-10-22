@@ -69,7 +69,7 @@ export function ReferralLinkGenerator({
   const baseUrl =
     typeof window !== "undefined"
       ? `${window.location.protocol}//${window.location.host}`
-      : "https://agora.app";
+      : "https://Wordpool.app";
 
   /** Generate the referral link */
   const handleGenerate = useCallback(() => {
@@ -125,7 +125,7 @@ export function ReferralLinkGenerator({
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement("a");
       anchor.href = url;
-      anchor.download = `agora-referral-${selectedEventId}.${extension}`;
+      anchor.download = `Wordpool-referral-${selectedEventId}.${extension}`;
       document.body.appendChild(anchor);
       anchor.click();
       anchor.remove();
@@ -381,7 +381,7 @@ export function ReferralLinkGenerator({
         isOpen={shareModalOpen}
         onClose={() => setShareModalOpen(false)}
         referralUrl={generatedUrl}
-        shareText="Join me at this event on Agora Events! Get your ticket here:"
+        shareText="Join me at this event on Wordpool Events! Get your ticket here:"
       />
 
       {qrModalOpen && generatedUrl && (

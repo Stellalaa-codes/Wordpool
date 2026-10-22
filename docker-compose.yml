@@ -3,10 +3,10 @@ services:
     build:
       context: .
       dockerfile: server/Dockerfile
-    container_name: agora_server
+    container_name: Wordpool_server
     environment:
       PORT: 3001
-      DATABASE_URL: postgres://user:password@postgres:5432/agora
+      DATABASE_URL: postgres://user:password@postgres:5432/Wordpool
       REDIS_URL: redis://redis:6379
       OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4317
     ports:
@@ -21,24 +21,24 @@ services:
 
   postgres:
     image: postgres:latest
-    container_name: agora_postgres
+    container_name: Wordpool_postgres
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: agora
+      POSTGRES_DB: Wordpool
     ports:
       - "5432:5432"
     volumes:
-      - agora_postgres_data:/var/lib/postgresql/data
+      - Wordpool_postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d agora"]
+      test: ["CMD-SHELL", "pg_isready -U user -d Wordpool"]
       interval: 10s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7
-    container_name: agora_redis
+    container_name: Wordpool_redis
     ports:
       - "6379:6379"
     healthcheck:
@@ -49,7 +49,7 @@ services:
 
   jaeger:
     image: jaegertracing/all-in-one:latest
-    container_name: agora_jaeger
+    container_name: Wordpool_jaeger
     ports:
       - "16686:16686" # Jaeger UI
       - "4317:4317"   # OTLP gRPC receiver
@@ -58,4 +58,4 @@ services:
       COLLECTOR_OTLP_ENABLED: "true"
 
 volumes:
-  agora_postgres_data:
+  Wordpool_postgres_data:

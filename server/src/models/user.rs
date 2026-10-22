@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use uuid::Uuid;
 
-/// Represents a registered user of the Agora platform.
+/// Represents a registered user of the Wordpool platform.
 ///
 /// Users are the attendees who browse events, purchase tickets, and attend events.
 /// They are distinct from [`super::organizer::Organizer`]s, who create and manage events.

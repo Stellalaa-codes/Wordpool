@@ -12,16 +12,16 @@ export interface Article {
 
 export const mockArticles: Article[] = [
   {
-    slug: "what-is-agora",
-    title: "What is Agora?",
+    slug: "what-is-Wordpool",
+    title: "What is Wordpool?",
     categorySlug: "getting-started",
-    content: "# What is Agora?\n\nAgora is a decentralized event management platform...\n\n## Getting Started\n\n1. Sign up for an account\n2. Create an event\n3. Sell tickets",
+    content: "# What is Wordpool?\n\nWordpool is a decentralized event management platform...\n\n## Getting Started\n\n1. Sign up for an account\n2. Create an event\n3. Sell tickets",
   },
   {
     slug: "how-to-buy-tickets",
     title: "How to Buy Tickets",
     categorySlug: "buying-tickets",
-    content: "# How to Buy Tickets\n\nBuying tickets on Agora is simple.\n\n## Steps\n\n- Navigate to an event page\n- Click **Buy Ticket**\n- Confirm transaction in your wallet",
+    content: "# How to Buy Tickets\n\nBuying tickets on Wordpool is simple.\n\n## Steps\n\n- Navigate to an event page\n- Click **Buy Ticket**\n- Confirm transaction in your wallet",
   }
 ];
 

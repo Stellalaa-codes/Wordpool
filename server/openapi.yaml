@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Agora Backend API
+  title: Wordpool Backend API
   description: |
-    REST API for the Agora events platform.
+    REST API for the Wordpool events platform.
 
     All successful responses are wrapped in a standard envelope:
     `{ "success": true, "data": ..., "message": "..." }`.

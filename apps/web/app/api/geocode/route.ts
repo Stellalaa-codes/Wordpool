@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
     const response = await fetch(nominatimUrl.toString(), {
       headers: {
         // Nominatim requires a descriptive User-Agent with contact info.
-        "User-Agent": "AgoraEvents/1.0 (contact@agora-demo.com)",
+        "User-Agent": "WordpoolEvents/1.0 (contact@Wordpool-demo.com)",
         Accept: "application/json",
       },
       // Revalidate at most once per day when using Next.js fetch caching.

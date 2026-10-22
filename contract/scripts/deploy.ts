@@ -221,7 +221,7 @@ Examples:
   // Display all discovered contracts
   const contracts = getDeployedContracts();
   console.log("\n==================================================================");
-  console.log(` Agora Soroban Contracts — Stellar Expert Explorer (${network})`);
+  console.log(` Wordpool Soroban Contracts — Stellar Expert Explorer (${network})`);
   console.log("==================================================================");
 
   if (Object.keys(contracts).length === 0) {

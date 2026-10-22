@@ -26,7 +26,7 @@ export default function CheckoutScreen() {
   const checkout = useTicketCheckout();
 
   const eventId = params.eventId ?? '1';
-  const eventTitle = params.eventTitle ?? 'Agora Event';
+  const eventTitle = params.eventTitle ?? 'Wordpool Event';
   // Received when the user was admitted through the virtual waiting room.
   // Server-side checkout endpoints can verify it with the waiting-room API.
   const grantToken = params.grantToken;
@@ -74,7 +74,7 @@ export default function CheckoutScreen() {
       Alert.alert('Tier sold out', 'This ticket tier just sold out. Please choose another tier.');
       return;
     }
-    if (!user?.walletAddress || user.walletAddress === 'GDAGORA...') {
+    if (!user?.walletAddress || user.walletAddress === 'GDWordpool...') {
       Alert.alert(
         'Wallet required',
         'Set up your Stellar wallet in Settings before purchasing tickets.'

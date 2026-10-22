@@ -3,7 +3,7 @@
 /**
  * NetworkSwitcher — Issue #1541
  *
- * Header dropdown that lets developers/QA flip Agora's active Stellar
+ * Header dropdown that lets developers/QA flip Wordpool's active Stellar
  * network between Testnet and Mainnet. Delegates to `useNetwork()`
  * (lib/stellar/network-context.tsx), which handles persisting the choice,
  * updating the active RPC/Horizon endpoints, and clearing cached

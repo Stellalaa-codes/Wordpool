@@ -43,38 +43,38 @@ const STATUS_STYLES: Record<ToastStatus, { border: string; label: string; icon: 
 };
 
 const TOAST_STYLES = `
-@keyframes agora-toast-in {
+@keyframes Wordpool-toast-in {
   from { opacity: 0; transform: translateY(100%); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes agora-toast-out {
+@keyframes Wordpool-toast-out {
   from { opacity: 1; transform: translateY(0); }
   to   { opacity: 0; transform: translateY(24px); }
 }
-@keyframes agora-toast-spin {
+@keyframes Wordpool-toast-spin {
   to { transform: rotate(360deg); }
 }
-.agora-toast {
-  animation: agora-toast-in 300ms cubic-bezier(0.21, 1.02, 0.73, 1) both;
+.Wordpool-toast {
+  animation: Wordpool-toast-in 300ms cubic-bezier(0.21, 1.02, 0.73, 1) both;
 }
-.agora-toast[data-exiting="true"] {
-  animation: agora-toast-out 300ms ease-in both;
+.Wordpool-toast[data-exiting="true"] {
+  animation: Wordpool-toast-out 300ms ease-in both;
 }
-.agora-toast-spinner {
+.Wordpool-toast-spinner {
   display: inline-block;
   width: 0.875rem;
   height: 0.875rem;
   border: 2px solid currentColor;
   border-right-color: transparent;
   border-radius: 9999px;
-  animation: agora-toast-spin 0.7s linear infinite;
+  animation: Wordpool-toast-spin 0.7s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .agora-toast,
-  .agora-toast[data-exiting="true"] {
+  .Wordpool-toast,
+  .Wordpool-toast[data-exiting="true"] {
     animation: none;
   }
-  .agora-toast-spinner {
+  .Wordpool-toast-spinner {
     animation: none;
     border-right-color: currentColor;
     opacity: 0.6;
@@ -122,10 +122,10 @@ export function Toast({
         aria-live="polite"
         data-status={status}
         data-exiting={exiting}
-        className={`agora-toast pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-lg border-l-4 ${border} bg-zinc-900 p-4 text-zinc-100 shadow-lg ${className}`}
+        className={`Wordpool-toast pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-lg border-l-4 ${border} bg-zinc-900 p-4 text-zinc-100 shadow-lg ${className}`}
       >
         <span aria-hidden="true" className="mt-0.5 text-sm">
-          {status === "pending" ? <span className="agora-toast-spinner" /> : icon}
+          {status === "pending" ? <span className="Wordpool-toast-spinner" /> : icon}
         </span>
         <div className="min-w-0 flex-1">
           <p className="text-sm font-semibold">{title || label}</p>

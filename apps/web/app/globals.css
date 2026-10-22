@@ -42,7 +42,7 @@
 @theme inline {
   --font-sans: var(--font-inter);
 
-  /* ── Agora colour palette ── */
+  /* ── Wordpool colour palette ── */
   --color-accent:        #FDDA23;
   --color-accent-hover:  #f0ce1e;
   --color-accent-dark:   #CAAE1C;
@@ -161,12 +161,12 @@ select:focus-visible,
 /* Event map cluster badges (Issue #1140).
    Built with Leaflet's divIcon, so the count is live text rather than an
    image and stays legible as it changes on zoom. */
-.agora-cluster-marker {
+.Wordpool-cluster-marker {
   background: transparent;
   border: none;
 }
 
-.agora-cluster-marker span {
+.Wordpool-cluster-marker span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,16 +181,16 @@ select:focus-visible,
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-.agora-cluster-marker:hover span {
+.Wordpool-cluster-marker:hover span {
   transform: scale(1.06);
   box-shadow: 0 0 0 6px rgb(24 24 27 / 0.22);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .agora-cluster-marker span {
+  .Wordpool-cluster-marker span {
     transition: none;
   }
-  .agora-cluster-marker:hover span {
+  .Wordpool-cluster-marker:hover span {
     transform: none;
   }
 }

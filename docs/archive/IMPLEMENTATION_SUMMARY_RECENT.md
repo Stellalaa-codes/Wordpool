@@ -6,7 +6,7 @@ June 24, 2026
 
 ## Overview
 
-Three critical tasks completed for the Agora event management platform:
+Three critical tasks completed for the Wordpool event management platform:
 
 1. **Testing Strategy Documentation** - Comprehensive guide for running and writing tests
 2. **Frontend Architecture Overview** - Complete architectural documentation

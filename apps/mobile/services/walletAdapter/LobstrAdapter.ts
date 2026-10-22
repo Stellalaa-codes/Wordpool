@@ -30,7 +30,7 @@ export class LobstrAdapter implements MobileWalletAdapter {
       // Fallback
     }
 
-    const demoKey = 'GLOBSTRMOBILEACCOUNTFORAGORATICKETING00000000000000000';
+    const demoKey = 'GLOBSTRMOBILEACCOUNTFORWordpoolTICKETING00000000000000000';
     this.connectedPublicKey = demoKey;
     return demoKey;
   }

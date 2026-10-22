@@ -4,7 +4,7 @@ export interface CheckoutAttribution {
   utmCampaign?: string;
 }
 
-const STORAGE_KEY = "agora_checkout_attribution";
+const STORAGE_KEY = "Wordpool_checkout_attribution";
 const MAX_UTM_LENGTH = 255;
 
 function clean(value: string | null): string | undefined {

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes the implementation of the garbage collection feature for old event data in the Agora Event Registry smart contract.
+This document summarizes the implementation of the garbage collection feature for old event data in the Wordpool Event Registry smart contract.
 
 ## Requirements Met
 
@@ -112,7 +112,7 @@ pub fn archive_event(env: Env, event_id: String) -> Result<(), EventRegistryErro
 
             // 7. Emit event
             env.events().publish(
-                (AgoraEvent::EventArchived,),
+                (WordpoolEvent::EventArchived,),
                 EventArchivedEvent {
                     event_id,
                     organizer_address: event_info.organizer_address,
@@ -244,7 +244,7 @@ The implementation includes comprehensive error handling:
 The function emits an `EventArchived` event for off-chain tracking:
 ```rust
 env.events().publish(
-    (AgoraEvent::EventArchived,),
+    (WordpoolEvent::EventArchived,),
     EventArchivedEvent {
         event_id,
         organizer_address: event_info.organizer_address,

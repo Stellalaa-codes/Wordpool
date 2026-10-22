@@ -1,8 +1,8 @@
-https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=813-2162&t=iDIJUBtGHnMs5zvg-4
+https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=813-2162&t=iDIJUBtGHnMs5zvg-4
 
-# Agora: Upcoming Events (Filled State) - Design Description
+# Wordpool: Upcoming Events (Filled State) - Design Description
 
-This document provides a detailed technical breakdown of the "Upcoming Events (Filled State)" designed for the Agora platform, based on issue #244.
+This document provides a detailed technical breakdown of the "Upcoming Events (Filled State)" designed for the Wordpool platform, based on issue #244.
 
 ## 1. Overall Theme & Palette
 *   **Background**: Soft cream/off-white (approx `#FDFCEE`).
@@ -16,7 +16,7 @@ This document provides a detailed technical breakdown of the "Upcoming Events (F
 The page is organized into a vertical flow with a clean, centered container.
 
 ### A. Navigation Bar
-*   **Logo**: Yellow book/card icon followed by "agora" in lowercase sans-serif.
+*   **Logo**: Yellow book/card icon followed by "Wordpool" in lowercase sans-serif.
 *   **Menu Items**: "Home" (Active, Yellow), "Discover Events", "Organizers", "Stellar Ecosystem".
 *   **Actions**: 
     *   "Create Your Event" button: Rounded, black border, includes a northeast arrow icon.
@@ -59,7 +59,7 @@ The page is organized into a vertical flow with a clean, centered container.
 ## 4. Components & Interactive Elements
 *   **Buttons**: Highly rounded (capsule shape) or rounded squares.
 *   **Cards**: All cards use a "Ticket" metaphor, either through full card shape or left-side iconography.
-*   **Hard Decor**: Subtle background illustrations (like the "agora" ticket graphic on the right side of the "For You" section).
+*   **Hard Decor**: Subtle background illustrations (like the "Wordpool" ticket graphic on the right side of the "For You" section).
 
 ## 5. Footer
 *   **Background**: Dark grey/Black section.

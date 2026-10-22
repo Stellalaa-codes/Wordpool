@@ -11,7 +11,7 @@ const preview: Preview = {
     },
     backgrounds: {
       options: {
-        "agora-base": { name: "agora-base", value: "#FFFBE9" },
+        "Wordpool-base": { name: "Wordpool-base", value: "#FFFBE9" },
         white: { name: "white", value: "#ffffff" },
         dark: { name: "dark", value: "#0B151F" }
       }
@@ -23,7 +23,7 @@ const preview: Preview = {
 
   initialGlobals: {
     backgrounds: {
-      value: "agora-base"
+      value: "Wordpool-base"
     }
   }
 };

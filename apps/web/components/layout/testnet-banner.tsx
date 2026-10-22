@@ -3,7 +3,7 @@
 /**
  * TestnetBanner — Issue #1491
  *
- * Displays a persistent warning strip informing users that Agora is running
+ * Displays a persistent warning strip informing users that Wordpool is running
  * against Stellar Testnet.  Renders only when
  * `NEXT_PUBLIC_STELLAR_NETWORK === "TESTNET"` (checked at runtime so the
  * component can be mounted unconditionally and tree-shaken in production).
@@ -17,7 +17,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const SESSION_KEY = "agora:testnet-banner-dismissed";
+const SESSION_KEY = "Wordpool:testnet-banner-dismissed";
 
 /**
  * Full-width testnet warning banner.
@@ -68,7 +68,7 @@ export function TestnetBanner() {
         </span>
 
         <span>
-          You are using Agora on <strong>Stellar Testnet</strong>. Assets and
+          You are using Wordpool on <strong>Stellar Testnet</strong>. Assets and
           transactions here have no real-world value.
         </span>
 

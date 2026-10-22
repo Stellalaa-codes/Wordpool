@@ -8,8 +8,8 @@ export const DEFAULT_PROFILE_DETAILS: ProfileDetails = {
   bio: "Designer",
 };
 
-const STORAGE_KEY = "agora-profile-details";
-const PROFILE_DETAILS_EVENT = "agora-profile-details-updated";
+const STORAGE_KEY = "Wordpool-profile-details";
+const PROFILE_DETAILS_EVENT = "Wordpool-profile-details-updated";
 export const PROFILE_DETAILS_LOAD_ERROR = "load-error";
 
 function parseProfileDetails(value: string): ProfileDetails {

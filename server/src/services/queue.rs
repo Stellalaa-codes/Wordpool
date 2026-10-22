@@ -6,7 +6,7 @@
 //! ## Design
 //!
 //! - **Fair FIFO queue** — one Redis sorted set per event
-//!   (`agora:waiting:{event_id}:zset`). Members are scored with an atomic
+//!   (`Wordpool:waiting:{event_id}:zset`). Members are scored with an atomic
 //!   per-event sequence counter, so admission order is exactly arrival order
 //!   regardless of how many workers or server replicas are running.
 //! - **Token-bucket admission** — each event has a Redis token bucket whose
@@ -37,13 +37,13 @@ use uuid::Uuid;
 // ---------------------------------------------------------------------------
 
 /// Prefix for every waiting-room key.
-pub const WAITING_ROOM_KEY_PREFIX: &str = "agora:waiting";
+pub const WAITING_ROOM_KEY_PREFIX: &str = "Wordpool:waiting";
 
 /// Set of event ids that currently have a non-empty queue (worker sweep list).
-pub const ACTIVE_EVENTS_KEY: &str = "agora:waiting:active";
+pub const ACTIVE_EVENTS_KEY: &str = "Wordpool:waiting:active";
 
 /// Prefix for single-use proof-of-work challenges.
-pub const POW_CHALLENGE_PREFIX: &str = "agora:pow";
+pub const POW_CHALLENGE_PREFIX: &str = "Wordpool:pow";
 
 /// Default admission rate (clients per minute) when no env override is set.
 pub const DEFAULT_ADMISSION_RATE_PER_MINUTE: u64 = 60;

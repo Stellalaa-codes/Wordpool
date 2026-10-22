@@ -22,7 +22,7 @@ export default function WaitingRoomScreen() {
   const { user } = useAuth();
 
   const eventId = params.eventId ?? '';
-  const eventTitle = params.eventTitle ?? 'Agora Event';
+  const eventTitle = params.eventTitle ?? 'Wordpool Event';
   const clientId = user?.walletAddress || 'guest';
 
   const { phase, position, queueSize, estimatedWaitSeconds, grantToken, errorMessage, retry } =

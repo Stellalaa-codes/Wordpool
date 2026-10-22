@@ -73,7 +73,7 @@ pub struct Payment {
     pub token_address: Address,
     /// Per-ticket amount paid in stroops.
     pub amount: i128,
-    /// Platform fee portion retained by Agora.
+    /// Platform fee portion retained by Wordpool.
     pub platform_fee: i128,
     /// Organizer revenue portion after fees.
     pub organizer_amount: i128,

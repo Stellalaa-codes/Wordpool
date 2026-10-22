@@ -143,8 +143,8 @@ describe('locationService — background task registration', () => {
 
     const taskNames = mockTaskManager.defineTask.mock.calls.map(([name]: [string]) => name);
     expect(taskNames).toEqual(expect.arrayContaining([LOCATION_TASK_NAME, GEOFENCE_TASK_NAME]));
-    expect(LOCATION_TASK_NAME).toBe('AGORA_BACKGROUND_LOCATION');
-    expect(GEOFENCE_TASK_NAME).toBe('AGORA_GEOFENCE_MONITOR');
+    expect(LOCATION_TASK_NAME).toBe('Wordpool_BACKGROUND_LOCATION');
+    expect(GEOFENCE_TASK_NAME).toBe('Wordpool_GEOFENCE_MONITOR');
   });
 
   it('starts background location updates with distance and deferred optimizations under LOCATION_TASK_NAME', async () => {

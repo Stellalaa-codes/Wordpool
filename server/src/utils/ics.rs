@@ -14,7 +14,7 @@ pub fn generate_ics(
     let dtstamp = Utc::now().format("%Y%m%dT%H%M%SZ").to_string();
     let start = dtstart.format("%Y%m%dT%H%M%SZ").to_string();
     let end = dtend.format("%Y%m%dT%H%M%SZ").to_string();
-    let uid = format!("{}@agora.events", uuid::Uuid::new_v4());
+    let uid = format!("{}@Wordpool.events", uuid::Uuid::new_v4());
     let desc = format!("{description}\\n{event_link}");
 
     // Escape commas/semicolons per RFC5545 for safety (minimal)
@@ -25,7 +25,7 @@ pub fn generate_ics(
     format!(
         "BEGIN:VCALENDAR\r\n\
 VERSION:2.0\r\n\
-PRODID:-//Agora//Event//EN\r\n\
+PRODID:-//Wordpool//Event//EN\r\n\
 CALSCALE:GREGORIAN\r\n\
 METHOD:PUBLISH\r\n\
 BEGIN:VEVENT\r\n\
@@ -58,7 +58,7 @@ mod tests {
     fn test_ics_contains_required_fields() {
         let start = Utc.with_ymd_and_hms(2026, 6, 1, 10, 0, 0).unwrap();
         let end = Utc.with_ymd_and_hms(2026, 6, 1, 12, 0, 0).unwrap();
-        let ics = generate_ics("My Concert", "Lagos", "Great show", start, end, "https://agora.events/e/1");
+        let ics = generate_ics("My Concert", "Lagos", "Great show", start, end, "https://Wordpool.events/e/1");
         assert!(ics.contains("DTSTART:20260601T100000Z"));
         assert!(ics.contains("DTEND:20260601T120000Z"));
         assert!(ics.contains("SUMMARY:My Concert"));

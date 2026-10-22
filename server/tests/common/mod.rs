@@ -69,7 +69,7 @@ pub async fn seed_organizer_and_event(pool: &PgPool, label: &str) -> (uuid::Uuid
     let event_id = uuid::Uuid::new_v4();
 
     sqlx::query(
-        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'chaos-suite@agora.test')",
+        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'chaos-suite@Wordpool.test')",
     )
     .bind(organizer_id)
     .bind(format!("Chaos Suite Organizer ({label})"))

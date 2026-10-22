@@ -256,7 +256,7 @@ export default function SubscriptionsPage() {
             }
           : prev,
       );
-      toast.success(isActive ? "Pro subscription cancelled." : "Welcome to Agora Pro! 🎉");
+      toast.success(isActive ? "Pro subscription cancelled." : "Welcome to Wordpool Pro! 🎉");
     }
 
     setProActionLoading(false);
@@ -301,13 +301,13 @@ export default function SubscriptionsPage() {
               </div>
             )}
 
-            {/* ── Agora Pro card ───────────────────────────────────────── */}
+            {/* ── Wordpool Pro card ───────────────────────────────────────── */}
             <section aria-labelledby="pro-heading">
               <h2
                 id="pro-heading"
                 className="text-lg font-bold text-ink-soft mb-4"
               >
-                Agora Pro Organiser
+                Wordpool Pro Organiser
               </h2>
 
               {isLoading ? (
@@ -335,7 +335,7 @@ export default function SubscriptionsPage() {
                             data?.pro.active ? "text-black" : "text-white"
                           }`}
                         >
-                          Agora Pro
+                          Wordpool Pro
                         </p>
                         <p
                           className={`text-xs font-semibold ${
@@ -388,8 +388,8 @@ export default function SubscriptionsPage() {
                         className="font-bold flex-1"
                         aria-label={
                           data?.pro.active
-                            ? "Cancel Agora Pro subscription"
-                            : "Subscribe to Agora Pro"
+                            ? "Cancel Wordpool Pro subscription"
+                            : "Subscribe to Wordpool Pro"
                         }
                         disabled={proActionLoading}
                       >
@@ -471,7 +471,7 @@ export default function SubscriptionsPage() {
               <p>
                 All payments are processed in{" "}
                 <strong className="text-ink-soft">USDC on the Stellar network</strong>.
-                Transactions are non-custodial — Agora never holds your private keys.
+                Transactions are non-custodial — Wordpool never holds your private keys.
                 Need help?{" "}
                 <Link
                   href="/help"

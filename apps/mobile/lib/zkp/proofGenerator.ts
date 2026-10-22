@@ -57,13 +57,13 @@ import { randomBytes, sha512 } from './sha512';
 // versioned rather than edited: changing one invalidates every commitment and
 // proof in circulation.
 
-const DOMAIN_GENERATOR_H = 'agora/zkp/v1/generator-h';
-const DOMAIN_TICKET_SCALAR = 'agora/zkp/v1/ticket-scalar';
-const DOMAIN_SECRET_SCALAR = 'agora/zkp/v1/secret-scalar';
-const DOMAIN_NULLIFIER_BASE = 'agora/zkp/v1/nullifier-base';
-const DOMAIN_MERKLE_LEAF = 'agora/zkp/v1/merkle-leaf';
-const DOMAIN_MERKLE_NODE = 'agora/zkp/v1/merkle-node';
-const DOMAIN_TRANSCRIPT = 'agora/zkp/v1/fiat-shamir';
+const DOMAIN_GENERATOR_H = 'Wordpool/zkp/v1/generator-h';
+const DOMAIN_TICKET_SCALAR = 'Wordpool/zkp/v1/ticket-scalar';
+const DOMAIN_SECRET_SCALAR = 'Wordpool/zkp/v1/secret-scalar';
+const DOMAIN_NULLIFIER_BASE = 'Wordpool/zkp/v1/nullifier-base';
+const DOMAIN_MERKLE_LEAF = 'Wordpool/zkp/v1/merkle-leaf';
+const DOMAIN_MERKLE_NODE = 'Wordpool/zkp/v1/merkle-node';
+const DOMAIN_TRANSCRIPT = 'Wordpool/zkp/v1/fiat-shamir';
 
 /** Wire-format version of the proof encoding. */
 export const PROOF_VERSION = 0x01;

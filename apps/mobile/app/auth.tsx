@@ -53,7 +53,7 @@ export default function AuthScreen() {
     // Simulate API request
     setTimeout(() => {
       setLoading(false);
-      login(email, 'Jane Doe', 'GDAGORA12345678901234567890123456789012345678901234567890XLM');
+      login(email, 'Jane Doe', 'GDWordpool12345678901234567890123456789012345678901234567890XLM');
       // RootLayout will automatically redirect to discover tab due to the useEffect listener
     }, 1000);
   };
@@ -63,7 +63,7 @@ export default function AuthScreen() {
     setTimeout(() => {
       setLoading(false);
       login(
-        `${platform.toLowerCase()}user@agora.events`,
+        `${platform.toLowerCase()}user@Wordpool.events`,
         `${platform} User`,
         `GDSOCIAL${platform.toUpperCase()}12345678901234567890XLM`
       );
@@ -79,7 +79,7 @@ export default function AuthScreen() {
         >
           <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
             <View style={styles.headerContainer} accessible={true} accessibilityRole="header">
-              <Text style={styles.logoText}>AGORA</Text>
+              <Text style={styles.logoText}>Wordpool</Text>
               <Text style={styles.subtitleText}>Decentralized Event Ticketing</Text>
             </View>
 

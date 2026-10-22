@@ -7,7 +7,7 @@ body:
     id: area
     attributes:
       label: Area
-      description: What part of Agora does this issue relate to?
+      description: What part of Wordpool does this issue relate to?
       options:
         - frontend
         - backend

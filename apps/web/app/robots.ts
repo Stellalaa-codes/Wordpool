@@ -9,7 +9,7 @@ import { MetadataRoute } from "next";
  * The base URL matches `metadataBase` in `app/layout.tsx` so the advertised
  * sitemap and the canonical URLs point at the same origin.
  */
-const BASE_URL = "https://agora.events";
+const BASE_URL = "https://Wordpool.events";
 
 /**
  * Routes that must not be indexed.

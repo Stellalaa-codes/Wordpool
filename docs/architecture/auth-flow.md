@@ -1,6 +1,6 @@
 # Authentication Flows
 
-This document outlines the three primary authentication flows used in the Agora application.
+This document outlines the three primary authentication flows used in the Wordpool application.
 
 ## 1. Email / JWT Flow
 Standard email and password authentication resulting in a stateless JWT cookie.

@@ -1,6 +1,6 @@
-//! # Agora Server Main Entry Point
+//! # Wordpool Server Main Entry Point
 //!
-//! This module contains the main entry point for the Agora events platform server.
+//! This module contains the main entry point for the Wordpool events platform server.
 //! It initializes and configures all necessary services including:
 //! - Database connectivity and migrations
 //! - HTTP server with routing
@@ -24,10 +24,10 @@ use tokio::net::TcpListener;
 use tokio::signal::unix::{signal, SignalKind};
 use tokio_util::sync::CancellationToken;
 
-use agora_server::cache::RedisCache;
-use agora_server::config::request_id::REQUEST_ID_HEADER;
-use agora_server::config::Config;
-use agora_server::utils::logging::init_logging;
+use Wordpool_server::cache::RedisCache;
+use Wordpool_server::config::request_id::REQUEST_ID_HEADER;
+use Wordpool_server::config::Config;
+use Wordpool_server::utils::logging::init_logging;
 
 /// Main application entry point.
 ///
@@ -40,7 +40,7 @@ use agora_server::utils::logging::init_logging;
 /// 6. Starting the HTTP server with configured routes
 #[tokio::main]
 async fn main() {
-    agora_server::handlers::health::init_start_time();
+    Wordpool_server::handlers::health::init_start_time();
     dotenv().ok();
     init_logging();
 
@@ -94,8 +94,8 @@ async fn main() {
 
     // Validate categories match contract (Issue #1076)
     let categories_synced =
-        agora_server::handlers::categories::validate_categories_match_contract(&pool).await;
-    agora_server::handlers::health::set_category_sync_status(categories_synced);
+        Wordpool_server::handlers::categories::validate_categories_match_contract(&pool).await;
+    Wordpool_server::handlers::health::set_category_sync_status(categories_synced);
     if !categories_synced {
         tracing::error!("Category sync validation failed - database categories do not match contract canonical list");
     }
@@ -118,7 +118,7 @@ async fn main() {
     let shutdown = CancellationToken::new();
 
     let app: Router =
-        agora_server::routes::create_routes(pool.clone(), config.clone(), redis.clone(), shutdown.clone()).await;
+        Wordpool_server::routes::create_routes(pool.clone(), config.clone(), redis.clone(), shutdown.clone()).await;
     let addr = SocketAddr::from(([0, 0, 0, 0], config.port));
     tracing::info!("🚀 Server running at http://localhost:{}", config.port);
     tracing::info!("Request IDs will be set via '{REQUEST_ID_HEADER}' header");

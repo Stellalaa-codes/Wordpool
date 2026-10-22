@@ -1,6 +1,6 @@
 #![no_std]
 #![warn(missing_docs)]
-//! Pro Subscription smart contract for the Agora platform.
+//! Pro Subscription smart contract for the Wordpool platform.
 //!
 //! This contract manages organizer Pro subscriptions, including subscription
 //! creation, renewal, cancellation, and admin controls.

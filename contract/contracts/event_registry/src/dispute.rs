@@ -57,7 +57,7 @@ pub fn open_dispute(
     storage::store_dispute(env, &dispute);
 
     env.events().publish(
-        (crate::events::AgoraEvent::DisputeOpened,),
+        (crate::events::WordpoolEvent::DisputeOpened,),
         crate::events::DisputeOpenedEvent {
             event_id,
             opened_by,
@@ -119,7 +119,7 @@ pub fn vote_on_dispute(
     storage::store_dispute(env, &dispute);
 
     env.events().publish(
-        (crate::events::AgoraEvent::DisputeVoted,),
+        (crate::events::WordpoolEvent::DisputeVoted,),
         crate::events::DisputeVotedEvent {
             event_id,
             voter,
@@ -165,7 +165,7 @@ pub fn resolve_dispute(env: &Env, event_id: String) -> Result<DisputeStatus, Eve
     storage::store_dispute(env, &dispute);
 
     env.events().publish(
-        (crate::events::AgoraEvent::DisputeResolved,),
+        (crate::events::WordpoolEvent::DisputeResolved,),
         crate::events::DisputeResolvedEvent {
             event_id,
             status: dispute.status.clone(),

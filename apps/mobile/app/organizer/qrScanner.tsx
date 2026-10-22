@@ -94,7 +94,7 @@ export default function QrScannerScreen() {
     async (raw: string) => {
       const parsed = parseScannedQr(raw);
       if (!parsed) {
-        await resolveScan('invalid', 'This QR code is not a valid Agora ticket.');
+        await resolveScan('invalid', 'This QR code is not a valid Wordpool ticket.');
         return;
       }
 
@@ -155,7 +155,7 @@ export default function QrScannerScreen() {
       <SafeAreaView style={styles.container}>
         <Text style={styles.title} accessibilityRole="header">Camera access needed</Text>
         <Text style={styles.subtitle}>
-          Agora needs camera access to scan attendee ticket QR codes at the gate.
+          Wordpool needs camera access to scan attendee ticket QR codes at the gate.
         </Text>
         <Button
           title="Grant Camera Access"

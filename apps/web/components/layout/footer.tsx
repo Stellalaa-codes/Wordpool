@@ -42,8 +42,8 @@ export function Footer() {
         {/* Left Column: Branding & Copyright */}
         <div className="flex flex-col gap-6">
           <Image
-            src="/logo/agora logo footer.svg"
-            alt="Agora Logo"
+            src="/logo/Wordpool logo footer.svg"
+            alt="Wordpool Logo"
             width={180}
             height={54}
             className="w-auto h-12"
@@ -94,7 +94,7 @@ export function Footer() {
           <div className="flex flex-col gap-3">
             {/* Instagram */}
             <a
-              href="https://instagram.com/agora"
+              href="https://instagram.com/Wordpool"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Instagram"
@@ -112,7 +112,7 @@ export function Footer() {
 
             {/* X (Twitter) */}
             <a
-              href="https://x.com/agora"
+              href="https://x.com/Wordpool"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Twitter"
@@ -128,9 +128,9 @@ export function Footer() {
               <span className="text-sm">{t("x")}</span>
             </a>
 
-            {/* Mail: Integrated hello@agora.com */}
+            {/* Mail: Integrated hello@Wordpool.com */}
             <a
-              href="mailto:hello@agora.com"
+              href="mailto:hello@Wordpool.com"
               aria-label="Contact us via email"
               className="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-1.5 -ml-3 rounded-md transition-all duration-200 flex items-center gap-2 group focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
@@ -191,7 +191,7 @@ export function Footer() {
       {/* Copyright Line: Added in Issue #1399 */}
       <div className="w-full max-w-[1240px] mx-auto px-4 relative z-10 mt-12">
         <p className="text-gray-400 text-sm text-center md:text-left">
-          Â© {new Date().getFullYear()} Agora. All rights reserved.
+          Â© {new Date().getFullYear()} Wordpool. All rights reserved.
         </p>
       </div>
     </footer>

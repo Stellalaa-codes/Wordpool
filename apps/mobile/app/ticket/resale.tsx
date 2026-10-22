@@ -454,7 +454,7 @@ export default function TicketResaleScreen() {
           <Text style={styles.helpText}>
             The buyer pays and receives ownership in a single on-chain transaction. Sending
             the key is the last step — it is encrypted to that buyer alone and nobody in
-            between, including Agora, can read it.
+            between, including Wordpool, can read it.
           </Text>
         </View>
       )}

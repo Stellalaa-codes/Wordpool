@@ -12,7 +12,7 @@ The following environment variables must be configured in your environment or `.
 - `JWT_SECRET`: Secret key used for signing JSON Web Tokens.
 - `NEXT_PUBLIC_POSTHOG_KEY`: Public key for PostHog analytics tracking.
 - `NEXT_PUBLIC_POSTHOG_HOST`: Host URL for the PostHog instance.
-- `NEXT_PUBLIC_SITE_URL`: The base URL of the deployed application (e.g., https://agora-web-eta.vercel.app).
+- `NEXT_PUBLIC_SITE_URL`: The base URL of the deployed application (e.g., https://Wordpool-web-eta.vercel.app).
 - `STELLAR_CONTRACT_ADDRESS`: Address of the deployed Stellar smart contract.
 - `NEXT_PUBLIC_TICKET_PAYMENT_CONTRACT_ID`: Public ticket-payment contract ID required for client-signed resale purchases.
 - `STELLAR_SOURCE_SECRET`: Secret key for the Stellar source account.

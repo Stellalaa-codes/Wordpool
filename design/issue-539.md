@@ -1,7 +1,7 @@
-# [Design] Agora Help Center: UI/UX Design #539
+# [Design] Wordpool Help Center: UI/UX Design #539
 
 ## Summary
-Users need a self-serve help center to understand how to use Agora — from buying tickets to creating events and managing their account. This design covers the full design of the Help Center experience, including the landing page, topic navigation, and popular articles.
+Users need a self-serve help center to understand how to use Wordpool — from buying tickets to creating events and managing their account. This design covers the full design of the Help Center experience, including the landing page, topic navigation, and popular articles.
 
 ### Key Requirements
 - **Help Center Landing Page (/help)**:
@@ -25,8 +25,8 @@ Users need a self-serve help center to understand how to use Agora — from buyi
 - Designs cover all pages and user flows.
 - Full responsive support for desktop and mobile breakpoints.
 - All interactive states (hover, focus, active, empty, error) are designed.
-- Consistent with Agora's visual system (typography, color variables, spacing).
+- Consistent with Wordpool's visual system (typography, color variables, spacing).
 - Figma frames are organized by page with component annotations and a handoff-ready layout.
 
 ## Figma Design Link
-[Agora Help Center - Figma Design](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1)
+[Wordpool Help Center - Figma Design](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1)

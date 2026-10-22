@@ -1,4 +1,4 @@
-# Agora Architecture
+# Wordpool Architecture
 
 > High-level system architecture and monorepo guide for developers.
 
@@ -24,7 +24,7 @@
 
 ## Overview
 
-Agora is an event and ticketing platform built on the **Stellar blockchain**. It enables organizers to create events, sell tickets, and manage attendees with **0% platform fees** on Pro plan, powered by fast, low-cost borderless payments using USDC.
+Wordpool is an event and ticketing platform built on the **Stellar blockchain**. It enables organizers to create events, sell tickets, and manage attendees with **0% platform fees** on Pro plan, powered by fast, low-cost borderless payments using USDC.
 
 The platform consists of three interconnected pillars:
 
@@ -57,7 +57,7 @@ graph TB
 ## Monorepo Structure
 
 ```
-agora/
+Wordpool/
 ├── apps/web/              # Next.js frontend application
 ├── server/                # Rust/Axum REST API backend
 ├── contract/              # Soroban smart contracts
@@ -411,7 +411,7 @@ erDiagram
 
 ## On-Chain vs Off-Chain
 
-Understanding the distinction between on-chain and off-chain data is crucial for contributing to Agora.
+Understanding the distinction between on-chain and off-chain data is crucial for contributing to Wordpool.
 
 ```mermaid
 flowchart TD
@@ -546,8 +546,8 @@ flowchart TD
 
 ```bash
 # Clone the repository
-git clone https://github.com/Agora-Events/agora.git
-cd agora
+git clone https://github.com/Wordpool-Events/Wordpool.git
+cd Wordpool
 
 # Install dependencies
 pnpm install
@@ -559,7 +559,7 @@ pnpm dev
 ### Repository Structure
 
 ```
-agora/
+Wordpool/
 ├── apps/web/                # Frontend (Next.js)
 │   ├── src/app/            # App router pages
 │   ├── src/components/     # React components
@@ -580,7 +580,7 @@ agora/
 
 ### Key Resources
 
-- [Figma Design File](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event)
+- [Figma Design File](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event)
 - [Frontend Guidelines](apps/web/README.md)
 - [Smart Contract Docs](contract/README.md)
 - [Development Setup](DEPLOYMENT_SETUP.md)

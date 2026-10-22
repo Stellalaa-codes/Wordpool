@@ -1,8 +1,8 @@
-https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=821-2193&t=iDIJUBtGHnMs5zvg-4
+https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=821-2193&t=iDIJUBtGHnMs5zvg-4
 
-# Agora: Organizers Feature - Design Specifications (Filled State)
+# Wordpool: Organizers Feature - Design Specifications (Filled State)
 
-This document provides a detailed technical breakdown of the "Organizers" feature for the Agora platform, focusing on the filled state based on issue #248.
+This document provides a detailed technical breakdown of the "Organizers" feature for the Wordpool platform, focusing on the filled state based on issue #248.
 
 ## 1. Organizers Main Screen (Filled State)
 The main screen is divided into two primary sections: "My Organizer profile" and "Subscribed Organizers".
@@ -27,4 +27,4 @@ The main screen is divided into two primary sections: "My Organizer profile" and
 *   **Typography**: Clean sans-serif (Bold headers, Medium labels).
 *   **Color Palette**: Yellow accent (`#FFD900`), Deep Black (`#000000`), and vibrant rainbow gradients for headers.
 *   **Shadows**: Subtle but consistent dark drop-shadows on all interactive cards.
-*   **Footer**: Standard dark Agora footer remains consistent across all views.
+*   **Footer**: Standard dark Wordpool footer remains consistent across all views.

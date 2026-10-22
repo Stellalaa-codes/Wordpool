@@ -1,6 +1,6 @@
 {
   "footer": {
-    "copyright": "© 2026 agora. All rights reserved.",
+    "copyright": "© 2026 Wordpool. All rights reserved.",
     "discoverEvents": "Discover Events",
     "pricing": "Pricing",
     "stellarEcosystem": "Stellar Ecosystem",
@@ -53,9 +53,9 @@
     "eventNotFound": "Event not found",
     "register": "Register",
     "getTickets": "Get Tickets",
-    "securedSpot": "Secure your spot on Agora",
+    "securedSpot": "Secure your spot on Wordpool",
     "freeEntry": "Free entry",
-    "joinUs": "Join us for {title} on {date} in {location}. {priceNote} Secure your spot on Agora.",
+    "joinUs": "Join us for {title} on {date} in {location}. {priceNote} Secure your spot on Wordpool.",
     "ticketsFrom": "Tickets from ${price}.",
     "hostedBy": "Hosted By",
     "aboutEvent": "About Event",

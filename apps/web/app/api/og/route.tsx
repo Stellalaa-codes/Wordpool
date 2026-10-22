@@ -2,7 +2,7 @@ import { ImageResponse } from "@vercel/og";
 
 export const runtime = "edge";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://agora.events";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://Wordpool.events";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
 
 async function fetchEvent(eventId: string) {
@@ -27,8 +27,8 @@ export async function GET(req: Request) {
   }
 
   // Fallback defaults
-  const title = event?.title ?? "Agora Event";
-  const host = event?.organizerName ?? event?.organizer?.name ?? "Agora";
+  const title = event?.title ?? "Wordpool Event";
+  const host = event?.organizerName ?? event?.organizer?.name ?? "Wordpool";
   const date = event?.date ?? "TBA";
   const location = event?.location ?? "Online";
   const cover = event?.imageUrl ? (event.imageUrl.startsWith("http") ? event.imageUrl : `${SITE_URL}${event.imageUrl}`) : `${SITE_URL}/og-fallback.jpg`;
@@ -52,7 +52,7 @@ export async function GET(req: Request) {
           </div>
           <div style={{ padding: 48, width: "55%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
-              <div style={{ background: "#FFE34D", display: "inline-block", padding: "6px 12px", fontWeight: 700, borderRadius: 4 }}>Agora</div>
+              <div style={{ background: "#FFE34D", display: "inline-block", padding: "6px 12px", fontWeight: 700, borderRadius: 4 }}>Wordpool</div>
               <h1 style={{ fontSize: 56, marginTop: 24, marginBottom: 12, lineHeight: 1.02, color: "#000", fontWeight: 800 }}>{title}</h1>
               <p style={{ fontSize: 22, color: "#111", margin: 0 }}>{host} • {date}</p>
             </div>
@@ -62,7 +62,7 @@ export async function GET(req: Request) {
                 <div style={{ width: 44, height: 44, borderRadius: 8, background: "#000" }} />
                 <div style={{ fontSize: 20, fontWeight: 700 }}>{location}</div>
               </div>
-              <div style={{ fontSize: 16, color: "#333" }}>agora.events</div>
+              <div style={{ fontSize: 16, color: "#333" }}>Wordpool.events</div>
             </div>
           </div>
         </div>

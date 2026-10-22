@@ -6,13 +6,13 @@ This document provides a reference for all environment variables used in the fro
 |---------------|-------------|-------------------|---------------|-----------------|
 | `BACKEND_URL` | The base URL for the backend API. | Optional | `http://localhost:3001` | Developer setup or deployment environment |
 | `PINATA_JWT` | Server-side bearer token used to pin event cover images to IPFS. | Required for image uploads | `eyJ...` | Pinata dashboard > API Keys |
-| `DATABASE_URL` | Database connection string for Prisma. | Required | `postgresql://user:password@localhost:5432/agora` | Database provider (e.g., Supabase, Heroku, local Postgres) |
+| `DATABASE_URL` | Database connection string for Prisma. | Required | `postgresql://user:password@localhost:5432/Wordpool` | Database provider (e.g., Supabase, Heroku, local Postgres) |
 | `NODE_ENV` | Defines the environment the application is running in (development, production, test). | Optional | `development` | Automatically set by framework or deployment platform |
 | `JWT_SECRET` | Secret key used to sign JSON Web Tokens. | Optional | `super_secret_string` | Generated securely by developer |
 | `GOOGLE_CLIENT_ID` | Client ID for Google OAuth. | Optional | `123456789-abc.apps.googleusercontent.com` | Google Cloud Console > Credentials |
 | `GOOGLE_CLIENT_SECRET` | Client Secret for Google OAuth. | Optional | `GOCSPX-abcdefg123456` | Google Cloud Console > Credentials |
 | `GOOGLE_REDIRECT_URI` | Redirect URI for Google OAuth callback. | Optional | `http://localhost:3000/api/auth/google` | Google Cloud Console > Credentials |
-| `APPLE_CLIENT_ID` | Client ID for Apple OAuth. | Optional | `com.example.agora.web` | Apple Developer Portal > Identifiers |
+| `APPLE_CLIENT_ID` | Client ID for Apple OAuth. | Optional | `com.example.Wordpool.web` | Apple Developer Portal > Identifiers |
 | `APPLE_CLIENT_SECRET` | Client Secret for Apple OAuth. | Optional | `secret_string` | Apple Developer Portal |
 | `APPLE_REDIRECT_URI` | Redirect URI for Apple OAuth callback. | Optional | `http://localhost:3000/api/auth/apple` | Apple Developer Portal |
 | `STELLAR_CONTRACT_ADDRESS` | The address of the deployed Stellar smart contract. | Optional | `CA...XYZ` | Provided after deploying the Stellar contract |

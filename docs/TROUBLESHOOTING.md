@@ -1,6 +1,6 @@
 # Troubleshooting & FAQ
 
-This guide collects the most common setup problems contributors hit while working on Agora. Start with the quick fixes below, then use the issue search tips at the end of the file if your error still shows up.
+This guide collects the most common setup problems contributors hit while working on Wordpool. Start with the quick fixes below, then use the issue search tips at the end of the file if your error still shows up.
 
 ## Quick Fixes
 
@@ -51,7 +51,7 @@ Then verify the defaults from [`server/CONTRIBUTING.md`](server/CONTRIBUTING.md)
 - Port: `5432`
 - User: `user`
 - Password: `password`
-- Database: `agora`
+- Database: `Wordpool`
 
 If you changed `.env` values, restart Docker and the backend after updating them.
 

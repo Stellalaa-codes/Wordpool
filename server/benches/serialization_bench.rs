@@ -3,7 +3,7 @@
 //! Measures the cost of the JSON/XDR encode-decode paths that sit on the hot
 //! path of every request: WebSocket telemetry frames, cursor-paginated list
 //! responses, and Soroban contract-event decoding in the re-org resilient
-//! indexer (`agora_server::services::indexer`, `agora_server::models::indexer_event`).
+//! indexer (`Wordpool_server::services::indexer`, `Wordpool_server::models::indexer_event`).
 //!
 //! None of these benchmarks touch the network or the database — they isolate
 //! CPU-bound (de)serialization cost so a regression here can't be masked by
@@ -13,12 +13,12 @@
 //! cargo bench --bench serialization_bench
 //! ```
 
-use agora_server::handlers::ws::{
+use Wordpool_server::handlers::ws::{
     GateHeatmapEvent, GateMetrics, OrganizerEvent, PurchaseEvent, ScanVelocityEvent,
 };
-use agora_server::models::blockchain_checkpoint::BlockchainCheckpoint;
-use agora_server::models::indexer_event::{scval_to_json, IndexedEvent};
-use agora_server::utils::cursor_pagination::{encode_cursor, decode_cursor, CursorResponse, EventCursor, ValidatedCursorParams};
+use Wordpool_server::models::blockchain_checkpoint::BlockchainCheckpoint;
+use Wordpool_server::models::indexer_event::{scval_to_json, IndexedEvent};
+use Wordpool_server::utils::cursor_pagination::{encode_cursor, decode_cursor, CursorResponse, EventCursor, ValidatedCursorParams};
 use chrono::Utc;
 use criterion::{black_box, criterion_group, criterion_main, BenchmarkId, Criterion, Throughput};
 use serde_json::json;

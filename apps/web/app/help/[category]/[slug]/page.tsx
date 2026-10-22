@@ -19,13 +19,13 @@ export async function generateMetadata({
 
   if (!article) {
     return {
-      title: "Article Not Found | Agora Help Center",
+      title: "Article Not Found | Wordpool Help Center",
     };
   }
 
-  const title = `${article.title} | Help Center - Agora`;
+  const title = `${article.title} | Help Center - Wordpool`;
   const description = article.summary || article.content.slice(0, 160).replace(/[#*`]/g, "").trim();
-  const canonicalUrl = `https://agora.events/help/${category}/${slug}`;
+  const canonicalUrl = `https://Wordpool.events/help/${category}/${slug}`;
 
   return {
     title,
@@ -38,7 +38,7 @@ export async function generateMetadata({
       description,
       url: canonicalUrl,
       type: "article",
-      siteName: "Agora Events",
+      siteName: "Wordpool Events",
     },
     twitter: {
       card: "summary_large_image",

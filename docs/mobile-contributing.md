@@ -1,12 +1,12 @@
 # Mobile Development Contributing Guide
 
-Welcome to the Agora Mobile contributing guide! This guide covers everything you need to know to set up your local development environment, run the mobile app using Expo, connect to the backend server, and execute tests.
+Welcome to the Wordpool Mobile contributing guide! This guide covers everything you need to know to set up your local development environment, run the mobile app using Expo, connect to the backend server, and execute tests.
 
 ---
 
 ## 1. Overview & Architecture
 
-The Agora mobile app is built with:
+The Wordpool mobile app is built with:
 - **Framework:** React Native with [Expo](https://expo.dev/) (managed workflow)
 - **Routing:** [Expo Router](https://docs.expo.dev/router/introduction/) (file-based routing located in `apps/mobile/app/`)
 - **Language:** TypeScript
@@ -32,8 +32,8 @@ Before getting started, make sure you have installed:
 
 1. **Clone the repository and install root dependencies:**
    ```bash
-   git clone https://github.com/Agora-Events/agora.git
-   cd agora
+   git clone https://github.com/Wordpool-Events/Wordpool.git
+   cd Wordpool
    pnpm install
    ```
 
@@ -57,7 +57,7 @@ Before getting started, make sure you have installed:
 
 ## 4. Connecting to the Local Backend Server
 
-The mobile app communicates with the Agora backend server. When running locally, configure `EXPO_PUBLIC_API_URL` based on your platform:
+The mobile app communicates with the Wordpool backend server. When running locally, configure `EXPO_PUBLIC_API_URL` based on your platform:
 
 | Target Platform | `EXPO_PUBLIC_API_URL` Value | Notes |
 |---|---|---|
@@ -173,4 +173,4 @@ pnpm start -- --port 8082
    pnpm test
    ```
 3. Commit with concise, descriptive commit messages following the Conventional Commits specification.
-4. Open a pull request against `Agora-Events/agora`.
+4. Open a pull request against `Wordpool-Events/Wordpool`.

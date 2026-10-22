@@ -1,6 +1,6 @@
 Overview
 
-Designed the User Profile Page following Agora’s existing design system, typography, spacing, and reusable components.
+Designed the User Profile Page following Wordpool’s existing design system, typography, spacing, and reusable components.
 
 This submission includes full desktop designs and clearly defined responsive behavior for implementation.
 
@@ -21,7 +21,7 @@ Attended Events count
 
 Social links (Twitter/X, LinkedIn, Instagram if available)
 
-Clear visual hierarchy and consistent spacing with the current Agora style.
+Clear visual hierarchy and consistent spacing with the current Wordpool style.
 
 States Designed
 1️⃣ Empty State
@@ -65,7 +65,7 @@ Tablet: 2-column grid
 
 Desktop: centered container with grid layout
 
-Follows Agora’s existing breakpoint system.
+Follows Wordpool’s existing breakpoint system.
 
 Design System Compliance
 
@@ -79,6 +79,6 @@ Organized Figma file for clean handoff
 
 Figma Link
 
-👉 https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Agora-Profile-Page?node-id=0-1&t=uFO22ORvuFcXBCvh-1
+👉 https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Wordpool-Profile-Page?node-id=0-1&t=uFO22ORvuFcXBCvh-1
 
 If you'd like, I can make it even tighter (like a GitHub comment-sized version).

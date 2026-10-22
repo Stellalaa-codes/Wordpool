@@ -1,5 +1,5 @@
 -- ============================================================
--- Agora: Recommended Events Query
+-- Wordpool: Recommended Events Query
 -- Strategy: Content-based filtering via category_id overlap
 --           from the user's 3 most recent ticket purchases.
 -- ============================================================

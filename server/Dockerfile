@@ -10,4 +10,4 @@ COPY . .
 WORKDIR /app/server
 EXPOSE 3001
 
-CMD ["cargo", "run", "--bin", "agora-server"]
+CMD ["cargo", "run", "--bin", "Wordpool-server"]

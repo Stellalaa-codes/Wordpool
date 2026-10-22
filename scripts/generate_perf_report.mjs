@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // ==============================================================================
-// Agora Performance Regression Report Generator (Issue #1178)
+// Wordpool Performance Regression Report Generator (Issue #1178)
 // ==============================================================================
 // Reads criterion's per-benchmark `estimates.json` files and a k6
 // `--summary-export` JSON file, and produces a single Markdown regression
@@ -176,13 +176,13 @@ function loadK6Summary(k6SummaryPath) {
     rps,
     totalRequests,
     perPhase: {
-      browse: extractTrend(metrics, 'agora_browse_duration'),
-      queue: extractTrend(metrics, 'agora_queue_duration'),
-      checkout: extractTrend(metrics, 'agora_checkout_duration'),
-      scan: extractTrend(metrics, 'agora_scan_duration'),
-      powSolve: extractTrend(metrics, 'agora_pow_solve_duration'),
+      browse: extractTrend(metrics, 'Wordpool_browse_duration'),
+      queue: extractTrend(metrics, 'Wordpool_queue_duration'),
+      checkout: extractTrend(metrics, 'Wordpool_checkout_duration'),
+      scan: extractTrend(metrics, 'Wordpool_scan_duration'),
+      powSolve: extractTrend(metrics, 'Wordpool_pow_solve_duration'),
     },
-    funnelErrorRate: pick('agora_funnel_error_rate', 'rate'),
+    funnelErrorRate: pick('Wordpool_funnel_error_rate', 'rate'),
   };
 }
 

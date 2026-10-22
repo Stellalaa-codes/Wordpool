@@ -1,5 +1,5 @@
 /**
- * Agora brand guide colors
+ * Wordpool brand guide colors
  */
 export const Colors = {
   primaryYellow: '#FDDA23',

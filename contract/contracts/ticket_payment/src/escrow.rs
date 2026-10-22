@@ -107,7 +107,7 @@ pub fn release_escrow_milestone(
 
     #[allow(deprecated)]
     env.events().publish(
-        (crate::events::AgoraEvent::MilestoneReleased,),
+        (crate::events::WordpoolEvent::MilestoneReleased,),
         crate::events::MilestoneReleasedEvent {
             event_id,
             milestone_index: escrow_state.milestones_reached,

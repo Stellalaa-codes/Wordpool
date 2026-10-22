@@ -5,10 +5,10 @@ export function InfoSection() {
   return (
     <section className="w-full bg-ink pt-[60px] md:pt-[102px] pb-24 text-white select-none overflow-hidden">
       <div className="w-full max-w-[1240px] mx-auto px-4 flex flex-col items-center">
-        {/* --- HOW AGORA WORKS --- */}
+        {/* --- HOW Wordpool WORKS --- */}
 
         <div className="bg-white text-black px-6 py-2 rounded-full italic text-sm mb-12">
-          How agora works
+          How Wordpool works
         </div>
 
         <div className="flex flex-wrap justify-center items-start gap-6 mb-16">
@@ -58,7 +58,7 @@ export function InfoSection() {
         <div className="flex flex-col items-center w-full">
           {/* Centered Pill */}
           <div className="bg-white text-black px-4 py-1.5 rounded-full italic text-sm mb-12">
-            What is agora about ?
+            What is Wordpool about ?
           </div>
 
           <div className="w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-30">
@@ -84,7 +84,7 @@ export function InfoSection() {
               {/* Paragraph */}
               <div className="text-[16px] md:text-[20px] leading-[26px] md:leading-[30px] font-normal font-sans text-white space-y-6 text-center lg:text-left">
                 <p>
-                  Agora is an event and ticketing platform built for organizers,
+                  Wordpool is an event and ticketing platform built for organizers,
                   creators, and communities to create events, sell tickets, and
                   manage attendees with ease.
                 </p>
@@ -95,11 +95,11 @@ export function InfoSection() {
                   connected beyond a single event.
                 </p>
                 <p>
-                  Built on Stellar, Agora enables fast, low-cost, borderless
+                  Built on Stellar, Wordpool enables fast, low-cost, borderless
                   payments using USDC, enabling fast, reliable payouts for
                   organizers.
                 </p>
-                <p>Agora is where events grow into communities.</p>
+                <p>Wordpool is where events grow into communities.</p>
               </div>
             </div>
           </div>

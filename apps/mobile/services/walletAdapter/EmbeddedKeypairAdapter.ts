@@ -2,11 +2,11 @@ import * as SecureStore from 'expo-secure-store';
 import { Keypair, TransactionBuilder, Networks } from '@stellar/stellar-sdk';
 import { MobileWalletAdapter, SignTransactionOptions, WalletType } from './types';
 
-const SECURE_STORE_KEY = 'agora_embedded_stellar_secret';
+const SECURE_STORE_KEY = 'Wordpool_embedded_stellar_secret';
 
 export class EmbeddedKeypairAdapter implements MobileWalletAdapter {
   id: WalletType = 'embedded';
-  name = 'Agora Embedded Keypair';
+  name = 'Wordpool Embedded Keypair';
   icon = 'key-outline';
   description = 'Local non-custodial encrypted keypair for instant onboarding';
 

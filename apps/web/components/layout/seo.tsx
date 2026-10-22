@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const BASE_URL = "https://agora.events";
+const BASE_URL = "https://Wordpool.events";
 const DEFAULT_IMAGE = "/og-image.png";
 
 interface SEOProps {

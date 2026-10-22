@@ -41,12 +41,12 @@ export function FAQSection() {
           {/* Right Content - Accordion */}
           <div className="w-full lg:w-2/2 flex flex-col gap-4">
             <FAQItem
-              question="How do I create an event on Agora?"
+              question="How do I create an event on Wordpool?"
               answer="Simply click the 'Create Event' button, fill in your event details, set your ticket prices (or make it free), and publish. Your event page will be live instantly."
             />
             <FAQItem
               question="What are the fees for paid events?"
-              answer="For free events, Agora is completely free. For paid events, we charge a small service fee. If you are on the Pro plan, there is a 0% platform fee."
+              answer="For free events, Wordpool is completely free. For paid events, we charge a small service fee. If you are on the Pro plan, there is a 0% platform fee."
             />
             <FAQItem
               question="How do I get paid?"

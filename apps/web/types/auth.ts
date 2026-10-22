@@ -1,7 +1,7 @@
 /**
  * Shared authentication types.
  *
- * Agora uses a custom JWT stored in an HttpOnly `auth_token` cookie (see
+ * Wordpool uses a custom JWT stored in an HttpOnly `auth_token` cookie (see
  * `lib/auth.ts`), so the browser cannot read the session directly. Client code
  * reads it through `GET /api/auth/session`, which returns the shape below.
  */

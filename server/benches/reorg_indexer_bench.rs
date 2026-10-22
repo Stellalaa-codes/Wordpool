@@ -14,9 +14,9 @@
 //! DATABASE_URL=postgres://... cargo bench --bench reorg_indexer_bench  # full suite
 //! ```
 
-use agora_server::models::indexer_event::{decode_topic_symbol, event_kind_for_topic, IndexedEvent};
-use agora_server::models::blockchain_checkpoint::CheckpointStore;
-use agora_server::services::indexer::{backoff_with_jitter, buffer_insert, RpcNodePool};
+use Wordpool_server::models::indexer_event::{decode_topic_symbol, event_kind_for_topic, IndexedEvent};
+use Wordpool_server::models::blockchain_checkpoint::CheckpointStore;
+use Wordpool_server::services::indexer::{backoff_with_jitter, buffer_insert, RpcNodePool};
 use criterion::{black_box, BenchmarkId, Criterion};
 use serde_json::json;
 use sqlx::PgPool;

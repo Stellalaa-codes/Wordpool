@@ -1,6 +1,6 @@
-# Agora Backend Server
+# Wordpool Backend Server
 
-This directory contains the Rust backend for Agora Events. The server exposes a versioned HTTP API with Axum, persists data in PostgreSQL through SQLx, and uses Redis for cache-backed features.
+This directory contains the Rust backend for Wordpool Events. The server exposes a versioned HTTP API with Axum, persists data in PostgreSQL through SQLx, and uses Redis for cache-backed features.
 
 ## Tech Stack
 
@@ -45,7 +45,7 @@ Required variables:
 | **Server / General** | `RUST_ENV` | No | `development` | The application environment. | `production` |
 | | `PORT` | Yes | - | The port the server binds to. | `8080` |
 | | `RUST_LOG` | No | `info` | The logging level. | `debug` |
-| | `BASE_URL` | No | `https://agora.events` | The base URL of the API. | `http://localhost:8080` |
+| | `BASE_URL` | No | `https://Wordpool.events` | The base URL of the API. | `http://localhost:8080` |
 | **Database** | `DATABASE_URL` **[SECRET]** | Yes | - | PostgreSQL connection string. | `postgres://user:pass@localhost/db` |
 | | `SLOW_QUERY_THRESHOLD_MS` | Yes | - | Execution time threshold for logging slow DB queries. | `500` |
 | | `DB_MAX_CONNECTIONS` | No | `10` | Maximum connections in the PostgreSQL pool. | `25` |
@@ -53,7 +53,7 @@ Required variables:
 | | `DB_ACQUIRE_TIMEOUT_SECS` | No | `10` | Seconds to wait for an available connection before failing. | `30` |
 | | `DB_IDLE_TIMEOUT_SECS` | No | `600` | Seconds before an idle connection is closed. | `300` |
 | **Redis** | `REDIS_URL` | No | `redis://127.0.0.1:6379` | Redis connection string. | `redis://127.0.0.1:6379` |
-| **CORS** | `CORS_ALLOWED_ORIGINS` | No | (Code default) | Comma-separated list of allowed CORS origins. | `https://agora.events` |
+| **CORS** | `CORS_ALLOWED_ORIGINS` | No | (Code default) | Comma-separated list of allowed CORS origins. | `https://Wordpool.events` |
 | **Security & Auth** | `JWT_SECRET` **[SECRET]** | No | `""` | Secret key used for signing JWTs. | `super_secret_string` |
 | | `MONITORING_TOKEN` **[SECRET]** | No | `None` | Token used for monitoring endpoints. | `monitor_secret_key` |
 | | `ADMIN_TOKEN` **[SECRET]** | No | `None` | Token used for administrative routes. | `admin_secret_key` |
@@ -72,12 +72,12 @@ Required variables:
 | | `INDEXER_WORKERS` | Yes | - | Number of concurrent worker threads for the indexer. | `4` |
 | | `RATES_PROVIDER_URL` | Yes | - | External provider URL for crypto/fiat exchange rates. | `https://api.coingecko.com...` |
 | **Notifications** | `EXPO_ACCESS_TOKEN` **[SECRET]** | Yes | - | Access token for Expo push notifications. | `ExponentPushToken[...]` |
-| **Storage (S3)** | `S3_BUCKET` | No | `""` | AWS S3 Bucket Name for asset uploads. | `agora-assets` |
+| **Storage (S3)** | `S3_BUCKET` | No | `""` | AWS S3 Bucket Name for asset uploads. | `Wordpool-assets` |
 | | `S3_REGION` | No | `auto` | AWS S3 Region. | `us-east-1` |
 | | `S3_ACCESS_KEY_ID` **[SECRET]** | No | `""` | Access Key ID for S3. | `AKIAIOSFODNN7EXAMPLE` |
 | | `S3_SECRET_ACCESS_KEY` **[SECRET]**| No | `""` | Secret Access Key for S3. | `wJalrXUtnFEMI/K7MDENG/b...` |
 | | `S3_ENDPOINT_URL` | No | `None` | Custom S3 endpoint URL (used for local/Minio storage). | `http://localhost:9000` |
-| | `S3_PUBLIC_URL` | No | `""` | Public CDN/URL prefix for accessing stored assets. | `https://cdn.agora.events` |
+| | `S3_PUBLIC_URL` | No | `""` | Public CDN/URL prefix for accessing stored assets. | `https://cdn.Wordpool.events` |
 | | `ALLOWED_UPLOAD_MIME_TYPES` | No* | - | Primary variable for allowed upload Mime types. | `image/jpeg,image/png` |
 | | `ALLOWED_MIME_TYPES` | Yes* | - | Fallback variable if `ALLOWED_UPLOAD_MIME_TYPES` is absent. | `image/jpeg,image/png` |
 
@@ -96,7 +96,7 @@ cp .env.example .env
 Confirm that `DATABASE_URL` points at your local PostgreSQL database:
 
 ```text
-DATABASE_URL=postgres://user:password@localhost:5432/agora
+DATABASE_URL=postgres://user:password@localhost:5432/Wordpool
 ```
 
 ### 2. Start PostgreSQL
@@ -111,7 +111,7 @@ This creates:
 
 - Host: `localhost`
 - Port: `5432`
-- Database: `agora`
+- Database: `Wordpool`
 - Username: `user`
 - Password: `password`
 
@@ -122,7 +122,7 @@ If your Docker Compose command is the older standalone binary, use `docker-compo
 If Redis is not already running locally, start it with Docker:
 
 ```bash
-docker run --name agora_redis -p 6379:6379 -d redis:7
+docker run --name Wordpool_redis -p 6379:6379 -d redis:7
 ```
 
 The default `REDIS_URL` is:

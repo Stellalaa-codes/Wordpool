@@ -26,7 +26,7 @@ export const GET = withErrorHandler(async (request: NextRequest) => {
 
 /**
  * POST /api/subscriptions
- * Subscribe to Agora Pro or purchase a series pass.
+ * Subscribe to Wordpool Pro or purchase a series pass.
  *
  * Body: { action: "subscribe_pro" | "cancel_pro" | "buy_pass", passId?: string }
  */

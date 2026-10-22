@@ -1,10 +1,10 @@
 # Authentication Guide
 
-This guide provides a comprehensive overview of how authentication is implemented and managed within the Agora platform. Agora uses a centralized authentication system based on JSON Web Tokens (JWT) stored in secure, HttpOnly cookies.
+This guide provides a comprehensive overview of how authentication is implemented and managed within the Wordpool platform. Wordpool uses a centralized authentication system based on JSON Web Tokens (JWT) stored in secure, HttpOnly cookies.
 
 ## Overview of Auth Strategy
 
-Agora utilizes a stateless authentication strategy using **JWT (JSON Web Tokens)**.
+Wordpool utilizes a stateless authentication strategy using **JWT (JSON Web Tokens)**.
 
 - **Cookie Name**: `auth_token`
 - **Storage**: HttpOnly, Secure (in production), SameSite: Lax.
@@ -36,16 +36,16 @@ The email flow is currently implemented as a passwordless login system.
 
 ### 2. Google OAuth Flow
 
-Agora supports authentication via Google OAuth 2.0.
+Wordpool supports authentication via Google OAuth 2.0.
 
 **Step-by-step:**
 1. **Initiation**: The user clicks the "Sign in with Google" button.
 2. **Redirect to Provider**: The application redirects the user to Google's OAuth consent screen (via `/api/auth/google`).
-3. **User Authorization**: The user grants permission to Agora.
-4. **Callback**: Google redirects the user back to Agora at `/api/auth/google?code=...`.
+3. **User Authorization**: The user grants permission to Wordpool.
+4. **Callback**: Google redirects the user back to Wordpool at `/api/auth/google?code=...`.
 5. **Code Exchange**: The server-side API route exchanges the `code` for an `id_token` using the Google OAuth API.
 6. **User Identification**: The `id_token` is decoded to extract the user's email and unique subject ID (`sub`).
-7. **Session Creation**: A JWT is signed for the Agora session and set as the `auth_token` cookie.
+7. **Session Creation**: A JWT is signed for the Wordpool session and set as the `auth_token` cookie.
 8. **Redirection**: The user is redirected to the `/home` page.
 
 ---
@@ -61,7 +61,7 @@ The Apple OAuth flow follows the "Sign in with Apple" protocol.
 4. **Callback (GET/POST)**: Apple redirects back to `/api/auth/apple`.
     - If `response_mode` is `query`, it's a `GET` request.
     - If `response_mode` is `form_post` (used when requesting scopes like email/name), it's a `POST` request.
-5. **Code Exchange**: Agora exchanges the authorization `code` for an `id_token` from Apple.
+5. **Code Exchange**: Wordpool exchanges the authorization `code` for an `id_token` from Apple.
 6. **User Identification**: The `id_token` is decoded. If the email is missing (common in subsequent logins), the subject ID (`sub`) is used to identify the user.
 7. **Session Creation**: The session JWT is generated and set as the `auth_token` cookie.
 8. **Redirection**: The user is redirected to the `/home` page.

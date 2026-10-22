@@ -1,4 +1,4 @@
-# Clippy configuration for Agora project
+# Clippy configuration for Wordpool project
 # See https://doc.rust-lang.org/nightly/clippy/lint_configuration.html
 
 # Cognitive complexity threshold

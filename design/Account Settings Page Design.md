@@ -4,7 +4,7 @@
 Short summary: This document captures the design I implemented for the user Account Settings page. It mirrors the task requirements and includes a design breakdown aligned with the stipulated guidelines.
 
 ## Figma Link
-- Figma design URL: [your-figma-link-here](https://www.figma.com/design/iVKQ7uzd627y1JQ4Ie3KqA/Agora-event-Settings---Account?node-id=1-5&t=eW46wF5WJ2fWFila-1)
+- Figma design URL: [your-figma-link-here](https://www.figma.com/design/iVKQ7uzd627y1JQ4Ie3KqA/Wordpool-event-Settings---Account?node-id=1-5&t=eW46wF5WJ2fWFila-1)
 
 ## Design Sections
 1. Profile Picture

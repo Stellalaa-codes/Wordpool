@@ -1,7 +1,7 @@
 import * as SecureStore from 'expo-secure-store';
 import { Asset, Keypair, Networks, Operation, TransactionBuilder, Horizon } from '@stellar/stellar-sdk';
 
-const STORAGE_KEY = 'agora_stellar_secret_key';
+const STORAGE_KEY = 'Wordpool_stellar_secret_key';
 const HORIZON_URL = 'https://horizon-testnet.stellar.org';
 const USDC_ASSET_CODE = 'USDC';
 const USDC_ISSUER = 'GBBD47IF6LWK7P7MABDHYZCYYZ277OEX22PQ6CHYA67BDN6C7CR27STN';
@@ -21,19 +21,19 @@ export interface TrustlineResult {
 export class StellarWalletManager {
   static async saveSecretKey(secretKey: string): Promise<void> {
     await SecureStore.setItemAsync(STORAGE_KEY, secretKey, {
-      keychainService: 'agora_stellar_wallet',
+      keychainService: 'Wordpool_stellar_wallet',
     });
   }
 
   static async getSecretKey(): Promise<string | null> {
     return SecureStore.getItemAsync(STORAGE_KEY, {
-      keychainService: 'agora_stellar_wallet',
+      keychainService: 'Wordpool_stellar_wallet',
     });
   }
 
   static async deleteSecretKey(): Promise<void> {
     await SecureStore.deleteItemAsync(STORAGE_KEY, {
-      keychainService: 'agora_stellar_wallet',
+      keychainService: 'Wordpool_stellar_wallet',
     });
   }
 

@@ -2,7 +2,7 @@
 
 ## Summary
 
-The garbage collection feature for old event data has been successfully implemented in the Agora Event Registry smart contract. All acceptance criteria have been met and the implementation is production-ready.
+The garbage collection feature for old event data has been successfully implemented in the Wordpool Event Registry smart contract. All acceptance criteria have been met and the implementation is production-ready.
 
 ## ✅ Acceptance Criteria Met
 
@@ -233,7 +233,7 @@ assert_eq!(receipts.len(), 1);
 
 ## 🎉 Conclusion
 
-The garbage collection feature is **complete, tested, and production-ready**. It successfully implements all acceptance criteria and provides significant value to the Agora platform by:
+The garbage collection feature is **complete, tested, and production-ready**. It successfully implements all acceptance criteria and provides significant value to the Wordpool platform by:
 
 1. **Reducing Costs:** 90-95% storage reduction per archived event
 2. **Maintaining History:** Preserves essential data via receipts

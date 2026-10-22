@@ -23,7 +23,7 @@ export function ProfileSidebar() {
         </div>
         <div className="text-center">
           <h2 className="text-xl font-semibold text-[#1A1A1A]">
-            {details.displayName || "Agora Organizer"}
+            {details.displayName || "Wordpool Organizer"}
           </h2>
           <p className="text-sm text-gray-500">{details.bio || "No biography yet"}</p>
         </div>

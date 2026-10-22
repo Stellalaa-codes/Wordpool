@@ -34,7 +34,7 @@ const categories: TopicCategory[] = [
     slug: "getting-started",
     icon: HelpCircleIcon,
     articleCount: 8,
-    description: "New to Agora? Start here.",
+    description: "New to Wordpool? Start here.",
   },
   {
     title: "Buying Tickets",

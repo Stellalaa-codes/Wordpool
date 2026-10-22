@@ -10,7 +10,7 @@ import { useLiveTicketInventory } from '@/hooks/useLiveTicketInventory';
 import { getTiersForEvent, totalRemaining } from '@/lib/ticketTiers';
 
 /** AsyncStorage key for an event's liked/saved status (issue #1552). */
-const likedStorageKey = (eventId: string) => `agora.event.liked.${eventId}`;
+const likedStorageKey = (eventId: string) => `Wordpool.event.liked.${eventId}`;
 
 export default function EventDetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -21,9 +21,9 @@ export default function EventDetailsScreen() {
   const getEventTitle = (eventId: string) => {
     switch (eventId) {
       case '1': return 'Stellar Meridian 2026';
-      case '2': return 'Agora Blockchain Summit';
+      case '2': return 'Wordpool Blockchain Summit';
       case '3': return 'Decentralized Music Festival';
-      default: return 'Agora Event';
+      default: return 'Wordpool Event';
     }
   };
 
@@ -77,7 +77,7 @@ export default function EventDetailsScreen() {
         style={styles.heroPlaceholder}
         testID="event-banner"
       >
-        <Text style={styles.heroText}>AGORA EVENTS</Text>
+        <Text style={styles.heroText}>Wordpool EVENTS</Text>
       </LikeableBanner>
 
       <View style={styles.detailsContainer}>

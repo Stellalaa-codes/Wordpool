@@ -7,7 +7,7 @@
  * (see `@/components/layout/network-switcher`). This is distinct from
  * `useStellarNetwork` (hooks/useStellarNetwork.ts), which reports whichever
  * network the user's connected Freighter wallet happens to be on — this
- * context instead controls which network *Agora itself* targets for RPC
+ * context instead controls which network *Wordpool itself* targets for RPC
  * calls, independent of the wallet.
  *
  * Switching network here:
@@ -18,7 +18,7 @@
  *   of reusing one pinned to the previous network.
  * - Clears any locally cached blockchain reads (ticket availability, etc.)
  *   so stale data from the old network isn't shown.
- * - Dispatches a `agora:network-changed` CustomEvent so any mounted
+ * - Dispatches a `Wordpool:network-changed` CustomEvent so any mounted
  *   component/hook can react (e.g. re-poll ticket availability).
  */
 
@@ -60,15 +60,15 @@ export const NETWORK_ENDPOINTS: Record<StellarNetworkId, NetworkEndpoints> = {
   },
 };
 
-const STORAGE_KEY = "agora:active-network";
+const STORAGE_KEY = "Wordpool:active-network";
 
 /** Fired on `window` whenever the active network changes. */
-export const NETWORK_CHANGE_EVENT = "agora:network-changed";
+export const NETWORK_CHANGE_EVENT = "Wordpool:network-changed";
 
 /** Prefixes of localStorage/sessionStorage keys that cache on-chain reads. */
 const CHAIN_CACHE_KEY_PREFIXES = [
-  "agora:chain-cache:",
-  "agora:ticket-availability:",
+  "Wordpool:chain-cache:",
+  "Wordpool:ticket-availability:",
 ];
 
 function resolveDefaultNetwork(): StellarNetworkId {

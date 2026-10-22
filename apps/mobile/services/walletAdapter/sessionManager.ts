@@ -1,9 +1,9 @@
 import * as SecureStore from 'expo-secure-store';
 import { WalletType } from './types';
 
-const WALLET_TYPE_KEY = 'agora_wallet_active_type';
-const WALLET_PUBKEY_KEY = 'agora_wallet_public_key';
-const WALLET_CONNECTED_AT = 'agora_wallet_connected_at';
+const WALLET_TYPE_KEY = 'Wordpool_wallet_active_type';
+const WALLET_PUBKEY_KEY = 'Wordpool_wallet_public_key';
+const WALLET_CONNECTED_AT = 'Wordpool_wallet_connected_at';
 
 export interface WalletSession {
   type: WalletType;

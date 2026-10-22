@@ -1,6 +1,6 @@
 # Reusable UI Component Library
 
-This document is the source of truth for reusable UI pieces in the Agora web app. Check here before building a new view so we reuse existing patterns, avoid duplicate components, and keep the brand consistent across landing, discovery, profile, and event pages.
+This document is the source of truth for reusable UI pieces in the Wordpool web app. Check here before building a new view so we reuse existing patterns, avoid duplicate components, and keep the brand consistent across landing, discovery, profile, and event pages.
 
 ## Directory Structure
 
@@ -25,7 +25,7 @@ Base primitives live in `components/ui`. This folder should stay small and reusa
 
 Purpose:
 - Shared button primitive for call-to-action buttons across landing pages, nav drawers, pricing cards, and forms.
-- Keeps the hard-shadow, rounded-pill, and motion behavior consistent with the Agora visual style.
+- Keeps the hard-shadow, rounded-pill, and motion behavior consistent with the Wordpool visual style.
 
 **Props**
 | Name | Type | Required | Default | Description |
@@ -156,7 +156,7 @@ Notes:
 File: `components/landing/info-section.tsx`
 
 Purpose:
-- Explains product value and the "How Agora Works" story.
+- Explains product value and the "How Wordpool Works" story.
 - Pairs static screenshots with brand-colored CTA styling and about-copy.
 
 Notes:
@@ -167,7 +167,7 @@ Notes:
 File: `components/landing/pricing-section.tsx`
 
 Purpose:
-- Shows plan comparison cards for Agora Basic and Agora Plus.
+- Shows plan comparison cards for Wordpool Basic and Wordpool Plus.
 - Reuses the shared `Button` component for pricing CTAs and keeps pricing-card styling consistent.
 
 Notes:
@@ -501,7 +501,7 @@ export default function DiscoverPage() {
 
 ## Icon Policy
 
-Agora uses local icon assets by default.
+Wordpool uses local icon assets by default.
 
 Rules:
 - Reuse assets from `apps/web/public/icons/` before adding anything new.

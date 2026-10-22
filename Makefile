@@ -2,7 +2,7 @@
 
 # Default target
 help:
-	@echo "Agora Development Stack - Available Commands"
+	@echo "Wordpool Development Stack - Available Commands"
 	@echo "============================================="
 	@echo ""
 	@echo "  make up       - Start all services (postgres, redis, stellar-rpc, backend, frontend)"
@@ -13,7 +13,7 @@ help:
 	@echo "Environment Variables:"
 	@echo "  POSTGRES_USER     - PostgreSQL username (default: user)"
 	@echo "  POSTGRES_PASSWORD - PostgreSQL password (default: password)"
-	@echo "  POSTGRES_DB       - PostgreSQL database name (default: agora)"
+	@echo "  POSTGRES_DB       - PostgreSQL database name (default: Wordpool)"
 	@echo "  POSTGRES_PORT     - PostgreSQL port (default: 5432)"
 	@echo "  REDIS_PORT        - Redis port (default: 6379)"
 	@echo "  STELLAR_RPC_PORT  - Stellar RPC port (default: 8000)"
@@ -23,11 +23,11 @@ help:
 	@echo "  NEXT_PUBLIC_API_URL - Frontend API URL (default: http://localhost:3001/api/v1)"
 
 up:
-	@echo "Starting Agora development stack..."
+	@echo "Starting Wordpool development stack..."
 	docker compose up --build
 
 down:
-	@echo "Stopping Agora development stack..."
+	@echo "Stopping Wordpool development stack..."
 	docker compose down
 
 logs:

@@ -1,6 +1,6 @@
-# Contributing to Agora
+# Contributing to Wordpool
 
-Thanks for helping build Agora! This document is the entry point for contributing to the repository. Area-specific guidance remains in the documents linked below; please read the relevant guide before changing that area.
+Thanks for helping build Wordpool! This document is the entry point for contributing to the repository. Area-specific guidance remains in the documents linked below; please read the relevant guide before changing that area.
 
 ## Where to start
 
@@ -47,8 +47,8 @@ cargo install sqlx-cli --no-default-features --features postgres
 Clone the repository and install workspace dependencies from the repository root:
 
 ```bash
-git clone https://github.com/Agora-Events/agora.git
-cd agora
+git clone https://github.com/Wordpool-Events/Wordpool.git
+cd Wordpool
 pnpm install
 ```
 
@@ -61,7 +61,7 @@ cp server/.env.example server/.env
 The default local database URL is:
 
 ```text
-DATABASE_URL=postgres://user:password@localhost:5432/agora
+DATABASE_URL=postgres://user:password@localhost:5432/Wordpool
 ```
 
 Start the local infrastructure with Docker:
@@ -211,4 +211,4 @@ Before requesting review, run the checks relevant to your change and confirm tha
 
 ## Need help?
 
-Read the area-specific guide in the table above, search the existing documentation and issues, and open a draft PR with the current state if you are blocked. Thank you for contributing to Agora!
+Read the area-specific guide in the table above, search the existing documentation and issues, and open a draft PR with the current state if you are blocked. Thank you for contributing to Wordpool!

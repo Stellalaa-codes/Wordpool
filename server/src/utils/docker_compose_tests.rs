@@ -104,12 +104,12 @@ mod tests {
     }
 
     #[tokio::test]
-    async fn test_postgres_db_name_is_agora() {
+    async fn test_postgres_db_name_is_Wordpool() {
         let compose = load_compose();
         let db = compose["services"]["postgres"]["environment"]["POSTGRES_DB"]
             .as_str()
             .expect("POSTGRES_DB should be a string");
-        assert_eq!(db, "agora");
+        assert_eq!(db, "Wordpool");
     }
 
     #[tokio::test]

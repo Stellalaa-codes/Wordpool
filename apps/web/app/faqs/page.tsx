@@ -4,10 +4,10 @@ import { FAQSection } from "@/components/landing/faq-section";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: { absolute: "FAQs | Agora" },
+  title: { absolute: "FAQs | Wordpool" },
   description: "Answers to common questions about tickets, payments and Stellar.",
   openGraph: {
-    title: "FAQs | Agora",
+    title: "FAQs | Wordpool",
     description: "Answers to common questions about tickets, payments and Stellar.",
   },
 };

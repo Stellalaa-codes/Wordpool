@@ -3,7 +3,7 @@ import { buildMetadata } from "@/components/layout/seo";
 export const metadata = buildMetadata({
   title: "Sign In",
   description:
-    "Sign in or create your Agora account to discover events, buy tickets, and connect with communities worldwide.",
+    "Sign in or create your Wordpool account to discover events, buy tickets, and connect with communities worldwide.",
   path: "/auth",
 });
 

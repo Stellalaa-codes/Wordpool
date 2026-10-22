@@ -58,7 +58,7 @@ describe("GET /api/events", () => {
   });
 
   it("builds a startsAt: { lt: now } where-clause for type=my&tab=past", async () => {
-    getAuthMock.mockReturnValue({ email: "host@agora.dev" });
+    getAuthMock.mockReturnValue({ email: "host@Wordpool.dev" });
 
     const before = new Date();
     const response = await GET(
@@ -71,7 +71,7 @@ describe("GET /api/events", () => {
     expect(findManyMock).toHaveBeenCalledTimes(1);
 
     const callArg = findManyMock.mock.calls[0][0];
-    expect(callArg.where.hostEmail).toBe("host@agora.dev");
+    expect(callArg.where.hostEmail).toBe("host@Wordpool.dev");
     expect(callArg.where.startsAt).toHaveProperty("lt");
     expect(callArg.where.startsAt.lt).toBeInstanceOf(Date);
     expect(callArg.where.startsAt.lt.getTime()).toBeGreaterThanOrEqual(
@@ -88,7 +88,7 @@ describe("GET /api/events", () => {
   });
 
   it("builds a startsAt: { gte: now } where-clause for type=my&tab=upcoming", async () => {
-    getAuthMock.mockReturnValue({ email: "host@agora.dev" });
+    getAuthMock.mockReturnValue({ email: "host@Wordpool.dev" });
 
     const response = await GET(
       makeRequest("/api/events?type=my&tab=upcoming"),
@@ -97,14 +97,14 @@ describe("GET /api/events", () => {
 
     expect(response.status).toBe(200);
     const callArg = findManyMock.mock.calls[0][0];
-    expect(callArg.where.hostEmail).toBe("host@agora.dev");
+    expect(callArg.where.hostEmail).toBe("host@Wordpool.dev");
     expect(callArg.where.startsAt).toHaveProperty("gte");
     expect(callArg.where.startsAt.gte).toBeInstanceOf(Date);
     expect(callArg.orderBy).toEqual({ startsAt: "asc" });
   });
 
   it("treats type=my&tab=hosting the same as upcoming (gte now)", async () => {
-    getAuthMock.mockReturnValue({ email: "host@agora.dev" });
+    getAuthMock.mockReturnValue({ email: "host@Wordpool.dev" });
 
     const response = await GET(
       makeRequest("/api/events?type=my&tab=hosting"),

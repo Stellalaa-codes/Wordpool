@@ -8,12 +8,12 @@ use hyper::{Body, Request, StatusCode};
 use sqlx::{sqlite::SqliteConnectOptions, SqlitePool};
 use tokio::net::TcpListener;
 
-use agora_server::handlers::events::list_events;
-use agora_server::models::event::Event;
+use Wordpool_server::handlers::events::list_events;
+use Wordpool_server::models::event::Event;
 
-use agora_server::cache::RedisCache;
-use agora_server::config::Config;
-use agora_server::routes::create_routes;
+use Wordpool_server::cache::RedisCache;
+use Wordpool_server::config::Config;
+use Wordpool_server::routes::create_routes;
 
 use serde_json::Value;
 use sqlx::migrate::MigrateDatabase;

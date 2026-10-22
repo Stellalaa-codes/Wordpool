@@ -6,16 +6,16 @@ import { buildMetadata } from "@/components/layout/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Pricing",
-  description: "Compare Agora plans and fees for event organizers.",
+  description: "Compare Wordpool plans and fees for event organizers.",
   path: "/pricing",
 });
 
 export const metadata: Metadata = {
-  title: { absolute: "Pricing | Agora" },
-  description: "Compare Agora plans and fees for event organizers.",
+  title: { absolute: "Pricing | Wordpool" },
+  description: "Compare Wordpool plans and fees for event organizers.",
   openGraph: {
-    title: "Pricing | Agora",
-    description: "Compare Agora plans and fees for event organizers.",
+    title: "Pricing | Wordpool",
+    description: "Compare Wordpool plans and fees for event organizers.",
   },
 };
 

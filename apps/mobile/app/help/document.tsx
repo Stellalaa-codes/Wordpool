@@ -25,19 +25,19 @@ const DEFAULT_DOCUMENTS: Record<string, PolicyDocument> = {
     id: 'terms',
     title: 'Terms of Service',
     lastUpdated: 'September 2026',
-    content: `# Agora Terms of Service
+    content: `# Wordpool Terms of Service
 
 *Last updated: September 2026*
 
-Welcome to **Agora**, the decentralized event ticketing platform powered by the Stellar network and Soroban smart contracts. By accessing or using Agora, you agree to be bound by these Terms of Service.
+Welcome to **Wordpool**, the decentralized event ticketing platform powered by the Stellar network and Soroban smart contracts. By accessing or using Wordpool, you agree to be bound by these Terms of Service.
 
 ---
 
 ### 1. Overview & Platform Role
-Agora provides a non-custodial decentralized marketplace connecting **Event Organizers** and **Ticket Purchasers**. Agora does not hold custody of ticket funds or escrow private keys. All purchases and secondary transfers are executed directly on the **Stellar blockchain**.
+Wordpool provides a non-custodial decentralized marketplace connecting **Event Organizers** and **Ticket Purchasers**. Wordpool does not hold custody of ticket funds or escrow private keys. All purchases and secondary transfers are executed directly on the **Stellar blockchain**.
 
 ### 2. User Responsibilities
-When interacting with Agora, you agree to:
+When interacting with Wordpool, you agree to:
 - Maintain the confidentiality and security of your private keys and seed phrases.
 - Ensure all wallet transactions and smart contract calls are reviewed before approval.
 - Refrain from unauthorized automated scraping, ticket scalping bot operations, or denial-of-service activities.
@@ -56,22 +56,22 @@ Organizers may configure anti-scalping parameters, including:
 3. Geo-fenced or timed access restrictions.
 
 ### 5. Limitation of Liability
-To the maximum extent permitted by applicable law, Agora is provided *"as is"* and *"as available"*, without warranties of any kind. Agora is not liable for blockchain reorganizations, wallet provider malfunctions, or organizer cancellation disputes.
+To the maximum extent permitted by applicable law, Wordpool is provided *"as is"* and *"as available"*, without warranties of any kind. Wordpool is not liable for blockchain reorganizations, wallet provider malfunctions, or organizer cancellation disputes.
 
 ---
 
-For legal inquiries or dispute resolution, contact: [legal@agora-events.org](https://agora-events.org/legal)
+For legal inquiries or dispute resolution, contact: [legal@Wordpool-events.org](https://Wordpool-events.org/legal)
 `,
   },
   privacy: {
     id: 'privacy',
     title: 'Privacy Policy',
     lastUpdated: 'September 2026',
-    content: `# Agora Privacy Policy
+    content: `# Wordpool Privacy Policy
 
 *Last updated: September 2026*
 
-At **Agora**, we prioritize privacy, data minimization, and user sovereignty in accordance with web3 principles.
+At **Wordpool**, we prioritize privacy, data minimization, and user sovereignty in accordance with web3 principles.
 
 ---
 
@@ -95,7 +95,7 @@ Please note that transactions broadcast to the **Stellar Network** are public an
 > **Privacy Recommendation:** We recommend utilizing dedicated event attendance wallets separate from high-value storage accounts.
 
 ### 4. User Rights & Data Deletion
-Depending on your jurisdiction (such as GDPR or CCPA), you may have the right to request deletion of any off-chain cached metadata. Contact us at [privacy@agora-events.org](https://agora-events.org/privacy).
+Depending on your jurisdiction (such as GDPR or CCPA), you may have the right to request deletion of any off-chain cached metadata. Contact us at [privacy@Wordpool-events.org](https://Wordpool-events.org/privacy).
 `,
   },
   refunds: {
@@ -106,7 +106,7 @@ Depending on your jurisdiction (such as GDPR or CCPA), you may have the right to
 
 *Last updated: September 2026*
 
-This policy outlines how cancellations, event rescheduling, and ticket refunds are handled across the **Agora** platform.
+This policy outlines how cancellations, event rescheduling, and ticket refunds are handled across the **Wordpool** platform.
 
 ---
 
@@ -125,7 +125,7 @@ If an event is rescheduled:
 - Tickets purchased on the secondary market are subject to the same smart contract terms.
 - Resale prices are capped according to the organizer's anti-scalping rules.
 
-> For questions regarding specific event refunds, check the event page in the Agora app.
+> For questions regarding specific event refunds, check the event page in the Wordpool app.
 `,
   },
 };

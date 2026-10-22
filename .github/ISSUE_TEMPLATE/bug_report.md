@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a reproducible bug in Agora
+about: Report a reproducible bug in Wordpool
 title: "[Bug] "
 labels: bug
 assignees: ''
@@ -29,7 +29,7 @@ assignees: ''
 - **OS:** (e.g. macOS 14, Ubuntu 22.04)
 - **Node version:** (e.g. 20.x)
 - **Browser / client:** (e.g. Chrome 126, curl)
-- **Agora version / commit:** (e.g. main @ abc1234)
+- **Wordpool version / commit:** (e.g. main @ abc1234)
 
 ## Additional Context
 

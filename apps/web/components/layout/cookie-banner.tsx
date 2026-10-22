@@ -36,7 +36,7 @@ export function CookieBanner() {
       className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-w-3xl flex-col gap-4 rounded-xl border-2 border-black bg-white p-5 shadow-[-5px_5px_0px_0px_rgba(0,0,0,1)] sm:flex-row sm:items-center sm:justify-between"
     >
       <p className="text-sm leading-relaxed">
-        We use cookies to improve your experience on Agora.
+        We use cookies to improve your experience on Wordpool.
       </p>
       <div className="flex shrink-0 gap-2">
         <button

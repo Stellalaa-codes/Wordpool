@@ -147,7 +147,7 @@ use utoipa::OpenApi;
         )
     ),
     tags(
-        (name = "Agora API", description = "Agora Events Platform API"),
+        (name = "Wordpool API", description = "Wordpool Events Platform API"),
         (name = "Events", description = "Event management endpoints"),
         (name = "Tickets", description = "Ticket management endpoints"),
         (name = "Webhooks", description = "Organizer webhook endpoints"),

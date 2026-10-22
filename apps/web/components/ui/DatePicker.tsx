@@ -67,7 +67,7 @@ function isDateValid(dateStr: string, minDate: string): boolean {
  * Reusable DatePicker component.
  *
  * Supports both standalone single date/time selection and connected
- * Start/End date range selection with Agora's neubrutalist styling.
+ * Start/End date range selection with Wordpool's neubrutalist styling.
  *
  * Refactored as part of Issue #1546.
  */

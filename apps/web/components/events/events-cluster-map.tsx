@@ -31,7 +31,7 @@ function clusterIcon(count: number): L.DivIcon {
   const size = clusterMarkerSize(count);
   return L.divIcon({
     html: `<span style="width:${size}px;height:${size}px">${formatClusterCount(count)}</span>`,
-    className: "agora-cluster-marker",
+    className: "Wordpool-cluster-marker",
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
   });

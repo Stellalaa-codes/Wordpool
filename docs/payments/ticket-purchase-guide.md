@@ -1,6 +1,6 @@
 # Ticket Purchase & Stellar Integration Guide
 
-This guide explains the end-to-end technical flow of purchasing a ticket on Agora, from the frontend interaction to the Stellar smart contract integration.
+This guide explains the end-to-end technical flow of purchasing a ticket on Wordpool, from the frontend interaction to the Stellar smart contract integration.
 
 ## Purchase Flow Overview
 
@@ -119,7 +119,7 @@ export async function mintTicket(eventId: string, buyer: string, qty: number)
 
 ### What is `transactionXdr`?
 
-`transactionXdr` is the External Data Representation of the Stellar transaction. It is a base64 encoded string that contains the complete transaction details, including the operations, source account, sequence number, and signatures. In the Agora platform, it provides a cryptographic proof of the on-chain minting process and can be used for debugging or manual verification on a block explorer.
+`transactionXdr` is the External Data Representation of the Stellar transaction. It is a base64 encoded string that contains the complete transaction details, including the operations, source account, sequence number, and signatures. In the Wordpool platform, it provides a cryptographic proof of the on-chain minting process and can be used for debugging or manual verification on a block explorer.
 
 ## QR Code Generation
 

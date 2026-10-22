@@ -27,7 +27,7 @@ use tower::ServiceExt;
 use uuid::Uuid;
 
 // Re-export the handlers under test.
-use agora_server::handlers::waiting_room::{
+use Wordpool_server::handlers::waiting_room::{
     queue_status, queue_stream, request_challenge, join_queue, WaitingRoomState, WaitingRoomConfig,
 };
 
@@ -86,7 +86,7 @@ async fn create_test_event(pool: &PgPool) -> String {
     
     // Insert organizer
     sqlx::query(
-        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'test+organizer@agora.test')",
+        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'test+organizer@Wordpool.test')",
     )
     .bind(organizer_id)
     .bind(&organizer_name)
@@ -764,7 +764,7 @@ async fn test_sold_out_event_returns_error() {
     let organizer_id = Uuid::new_v4();
     
     sqlx::query(
-        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'test+organizer@agora.test')",
+        "INSERT INTO organizers (id, name, contact_email) VALUES ($1, $2, 'test+organizer@Wordpool.test')",
     )
     .bind(organizer_id)
     .bind("Sold Out Organizer")

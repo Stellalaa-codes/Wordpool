@@ -77,7 +77,7 @@ export default function ReferralDashboardPage() {
           <p className="text-xs text-muted-text mb-4">
             Select an event to generate your tracked referral link and start earning 5% commission on every ticket purchase.
           </p>
-          <ReferralLinkGenerator defaultAffiliateCode="agora-partner" />
+          <ReferralLinkGenerator defaultAffiliateCode="Wordpool-partner" />
         </div>
 
         {/* Recent Referrals & Commission Breakdown Table */}

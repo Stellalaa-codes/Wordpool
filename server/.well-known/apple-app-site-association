@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "TEAM_ID.com.agora.events",
+        "appID": "TEAM_ID.com.Wordpool.events",
         "paths": [
           "/events/*",
           "/organizers/*",

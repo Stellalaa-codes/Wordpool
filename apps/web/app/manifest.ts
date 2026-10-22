@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Agora - Decentralized Event Ticketing Platform",
-    short_name: "Agora",
+    name: "Wordpool - Decentralized Event Ticketing Platform",
+    short_name: "Wordpool",
     description:
       "Discover, buy, and resell event tickets on the Stellar blockchain with low fees and instant settlement.",
     start_url: "/",

@@ -1,6 +1,6 @@
 # API Error Codes
 
-This document provides a centralized reference for all machine-readable API error codes used by the Agora backend.
+This document provides a centralized reference for all machine-readable API error codes used by the Wordpool backend.
 
 ## Overview
 

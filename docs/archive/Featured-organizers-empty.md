@@ -1,8 +1,8 @@
-https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=825-3084&t=iDIJUBtGHnMs5zvg-4
+https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=825-3084&t=iDIJUBtGHnMs5zvg-4
 
-# Agora: Organizers Feature - Design Specifications (Empty State)
+# Wordpool: Organizers Feature - Design Specifications (Empty State)
 
-This document provides a detailed technical breakdown of the "Organizers" feature for the Agora platform, focusing on the empty state based on issue #249.
+This document provides a detailed technical breakdown of the "Organizers" feature for the Wordpool platform, focusing on the empty state based on issue #249.
 
 ## 1. Organizers Main Screen (Empty State)
 The empty state maintains the layout of the organizers page but replaces active subscription data with a placeholder.
@@ -28,4 +28,4 @@ When the user has no active organization subscriptions:
 *   **Typography**: Clean sans-serif.
 *   **Color Palette**: Yellow accent (`#FFD900`), Deep Black (`#000000`).
 *   **Shadows**: Subtle but consistent dark drop-shadows on cards and placeholders.
-*   **Footer**: Standard dark Agora footer remains consistent.
+*   **Footer**: Standard dark Wordpool footer remains consistent.

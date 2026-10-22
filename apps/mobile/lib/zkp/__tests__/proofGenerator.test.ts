@@ -16,7 +16,7 @@
  * implementations have diverged and real check-ins would fail at the gate.
  *
  * Regenerate with:
- * `cargo test -p agora-server zkp_conformance -- --ignored --nocapture`
+ * `cargo test -p Wordpool-server zkp_conformance -- --ignored --nocapture`
  */
 
 import {
@@ -121,7 +121,7 @@ function vectorRng(label: string): ProverRng {
         value >>= EIGHT;
       }
       counter += 1;
-      return hashToScalar('agora/zkp/v1/test-rng', [utf8(label), encoded]);
+      return hashToScalar('Wordpool/zkp/v1/test-rng', [utf8(label), encoded]);
     },
   };
 }
@@ -137,8 +137,8 @@ function buildFixture(): {
   let witness = { index: VECTORS.witnessIndex, ticket: BigInt(0), secret: BigInt(0) };
 
   for (let i = 0; i < VECTORS.ringSize; i++) {
-    const ticket = ticketScalar(`AGORA-TICKET-${String(i).padStart(3, '0')}`);
-    const secret = hashToScalar('agora/zkp/v1/secret-scalar', [utf8(`conformance-secret-${i}`)]);
+    const ticket = ticketScalar(`Wordpool-TICKET-${String(i).padStart(3, '0')}`);
+    const secret = hashToScalar('Wordpool/zkp/v1/secret-scalar', [utf8(`conformance-secret-${i}`)]);
     if (i === VECTORS.witnessIndex) witness = { index: i, ticket, secret };
     ringHex.push(toHex(pointCompress(commit(ticket, secret))));
   }
@@ -213,8 +213,8 @@ describe('proof soundness', () => {
   it('accepts a proof from every ring position', () => {
     const { ring, ctx } = buildFixture();
     for (let i = 0; i < ring.length; i++) {
-      const ticket = ticketScalar(`AGORA-TICKET-${String(i).padStart(3, '0')}`);
-      const secret = hashToScalar('agora/zkp/v1/secret-scalar', [utf8(`conformance-secret-${i}`)]);
+      const ticket = ticketScalar(`Wordpool-TICKET-${String(i).padStart(3, '0')}`);
+      const secret = hashToScalar('Wordpool/zkp/v1/secret-scalar', [utf8(`conformance-secret-${i}`)]);
       expect(verifyLocally(prove({ index: i, ticket, secret }, ctx), ctx)).toBe(true);
     }
   });
@@ -279,7 +279,7 @@ describe('proof soundness', () => {
       prove(
         {
           index: 0,
-          ticket: ticketScalar('AGORA-TICKET-000'),
+          ticket: ticketScalar('Wordpool-TICKET-000'),
           secret: secretScalar(utf8('wrong-secret')),
         },
         ctx
@@ -400,7 +400,7 @@ describe('generateCheckinProof', () => {
       tier: VECTORS.tier,
       ringHex,
       merkleRootHex: toHex(ctx.merkleRoot),
-      ticketId: 'AGORA-TICKET-003',
+      ticketId: 'Wordpool-TICKET-003',
       secretBytes,
       ...overrides,
     };
@@ -439,7 +439,7 @@ describe('generateCheckinProof', () => {
 
   it('reports a ticket that is not in the set', () => {
     expect(() =>
-      generateCheckinProof(request({ ticketId: 'AGORA-TICKET-999' }))
+      generateCheckinProof(request({ ticketId: 'Wordpool-TICKET-999' }))
     ).toThrow(/not in the anonymity set/);
   });
 
@@ -462,8 +462,8 @@ describe('generateCheckinProof', () => {
 describe('findWitnessIndex', () => {
   it('locates a commitment in the ring', () => {
     const { ring } = buildFixture();
-    const ticket = ticketScalar('AGORA-TICKET-005');
-    const secret = hashToScalar('agora/zkp/v1/secret-scalar', [utf8('conformance-secret-5')]);
+    const ticket = ticketScalar('Wordpool-TICKET-005');
+    const secret = hashToScalar('Wordpool/zkp/v1/secret-scalar', [utf8('conformance-secret-5')]);
     expect(findWitnessIndex(ring, commit(ticket, secret))).toBe(5);
   });
 

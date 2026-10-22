@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==============================================================================
-# Agora k6 Stress Test Runner (Issue #1178)
+# Wordpool k6 Stress Test Runner (Issue #1178)
 # ==============================================================================
 # Thin wrapper around `k6 run scripts/stress_test.js` that:
 #   - verifies k6 is installed (with an install hint if not)

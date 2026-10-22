@@ -29,7 +29,7 @@ export interface BaseNavProps {
 /**
  * BaseNav — shared desktop navigation shell.
  *
- * Renders the Agora logo, a list of NavLink items, and two optional slots
+ * Renders the Wordpool logo, a list of NavLink items, and two optional slots
  * (ctaSlot for the primary CTA button, endSlot for auth controls).
  * GuestNav and UserNav are thin wrappers that pre-fill these props.
  */
@@ -54,8 +54,8 @@ export function BaseNav({
       >
         <Link href="/" className="flex items-center z-50">
           <Image
-            src="/logo/agora logo.svg"
-            alt="Agora Logo"
+            src="/logo/Wordpool logo.svg"
+            alt="Wordpool Logo"
             width={100}
             height={30}
             className="h-auto w-auto"

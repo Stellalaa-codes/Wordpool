@@ -1,8 +1,8 @@
-https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=813-2163&t=iDIJUBtGHnMs5zvg-4
+https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=813-2163&t=iDIJUBtGHnMs5zvg-4
 
-# Agora: Upcoming Events (Empty State) - Design
+# Wordpool: Upcoming Events (Empty State) - Design
 
-This document provides a detailed technical breakdown of the "Upcoming Events (Empty State)" designed for the Agora platform, based on issue #245.
+This document provides a detailed technical breakdown of the "Upcoming Events (Empty State)" designed for the Wordpool platform, based on issue #245.
 
 ## 1. Overview
 The "Empty State" of the Upcoming Events screen maintains the same global layout and theme as the "Filled State" but replaces the chronological timeline with a placeholder component in the "My Events" section.
@@ -20,7 +20,7 @@ When no upcoming events are scheduled, the timeline is replaced by a centered il
 The rest of the screen remains consistent with the global design system:
 
 ### A. Global Header
-*   **Logo**: "agora" with the yellow book icon. 
+*   **Logo**: "Wordpool" with the yellow book icon. 
 *   **Nav**: "Home" (Active), "Discover Events", "Organizers", "Stellar Ecosystem".
 *   **Actions**: "Create Your Event" (black pill button), Notification bell, and User profile.
 

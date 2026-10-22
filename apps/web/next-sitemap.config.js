@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://agora-web-eta.vercel.app",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://Wordpool-web-eta.vercel.app",
   generateRobotsTxt: true,
   additionalPaths: async () => [
     { loc: "/", changefreq: "daily", priority: 1.0 },

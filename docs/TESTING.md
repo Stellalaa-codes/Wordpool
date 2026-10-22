@@ -1,6 +1,6 @@
 # Testing Guide
 
-This document covers all test layers in the Agora frontend — unit tests, end-to-end tests, and visual regression tests.
+This document covers all test layers in the Wordpool frontend — unit tests, end-to-end tests, and visual regression tests.
 
 ---
 

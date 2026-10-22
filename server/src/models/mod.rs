@@ -1,4 +1,4 @@
-//! Database model structs for the Agora platform.
+//! Database model structs for the Wordpool platform.
 //!
 //! Each module contains a struct that maps directly to a PostgreSQL table via
 //! [`sqlx::FromRow`]. The entity relationships are:

@@ -8,7 +8,7 @@ Three major implementations completed on June 24, 2026:
 
 **File**: `apps/web/DOCS/TESTING_STRATEGY.md`
 
-Complete guide on running and writing tests for the Agora web application.
+Complete guide on running and writing tests for the Wordpool web application.
 
 **Quick Start**:
 

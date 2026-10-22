@@ -89,13 +89,13 @@ describe('useEventCreationForm', () => {
         locationType: 'virtual',
         venueName: '',
         venueAddress: '',
-        virtualLink: 'https://meet.example.com/agora',
+        virtualLink: 'https://meet.example.com/Wordpool',
       });
     });
 
     expect(result.current).toMatchObject(step1);
     expect(result.current.locationType).toBe('virtual');
-    expect(result.current.virtualLink).toBe('https://meet.example.com/agora');
+    expect(result.current.virtualLink).toBe('https://meet.example.com/Wordpool');
   });
 
   it('updateTier patches a single tier field and preserves the rest', () => {
@@ -163,10 +163,10 @@ describe('useEventCreationForm', () => {
     expect(result.current.coverImageUrl).toBeNull();
 
     act(() => {
-      result.current.setCoverImageUrl('https://cdn.agora.events/cover.jpg');
+      result.current.setCoverImageUrl('https://cdn.Wordpool.events/cover.jpg');
     });
     expect(result.current.coverImageUri).toBe('file:///tmp/cover.jpg');
-    expect(result.current.coverImageUrl).toBe('https://cdn.agora.events/cover.jpg');
+    expect(result.current.coverImageUrl).toBe('https://cdn.Wordpool.events/cover.jpg');
   });
 
   it('goToStep moves between wizard steps while keeping entered data', () => {
@@ -211,7 +211,7 @@ describe('useEventCreationForm', () => {
       result.current.addTier();
       result.current.updateTier(originalTierId, { name: 'VIP' });
       result.current.setCoverImageUri('file:///tmp/cover.jpg');
-      result.current.setCoverImageUrl('https://cdn.agora.events/cover.jpg');
+      result.current.setCoverImageUrl('https://cdn.Wordpool.events/cover.jpg');
       result.current.goToStep(4);
     });
 

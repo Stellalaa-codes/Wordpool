@@ -1,4 +1,4 @@
-# Agora Backend API Documentation
+# Wordpool Backend API Documentation
 
 This document summarizes the public backend endpoints available.
 

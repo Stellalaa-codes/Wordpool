@@ -13,7 +13,7 @@ export const SUPPORTED_CURRENCIES = ['USD', 'EUR', 'XLM', 'NGN'] as const;
 export type CurrencyCode = (typeof SUPPORTED_CURRENCIES)[number];
 
 export const DEFAULT_CURRENCY: CurrencyCode = 'USD';
-export const CURRENCY_STORAGE_KEY = '@agora/currency_preference';
+export const CURRENCY_STORAGE_KEY = '@Wordpool/currency_preference';
 
 /** Units of each currency per 1 USD. */
 export type ExchangeRates = Record<CurrencyCode, number>;

@@ -37,7 +37,7 @@ type AllowlistEntry = {
 //     ruleId: "color-contrast",
 //     reason:
 //       "Low-contrast text injected by the PostHog feedback widget, which " +
-//       "we don't control. Tracked in AGORA-1234.",
+//       "we don't control. Tracked in Wordpool-1234.",
 //   },
 // ];
 const KNOWN_VIOLATION_ALLOWLIST: AllowlistEntry[] = [];

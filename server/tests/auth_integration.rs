@@ -31,7 +31,7 @@ use sqlx::PgPool;
 use tower::ServiceExt;
 
 // Re-export the handlers under test.
-use agora_server::handlers::auth::{request_nonce, verify_jwt, verify_signature};
+use Wordpool_server::handlers::auth::{request_nonce, verify_jwt, verify_signature};
 
 /// Spin up a minimal router wired to the real test database.
 fn auth_router(pool: PgPool) -> Router {

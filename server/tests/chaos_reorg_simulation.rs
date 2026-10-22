@@ -1,6 +1,6 @@
 //! # Simulated Stellar Chain Re-org Runner (Issue #1178)
 //!
-//! Drives the real re-org machinery in `agora_server::services::indexer`
+//! Drives the real re-org machinery in `Wordpool_server::services::indexer`
 //! (`CheckpointStore::rollback_to`, `buffer_insert`, `apply_event_state`) —
 //! the same functions the live Soroban event indexer uses — through a
 //! simulated chain fork, without touching the network. This is the "Stellar
@@ -10,7 +10,7 @@
 //!
 //! ## Running
 //! ```bash
-//! DATABASE_URL=postgres://user:password@localhost:5432/agora cargo test --test chaos_reorg_simulation
+//! DATABASE_URL=postgres://user:password@localhost:5432/Wordpool cargo test --test chaos_reorg_simulation
 //! ```
 //! Skips gracefully (matching `server/tests/auth_integration.rs`) when
 //! `DATABASE_URL` is unset.
@@ -37,9 +37,9 @@
 
 mod common;
 
-use agora_server::models::blockchain_checkpoint::CheckpointStore;
-use agora_server::models::indexer_event::IndexedEvent;
-use agora_server::services::indexer::{apply_event_state, buffer_insert, IndexerConfig};
+use Wordpool_server::models::blockchain_checkpoint::CheckpointStore;
+use Wordpool_server::models::indexer_event::IndexedEvent;
+use Wordpool_server::services::indexer::{apply_event_state, buffer_insert, IndexerConfig};
 use common::{cleanup_organizer, random_synthetic_ledger_base, seed_organizer_and_event, test_pool};
 use serde_json::json;
 use sqlx::PgPool;

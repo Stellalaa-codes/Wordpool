@@ -1,7 +1,7 @@
 # [Design] Search for Events: UI/UX Design #538
 
 ## Summary
-The platform currently lacks a dedicated search experience for events. This design implements a comprehensive search interface that aligns with Agora's visual language, covering the search input, filters, results layout, and all essential states (empty, loading, and error).
+The platform currently lacks a dedicated search experience for events. This design implements a comprehensive search interface that aligns with Wordpool's visual language, covering the search input, filters, results layout, and all essential states (empty, loading, and error).
 
 ### Key Requirements
 - **Search Bar & Input**: Prominent search input with "Search events, organizers, locations…" placeholder, clear/reset button, and search icon.
@@ -11,4 +11,4 @@ The platform currently lacks a dedicated search experience for events. This desi
 - **Mobile Responsiveness**: Full-screen search overlay and filter bottom sheet for mobile devices.
 
 ## Figma Design Link
-[Agora Event - Figma Design](https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Agora-Design-%E2%80%93-Search-for-Events--UI-UX-Design?node-id=20-2&t=9O1DHo1X04wcJdra-1)
+[Wordpool Event - Figma Design](https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Wordpool-Design-%E2%80%93-Search-for-Events--UI-UX-Design?node-id=20-2&t=9O1DHo1X04wcJdra-1)

@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Agora — Plan Events. Bring People Together. Grow Communities.";
+export const alt = "Wordpool — Plan Events. Bring People Together. Grow Communities.";
 
 export default async function OpenGraphImage() {
   return new ImageResponse(
@@ -39,7 +39,7 @@ export default async function OpenGraphImage() {
             marginBottom: 32,
           }}
         >
-          AGORA
+          Wordpool
         </div>
 
         {/* Tagline */}
@@ -85,7 +85,7 @@ export default async function OpenGraphImage() {
             letterSpacing: "0.02em",
           }}
         >
-          agora.events
+          Wordpool.events
         </div>
       </div>
     ),

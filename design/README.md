@@ -1,4 +1,4 @@
-# Agora Design Contributions
+# Wordpool Design Contributions
 
 This directory is specifically created for Open Source design contributions.
 

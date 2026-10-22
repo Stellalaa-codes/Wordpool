@@ -27,7 +27,7 @@ use tower::ServiceExt;
 use uuid::Uuid;
 
 // Re-export the handlers under test.
-use agora_server::handlers::profile::{
+use Wordpool_server::handlers::profile::{
     delete_profile, get_my_profile, get_organizer_stats, get_profile_by_address,
     patch_profile, upsert_profile, ProfileState,
 };
@@ -152,7 +152,7 @@ async fn test_put_profile_creates_with_valid_field_lengths() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind(display_name)
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -209,7 +209,7 @@ async fn test_put_profile_rejects_display_name_over_50_chars() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 002")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -260,7 +260,7 @@ async fn test_put_profile_rejects_bio_over_500_chars() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 003")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -310,7 +310,7 @@ async fn test_patch_profile_validates_bio_length() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 004")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -371,7 +371,7 @@ async fn test_redis_cache_invalidation_on_profile_update() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 005")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -464,7 +464,7 @@ async fn test_put_profile_accepts_bio_at_exact_500_chars() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 006")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -514,7 +514,7 @@ async fn test_put_profile_accepts_display_name_at_exact_50_chars() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 007")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -563,7 +563,7 @@ async fn test_redis_cache_invalidation_on_profile_creation() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 008")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");
@@ -640,7 +640,7 @@ async fn test_stats_cache_invalidation_on_profile_update() {
     .bind(organizer_id)
     .bind(wallet_address)
     .bind("Test Organizer 009")
-    .bind("test+organizer@agora.test")
+    .bind("test+organizer@Wordpool.test")
     .execute(&pool)
     .await
     .expect("failed to insert organizer");

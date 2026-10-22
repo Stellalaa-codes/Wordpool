@@ -1,6 +1,6 @@
 # Pro Subscription Contract
 
-A Soroban smart contract that manages the "Pro" subscription tier for event organizers on Agora.
+A Soroban smart contract that manages the "Pro" subscription tier for event organizers on Wordpool.
 
 ## Overview
 

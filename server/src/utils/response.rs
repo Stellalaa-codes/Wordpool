@@ -109,7 +109,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_success_helper() {
-        let payload = json!({ "id": 1, "name": "agora" });
+        let payload = json!({ "id": 1, "name": "Wordpool" });
         let resp = success(payload.clone(), "Operation succeeded").into_response();
 
         assert_eq!(resp.status(), StatusCode::OK);

@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Image from "next/image";
 
-const CREATE_EVENT_DRAFT_KEY = "agora:draft:create-event";
+const CREATE_EVENT_DRAFT_KEY = "Wordpool:draft:create-event";
 
 // Description length constraint matches DB CHECK constraint
 export const MAX_DESCRIPTION_LENGTH = 10000;

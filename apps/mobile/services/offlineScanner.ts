@@ -192,7 +192,7 @@ export class OfflineScanner {
         result: ScanResult.BAD_PAYLOAD,
         ticketId: null,
         record: null,
-        message: 'This QR code is not a valid Agora ticket payload.',
+        message: 'This QR code is not a valid Wordpool ticket payload.',
       };
     }
 

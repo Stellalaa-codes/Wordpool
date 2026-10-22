@@ -5,7 +5,7 @@
 //!
 //! - Payload envelope: `{ id, event, timestamp, data }`
 //! - Signature: HMAC-SHA256 over the raw JSON body using the endpoint secret,
-//!   delivered in the `X-Agora-Signature: sha256=<hex>` header.
+//!   delivered in the `X-Wordpool-Signature: sha256=<hex>` header.
 //! - Retries: 3 attempts with exponential backoff (1s, 2s, 4s).
 //! - Every attempt is recorded in `webhook_delivery_logs` for debugging.
 
@@ -150,8 +150,8 @@ async fn deliver_to_endpoint(
             client
                 .post(&endpoint.url)
                 .header("Content-Type", "application/json")
-                .header("X-Agora-Signature", &signature)
-                .header("X-Agora-Event", event)
+                .header("X-Wordpool-Signature", &signature)
+                .header("X-Wordpool-Event", event)
                 .body(body.clone())
                 .send(),
         )
@@ -306,8 +306,8 @@ pub async fn retry_failed_delivery(
         client
             .post(&endpoint.url)
             .header("Content-Type", "application/json")
-            .header("X-Agora-Signature", &signature)
-            .header("X-Agora-Event", &failure.event)
+            .header("X-Wordpool-Signature", &signature)
+            .header("X-Wordpool-Event", &failure.event)
             .body(body)
             .send(),
     )

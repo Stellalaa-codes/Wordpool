@@ -43,12 +43,12 @@ export class WalletConnectAdapter implements MobileWalletAdapter {
 
       if (UniversalProvider) {
         this.universalProvider = await UniversalProvider.init({
-          projectId: process.env.EXPO_PUBLIC_WALLETCONNECT_PROJECT_ID || 'agora_mobile_demo',
+          projectId: process.env.EXPO_PUBLIC_WALLETCONNECT_PROJECT_ID || 'Wordpool_mobile_demo',
           metadata: {
-            name: 'Agora Mobile',
+            name: 'Wordpool Mobile',
             description: 'Decentralized Event Ticketing Platform',
-            url: 'https://agora-events.org',
-            icons: ['https://agora-events.org/favicon.ico'],
+            url: 'https://Wordpool-events.org',
+            icons: ['https://Wordpool-events.org/favicon.ico'],
           },
         });
 
@@ -83,7 +83,7 @@ export class WalletConnectAdapter implements MobileWalletAdapter {
     this.sessionTopic = simulatedTopic;
     this.pairingUri = `wc:${simulatedTopic}@2?relay-protocol=irn&symKey=sampleKey&chains=stellar:testnet`;
 
-    const demoAddress = 'GBLOBSTRWC2TESTNETDEMOACCOUNTFORAGORA000000000000000000';
+    const demoAddress = 'GBLOBSTRWC2TESTNETDEMOACCOUNTFORWordpool000000000000000000';
     this.connectedPublicKey = demoAddress;
     return demoAddress;
   }

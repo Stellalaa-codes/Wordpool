@@ -28,7 +28,7 @@ function wallet(seed: string): string {
 
 const ORGANIZER_WALLETS = {
   stellarWestAfrica: wallet("STELLARWESTAFRICA"),
-  agoraBuilders: wallet("AGORABUILDERS"),
+  WordpoolBuilders: wallet("WordpoolBUILDERS"),
   fintechOrbit: wallet("FINTECHORBIT"),
 };
 
@@ -41,11 +41,11 @@ const organizerProfiles = [
     socials: { twitter: "https://x.com/stellarwestafrica" },
   },
   {
-    address: ORGANIZER_WALLETS.agoraBuilders,
-    displayName: "Agora Builders",
+    address: ORGANIZER_WALLETS.WordpoolBuilders,
+    displayName: "Wordpool Builders",
     bio: "Networking and demo nights for the local ecosystem.",
-    avatarUrl: "/images/organizers/agora-builders.png",
-    socials: { website: "https://agora.dev" },
+    avatarUrl: "/images/organizers/Wordpool-builders.png",
+    socials: { website: "https://Wordpool.dev" },
   },
   {
     address: ORGANIZER_WALLETS.fintechOrbit,
@@ -71,7 +71,7 @@ const events = [
     ticketPrice: 0,
     totalTickets: 200,
     mintedTickets: 178,
-    hostEmail: "host@agora.dev",
+    hostEmail: "host@Wordpool.dev",
   },
   {
     id: "seed-event-builder-night-past",
@@ -80,14 +80,14 @@ const events = [
     startsAt: new Date("2026-03-01T17:00:00.000Z"), // past
     location: "Online",
     category: "Party",
-    organizerName: "Agora Builders",
-    organizerWallet: ORGANIZER_WALLETS.agoraBuilders,
+    organizerName: "Wordpool Builders",
+    organizerWallet: ORGANIZER_WALLETS.WordpoolBuilders,
     imageUrl: "/images/event2.png",
     ticketPrice: 15,
     totalTickets: 120,
     mintedTickets: 120,
     followersOnly: true,
-    hostEmail: "community@agora.dev",
+    hostEmail: "community@Wordpool.dev",
   },
   {
     id: "seed-event-payments-summit-future",
@@ -102,7 +102,7 @@ const events = [
     ticketPrice: 30,
     totalTickets: 400,
     mintedTickets: 40,
-    hostEmail: "payments@agora.dev",
+    hostEmail: "payments@Wordpool.dev",
   },
   {
     id: "seed-event-summer-music-fest-future",
@@ -111,13 +111,13 @@ const events = [
     startsAt: new Date("2026-09-12T16:00:00.000Z"), // future
     location: "Accra",
     category: "Music",
-    organizerName: "Agora Builders",
-    organizerWallet: ORGANIZER_WALLETS.agoraBuilders,
+    organizerName: "Wordpool Builders",
+    organizerWallet: ORGANIZER_WALLETS.WordpoolBuilders,
     imageUrl: "/images/event2.png",
     ticketPrice: 40,
     totalTickets: 500,
     mintedTickets: 210,
-    hostEmail: "community@agora.dev",
+    hostEmail: "community@Wordpool.dev",
   },
   {
     id: "seed-event-art-walk-past",
@@ -132,7 +132,7 @@ const events = [
     ticketPrice: 0,
     totalTickets: 150,
     mintedTickets: 96,
-    hostEmail: "host@agora.dev",
+    hostEmail: "host@Wordpool.dev",
   },
   {
     id: "seed-event-charity-run-future",
@@ -141,13 +141,13 @@ const events = [
     startsAt: new Date("2026-11-08T07:00:00.000Z"), // future
     location: "Kigali",
     category: "Sports",
-    organizerName: "Agora Builders",
-    organizerWallet: ORGANIZER_WALLETS.agoraBuilders,
+    organizerName: "Wordpool Builders",
+    organizerWallet: ORGANIZER_WALLETS.WordpoolBuilders,
     imageUrl: "/images/event2.png",
     ticketPrice: 10,
     totalTickets: 300,
     mintedTickets: 55,
-    hostEmail: "community@agora.dev",
+    hostEmail: "community@Wordpool.dev",
   },
   {
     id: "seed-event-food-festival-future",
@@ -162,7 +162,7 @@ const events = [
     ticketPrice: 5,
     totalTickets: 600,
     mintedTickets: 312,
-    hostEmail: "host@agora.dev",
+    hostEmail: "host@Wordpool.dev",
   },
   {
     id: "seed-event-founders-forum-past",
@@ -178,7 +178,7 @@ const events = [
     totalTickets: 80,
     mintedTickets: 80,
     followersOnly: true,
-    hostEmail: "payments@agora.dev",
+    hostEmail: "payments@Wordpool.dev",
   },
   {
     id: "seed-event-wellness-retreat-future",
@@ -187,13 +187,13 @@ const events = [
     startsAt: new Date("2026-12-05T08:00:00.000Z"), // future
     location: "Zanzibar",
     category: "Health",
-    organizerName: "Agora Builders",
-    organizerWallet: ORGANIZER_WALLETS.agoraBuilders,
+    organizerName: "Wordpool Builders",
+    organizerWallet: ORGANIZER_WALLETS.WordpoolBuilders,
     imageUrl: "/images/event2.png",
     ticketPrice: 60,
     totalTickets: 100,
     mintedTickets: 18,
-    hostEmail: "community@agora.dev",
+    hostEmail: "community@Wordpool.dev",
   },
   {
     id: "seed-event-web3-bootcamp-future",
@@ -208,7 +208,7 @@ const events = [
     ticketPrice: 0,
     totalTickets: 1000,
     mintedTickets: 430,
-    hostEmail: "host@agora.dev",
+    hostEmail: "host@Wordpool.dev",
   },
 ];
 

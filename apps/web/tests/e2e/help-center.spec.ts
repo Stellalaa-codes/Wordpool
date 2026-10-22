@@ -65,7 +65,7 @@ test.describe("Help center", () => {
 
     // Article page sets a real per-article <title> via generateMetadata —
     // assert it's not the app's default title.
-    await expect(page).toHaveTitle(`${ARTICLE_ONE.title} | Help Center - Agora`);
+    await expect(page).toHaveTitle(`${ARTICLE_ONE.title} | Help Center - Wordpool`);
 
     // Click into a sibling article via the "Related Articles" sidebar — the
     // real, working category-scoped navigation in this app today.
@@ -78,7 +78,7 @@ test.describe("Help center", () => {
     await expect(
       page.getByRole("heading", { level: 1, name: ARTICLE_TWO.title })
     ).toBeVisible();
-    await expect(page).toHaveTitle(`${ARTICLE_TWO.title} | Help Center - Agora`);
+    await expect(page).toHaveTitle(`${ARTICLE_TWO.title} | Help Center - Wordpool`);
   });
 
   test("an unknown article slug renders the not-found page instead of a 500", async ({

@@ -866,7 +866,7 @@ mod tests {
     #[test]
     fn test_validate_upsert_ok() {
         let req = UpsertProfileRequest {
-            display_name: "Agora Events".to_string(),
+            display_name: "Wordpool Events".to_string(),
             bio: Some("We run great events.".to_string()),
             avatar_url: None,
             socials: json!({}),
@@ -984,12 +984,12 @@ mod tests {
     #[test]
     fn test_validate_patch_accepts_camel_case_aliases() {
         let req: PatchProfileRequest = serde_json::from_value(json!({
-            "displayName": "Agora",
+            "displayName": "Wordpool",
             "avatarUrl": "https://example.com/avatar.png"
         }))
         .unwrap();
 
-        assert_eq!(req.display_name.as_deref(), Some("Agora"));
+        assert_eq!(req.display_name.as_deref(), Some("Wordpool"));
         assert_eq!(
             req.avatar_url.as_deref(),
             Some("https://example.com/avatar.png")
@@ -1002,7 +1002,7 @@ mod tests {
         let response = OrganizerProfileResponse {
             profile: OrganizerProfile {
                 address: "GABC".to_string(),
-                display_name: "Agora".to_string(),
+                display_name: "Wordpool".to_string(),
                 bio: None,
                 avatar_url: None,
                 socials: json!({}),
@@ -1050,7 +1050,7 @@ mod tests {
         let response = OrganizerProfileResponse {
             profile: OrganizerProfile {
                 address: "GABC".to_string(),
-                display_name: "Agora".to_string(),
+                display_name: "Wordpool".to_string(),
                 bio: None,
                 avatar_url: None,
                 socials: json!({}),
@@ -1097,7 +1097,7 @@ mod tests {
 
     #[test]
     fn test_validate_socials_accepts_known_string_keys() {
-        let v = serde_json::json!({ "twitter": "@agora", "website": "https://agora.dev" });
+        let v = serde_json::json!({ "twitter": "@Wordpool", "website": "https://Wordpool.dev" });
         assert!(validate_socials(&v).is_ok());
     }
 
@@ -1116,7 +1116,7 @@ mod tests {
     #[test]
     fn test_validate_socials_rejects_unknown_key() {
         // A mistyped platform is reported rather than silently dropped.
-        let err = validate_socials(&serde_json::json!({ "twiter": "@agora" })).unwrap_err();
+        let err = validate_socials(&serde_json::json!({ "twiter": "@Wordpool" })).unwrap_err();
         assert!(format!("{err:?}").contains("twiter"));
     }
 

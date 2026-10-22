@@ -695,7 +695,7 @@ export default function OrganizerVerifyPage() {
                   Non-custodial &amp; trustless
                 </h3>
                 <p className="text-sm text-black/70 mt-1">
-                  Agora never holds your keys. All staking operations are
+                  Wordpool never holds your keys. All staking operations are
                   executed via signed XDR payloads submitted directly to the
                   Stellar network through your own wallet.
                 </p>

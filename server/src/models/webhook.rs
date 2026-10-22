@@ -37,7 +37,7 @@ pub struct CreateWebhookRequest {
     pub organizer_id: Uuid,
     /// HTTPS URL that will receive signed POST payloads.
     pub url: String,
-    /// Shared secret used to generate the `X-Agora-Signature` HMAC.
+    /// Shared secret used to generate the `X-Wordpool-Signature` HMAC.
     pub secret: String,
     /// Subscribed event names, e.g. `["PaymentProcessed", "EventCreated"]`.
     #[serde(default)]

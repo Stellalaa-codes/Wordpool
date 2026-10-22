@@ -163,7 +163,7 @@ export interface UseTicketCheckoutResult {
   reset: () => void;
 }
 
-const CHECK_IN_SECRET_STORAGE_PREFIX = 'agora_ticket_checkin_secret_';
+const CHECK_IN_SECRET_STORAGE_PREFIX = 'Wordpool_ticket_checkin_secret_';
 
 /**
  * Drives the full checkout flow described in issue #1005:
@@ -218,7 +218,7 @@ export function useTicketCheckout(): UseTicketCheckoutResult {
         await SecureStore.setItemAsync(
           `${CHECK_IN_SECRET_STORAGE_PREFIX}${purchaseResult.paymentId}`,
           Buffer.from(purchaseResult.checkInSecret).toString('base64'),
-          { keychainService: 'agora_stellar_wallet' }
+          { keychainService: 'Wordpool_stellar_wallet' }
         );
       } catch {
         // Ignore — see comment above.

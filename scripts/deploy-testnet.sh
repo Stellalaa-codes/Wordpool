@@ -94,7 +94,7 @@ step "Resolving the deployer account"
 DEPLOYER_SECRET="${STELLAR_ACCOUNT_SECRET:-}"
 
 if [[ -z "$DEPLOYER_SECRET" ]]; then
-  IDENTITY="agora-testnet-deployer"
+  IDENTITY="Wordpool-testnet-deployer"
   note "STELLAR_ACCOUNT_SECRET not set — generating identity '$IDENTITY'"
   "$STELLAR_BIN" keys generate --global "$IDENTITY" --network testnet --overwrite >/dev/null 2>&1 \
     || "$STELLAR_BIN" keys generate "$IDENTITY" --network testnet --overwrite >/dev/null 2>&1 \

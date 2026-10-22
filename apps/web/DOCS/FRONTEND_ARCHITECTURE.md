@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Agora web application is a **Next.js 16+ server-first application** using the App Router, Tailwind CSS, and modern React patterns. It provides a seamless event discovery, creation, and ticketing experience powered by the Stellar blockchain.
+The Wordpool web application is a **Next.js 16+ server-first application** using the App Router, Tailwind CSS, and modern React patterns. It provides a seamless event discovery, creation, and ticketing experience powered by the Stellar blockchain.
 
 ## Architecture Layers
 
@@ -634,7 +634,7 @@ export function buildMetadata(props: SEOProps): Metadata {
       type: "website",
       locale: "en_US",
       url: props.path,
-      siteName: "Agora",
+      siteName: "Wordpool",
       images: [{ url: props.image }],
     },
     twitter: {
@@ -657,7 +657,7 @@ pnpm start    # Starts production server
 ### Environment Variables (`.env.local`)
 
 ```
-NEXT_PUBLIC_API_URL=https://api.agora.dev
+NEXT_PUBLIC_API_URL=https://api.Wordpool.dev
 JWT_SECRET=your_jwt_secret
 STELLAR_CONTRACT_ADDRESS=CABC...
 STELLAR_RPC_URL=https://soroban-testnet.stellar.org

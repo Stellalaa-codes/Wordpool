@@ -7,7 +7,7 @@
 //! request-id propagation, tracing, panic catching, and per-IP rate limiting.
 //!
 //! Also benchmarks the SHA-256 proof-of-work gate
-//! (`agora_server::services::pow`) that guards entry into the virtual
+//! (`Wordpool_server::services::pow`) that guards entry into the virtual
 //! waiting room, since its cost directly bounds how fast the `queue` phase
 //! of the k6 stress script (`scripts/stress_test.js`) can move.
 //!
@@ -15,11 +15,11 @@
 //! cargo bench --bench handler_bench
 //! ```
 
-use agora_server::config::request_id::{propagate_request_id_layer, set_request_id_layer};
-use agora_server::middleware::catch_panic::catch_panic_layer;
-use agora_server::middleware::request_id_tracing::{propagate_request_id, trace_request_id};
-use agora_server::services::pow::{generate_challenge, solve_pow, verify_pow, DEFAULT_DIFFICULTY};
-use agora_server::utils::rate_limit::RateLimitLayer;
+use Wordpool_server::config::request_id::{propagate_request_id_layer, set_request_id_layer};
+use Wordpool_server::middleware::catch_panic::catch_panic_layer;
+use Wordpool_server::middleware::request_id_tracing::{propagate_request_id, trace_request_id};
+use Wordpool_server::services::pow::{generate_challenge, solve_pow, verify_pow, DEFAULT_DIFFICULTY};
+use Wordpool_server::utils::rate_limit::RateLimitLayer;
 use axum::{body::Body, http::Request, middleware, routing::get, Router};
 use criterion::{black_box, criterion_group, criterion_main, BenchmarkId, Criterion};
 use tower::ServiceExt;

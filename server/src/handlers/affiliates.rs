@@ -273,7 +273,7 @@ pub async fn get_my_affiliate_metrics(
     };
 
     // 3. Aggregate transactions attributed to this affiliate's referral code.
-    // In Agora, standard affiliate commission is 500 bps (5%) unless overridden.
+    // In Wordpool, standard affiliate commission is 500 bps (5%) unless overridden.
     // Query completed tickets referred by this code: count and total volume.
     struct AggStats {
         tickets_sold: i64,

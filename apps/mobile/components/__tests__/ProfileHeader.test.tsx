@@ -57,8 +57,8 @@ describe('ProfileHeader', () => {
   it('renders default fallback username and email when not provided', () => {
     const { getByTestId } = render(<ProfileHeader />);
 
-    expect(getByTestId('profile-username')).toHaveTextContent('Agora User');
-    expect(getByTestId('profile-email')).toHaveTextContent('user@agora.events');
+    expect(getByTestId('profile-username')).toHaveTextContent('Wordpool User');
+    expect(getByTestId('profile-email')).toHaveTextContent('user@Wordpool.events');
     expect(getByTestId('truncated-public-key')).toHaveTextContent('No address');
   });
 

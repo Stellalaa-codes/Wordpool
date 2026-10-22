@@ -1,7 +1,7 @@
 //! # Chaos Test: Dropped WebSocket Frames (Issue #1178)
 //!
 //! Exercises the real broadcaster types dashboard clients connect to
-//! (`agora_server::handlers::ws::{PurchaseBroadcaster, OrganizerBroadcaster}`)
+//! (`Wordpool_server::handlers::ws::{PurchaseBroadcaster, OrganizerBroadcaster}`)
 //! under simulated frame loss, using [`common::chaos::drop_frames`] to model
 //! a lossy network dropping WebSocket frames in transit.
 //!
@@ -10,7 +10,7 @@
 
 mod common;
 
-use agora_server::handlers::ws::{
+use Wordpool_server::handlers::ws::{
     GateHeatmapEvent, OrganizerBroadcaster, OrganizerEvent, PurchaseBroadcaster, PurchaseEvent,
 };
 use common::chaos::drop_frames;

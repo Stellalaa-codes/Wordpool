@@ -8,7 +8,7 @@ export const localeNames: Record<Locale, string> = {
   fr: "Français",
 };
 
-export const storageKey = "agora.locale";
+export const storageKey = "Wordpool.locale";
 
 export function isLocale(value: string | null): value is Locale {
   return value === "en" || value === "es" || value === "fr";

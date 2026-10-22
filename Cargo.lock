@@ -3,7 +3,7 @@
 version = 4
 
 [[package]]
-name = "agora_event_geotag"
+name = "Wordpool_event_geotag"
 version = "0.1.0"
 dependencies = [
  "soroban-sdk",

@@ -1,10 +1,10 @@
-pub use crate::topics::AgoraEvent;
+pub use crate::topics::WordpoolEvent;
 
 use soroban_sdk::{contracttype, Address, String};
 
 /// Emitted when an event is permanently cancelled.
 ///
-/// Published with topic `(AgoraEvent::EventCancelled,)`.
+/// Published with topic `(WordpoolEvent::EventCancelled,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventCancelledEvent {
@@ -21,7 +21,7 @@ pub struct EventCancelledEvent {
 /// Emitted when an event is archived and its full storage is reclaimed.
 ///
 /// After archival, only a lightweight `EventReceipt` remains for historical lookups.
-/// Published with topic `(AgoraEvent::EventArchived,)`.
+/// Published with topic `(WordpoolEvent::EventArchived,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventArchivedEvent {
@@ -35,7 +35,7 @@ pub struct EventArchivedEvent {
 
 /// Emitted when a new event is successfully registered on the platform.
 ///
-/// Published with topic `(AgoraEvent::EventRegistered,)`.
+/// Published with topic `(WordpoolEvent::EventRegistered,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventRegisteredEvent {
@@ -51,7 +51,7 @@ pub struct EventRegisteredEvent {
 
 /// Emitted when an event's active status is toggled by its organizer.
 ///
-/// Published with topic `(AgoraEvent::EventStatusUpdated,)`.
+/// Published with topic `(WordpoolEvent::EventStatusUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventStatusUpdatedEvent {
@@ -67,7 +67,7 @@ pub struct EventStatusUpdatedEvent {
 
 /// Emitted when the global platform fee percentage is updated.
 ///
-/// Published with topic `(AgoraEvent::FeeUpdated,)`.
+/// Published with topic `(WordpoolEvent::FeeUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct FeeUpdatedEvent {
@@ -77,7 +77,7 @@ pub struct FeeUpdatedEvent {
 
 /// Emitted when the contract is initialized for the first time.
 ///
-/// Published with topic `(AgoraEvent::ContractInitialized,)`.
+/// Published with topic `(WordpoolEvent::ContractInitialized,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct InitializationEvent {
@@ -93,7 +93,7 @@ pub struct InitializationEvent {
 
 /// Emitted when the contract WASM is upgraded to a new version.
 ///
-/// Published with topic `(AgoraEvent::ContractUpgraded,)`.
+/// Published with topic `(WordpoolEvent::ContractUpgraded,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct RegistryUpgradedEvent {
@@ -105,7 +105,7 @@ pub struct RegistryUpgradedEvent {
 
 /// Emitted when an event's IPFS metadata CID is updated.
 ///
-/// Published with topic `(AgoraEvent::MetadataUpdated,)`.
+/// Published with topic `(WordpoolEvent::MetadataUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct MetadataUpdatedEvent {
@@ -123,7 +123,7 @@ pub struct MetadataUpdatedEvent {
 
 /// Emitted when tickets are sold and the event's supply counter increases.
 ///
-/// Published with topic `(AgoraEvent::InventoryIncremented,)`.
+/// Published with topic `(WordpoolEvent::InventoryIncremented,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct InventoryIncrementedEvent {
@@ -137,7 +137,7 @@ pub struct InventoryIncrementedEvent {
 
 /// Emitted when a ticket is refunded and the event's supply counter decreases.
 ///
-/// Published with topic `(AgoraEvent::InventoryDecremented,)`.
+/// Published with topic `(WordpoolEvent::InventoryDecremented,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct InventoryDecrementedEvent {
@@ -151,7 +151,7 @@ pub struct InventoryDecrementedEvent {
 
 /// Emitted when an organizer is added to the platform blacklist.
 ///
-/// Published with topic `(AgoraEvent::OrganizerBlacklisted,)`.
+/// Published with topic `(WordpoolEvent::OrganizerBlacklisted,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct OrganizerBlacklistedEvent {
@@ -167,7 +167,7 @@ pub struct OrganizerBlacklistedEvent {
 
 /// Emitted when an organizer is removed from the platform blacklist.
 ///
-/// Published with topic `(AgoraEvent::OrganizerRemovedFromBlacklist,)`.
+/// Published with topic `(WordpoolEvent::OrganizerRemovedFromBlacklist,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct OrganizerRemovedFromBlacklistEvent {
@@ -184,7 +184,7 @@ pub struct OrganizerRemovedFromBlacklistEvent {
 /// Emitted when all active events for a blacklisted organizer are suspended.
 ///
 /// This is a ripple effect triggered automatically during blacklisting.
-/// Published with topic `(AgoraEvent::EventsSuspended,)`.
+/// Published with topic `(WordpoolEvent::EventsSuspended,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventsSuspendedEvent {
@@ -200,7 +200,7 @@ pub struct EventsSuspendedEvent {
 
 /// Emitted when the global promotional discount is created or updated.
 ///
-/// Published with topic `(AgoraEvent::GlobalPromoUpdated,)`.
+/// Published with topic `(WordpoolEvent::GlobalPromoUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct GlobalPromoUpdatedEvent {
@@ -218,7 +218,7 @@ pub struct GlobalPromoUpdatedEvent {
 ///
 /// During the grace period, all guests may request refunds regardless of their
 /// ticket tier's standard refundability rules.
-/// Published with topic `(AgoraEvent::EventPostponed,)`.
+/// Published with topic `(WordpoolEvent::EventPostponed,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct EventPostponedEvent {
@@ -236,7 +236,7 @@ pub struct EventPostponedEvent {
 
 /// Emitted when the staking token address is changed by an admin.
 ///
-/// Published with topic `(AgoraEvent::StakingTokenUpdated,)`.
+/// Published with topic `(WordpoolEvent::StakingTokenUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct StakingTokenUpdatedEvent {
@@ -247,7 +247,7 @@ pub struct StakingTokenUpdatedEvent {
 
 /// Emitted when the minimum stake amount is changed by an admin.
 ///
-/// Published with topic `(AgoraEvent::MinStakeAmountUpdated,)`.
+/// Published with topic `(WordpoolEvent::MinStakeAmountUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct MinStakeAmountUpdatedEvent {
@@ -258,7 +258,7 @@ pub struct MinStakeAmountUpdatedEvent {
 
 /// Emitted when a governance proposal is created by an admin.
 ///
-/// Published with topic `(AgoraEvent::ProposalCreated,)` (used internally).
+/// Published with topic `(WordpoolEvent::ProposalCreated,)` (used internally).
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ProposalCreatedEvent {
@@ -272,7 +272,7 @@ pub struct ProposalCreatedEvent {
 
 /// Emitted when an admin approves a governance proposal.
 ///
-/// Published with topic `(AgoraEvent::ProposalApproved,)` (used internally).
+/// Published with topic `(WordpoolEvent::ProposalApproved,)` (used internally).
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ProposalApprovedEvent {
@@ -286,7 +286,7 @@ pub struct ProposalApprovedEvent {
 
 /// Emitted when a governance proposal is executed after meeting the approval threshold.
 ///
-/// Published with topic `(AgoraEvent::ProposalExecuted,)` (used internally).
+/// Published with topic `(WordpoolEvent::ProposalExecuted,)` (used internally).
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ProposalExecutedEvent {
@@ -300,7 +300,7 @@ pub struct ProposalExecutedEvent {
 
 /// Emitted when a governance proposal is cancelled by the proposer.
 ///
-/// Published with topic `(AgoraEvent::ProposalCancelled,)`.
+/// Published with topic `(WordpoolEvent::ProposalCancelled,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ProposalCancelledEvent {
@@ -378,7 +378,7 @@ pub struct AdminProposalCancelledEvent {
 /// Emitted when a scanner wallet is authorized for ticket validation at an event.
 ///
 /// Scanners are wallets authorized by the organizer to validate/check-in tickets
-/// at the event venue. Published with topic `(AgoraEvent::ScannerAuthorized,)`.
+/// at the event venue. Published with topic `(WordpoolEvent::ScannerAuthorized,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ScannerAuthorizedEvent {
@@ -394,7 +394,7 @@ pub struct ScannerAuthorizedEvent {
 
 /// Emitted when a scanner wallet's authorization is revoked for an event.
 ///
-/// Published with topic `(AgoraEvent::ScannerRevoked,)`.
+/// Published with topic `(WordpoolEvent::ScannerRevoked,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct ScannerRevokedEvent {
@@ -411,7 +411,7 @@ pub struct ScannerRevokedEvent {
 /// Emitted when an event's minimum sales target (goal) is reached.
 ///
 /// This signals that the event has sufficient ticket sales to proceed.
-/// Published with topic `(AgoraEvent::GoalMet,)`.
+/// Published with topic `(WordpoolEvent::GoalMet,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct GoalMetEvent {
@@ -431,7 +431,7 @@ pub struct GoalMetEvent {
 ///
 /// Organizers stake tokens to gain platform trust and unlock Verified badges.
 /// The `is_verified` field indicates whether the staked amount meets the minimum
-/// threshold for Verified status. Published with topic `(AgoraEvent::CollateralStaked,)`.
+/// threshold for Verified status. Published with topic `(WordpoolEvent::CollateralStaked,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct CollateralStakedEvent {
@@ -450,7 +450,7 @@ pub struct CollateralStakedEvent {
 /// Emitted when an organizer withdraws their staked collateral tokens.
 ///
 /// After unstaking, the organizer loses Verified status and is removed from
-/// the stakers list. Published with topic `(AgoraEvent::CollateralUnstaked,)`.
+/// the stakers list. Published with topic `(WordpoolEvent::CollateralUnstaked,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct CollateralUnstakedEvent {
@@ -467,7 +467,7 @@ pub struct CollateralUnstakedEvent {
 /// Emitted when staking rewards are distributed proportionally to all active stakers.
 ///
 /// Rewards are allocated based on each staker's share of the total staked amount.
-/// Published with topic `(AgoraEvent::StakerRewardsDistributed,)`.
+/// Published with topic `(WordpoolEvent::StakerRewardsDistributed,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct StakerRewardsDistributedEvent {
@@ -481,7 +481,7 @@ pub struct StakerRewardsDistributedEvent {
 
 /// Emitted when an organizer claims their accumulated staking rewards.
 ///
-/// Published with topic `(AgoraEvent::StakerRewardsClaimed,)`.
+/// Published with topic `(WordpoolEvent::StakerRewardsClaimed,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct StakerRewardsClaimedEvent {
@@ -496,7 +496,7 @@ pub struct StakerRewardsClaimedEvent {
 /// Emitted when a guest's loyalty score is updated after a ticket purchase.
 ///
 /// Loyalty scores accumulate over time and unlock platform-fee discounts at
-/// defined tiers. Published with topic `(AgoraEvent::LoyaltyScoreUpdated,)`.
+/// defined tiers. Published with topic `(WordpoolEvent::LoyaltyScoreUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct LoyaltyScoreUpdatedEvent {
@@ -513,7 +513,7 @@ pub struct LoyaltyScoreUpdatedEvent {
 /// Emitted when a custom fee override is set for a specific event.
 ///
 /// Custom fees allow admins to grant special rates (e.g., for high-volume partners
-/// or charitable events). Published with topic `(AgoraEvent::CustomFeeSet,)`.
+/// or charitable events). Published with topic `(WordpoolEvent::CustomFeeSet,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct CustomFeeSetEvent {
@@ -537,7 +537,7 @@ pub struct AdminUpdatedEvent {
 
 /// Emitted when a post-event feedback CID is set by the organizer after end_time.
 ///
-/// Published with topic `(AgoraEvent::FeedbackCidSet,)`.
+/// Published with topic `(WordpoolEvent::FeedbackCidSet,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct FeedbackCidSetEvent {
@@ -553,7 +553,7 @@ pub struct FeedbackCidSetEvent {
 
 /// Emitted when an event's token whitelist is updated (token added or removed).
 ///
-/// Published with topic `(AgoraEvent::TokenWhitelistUpdated,)`.
+/// Published with topic `(WordpoolEvent::TokenWhitelistUpdated,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct TokenWhitelistUpdatedEvent {
@@ -571,7 +571,7 @@ pub struct TokenWhitelistUpdatedEvent {
 
 /// Emitted when a user successfully joins the waitlist for an event.
 ///
-/// Published with topic `(AgoraEvent::WaitlistJoined,)`.
+/// Published with topic `(WordpoolEvent::WaitlistJoined,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct WaitlistJoinedEvent {
@@ -585,7 +585,7 @@ pub struct WaitlistJoinedEvent {
 
 /// Emitted when a user leaves the waitlist for an event.
 ///
-/// Published with topic `(AgoraEvent::WaitlistLeft,)`.
+/// Published with topic `(WordpoolEvent::WaitlistLeft,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct WaitlistLeftEvent {
@@ -599,7 +599,7 @@ pub struct WaitlistLeftEvent {
 
 /// Emitted when a dispute is opened on an event.
 ///
-/// Published with topic `(AgoraEvent::DisputeOpened,)`.
+/// Published with topic `(WordpoolEvent::DisputeOpened,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct DisputeOpenedEvent {
@@ -610,7 +610,7 @@ pub struct DisputeOpenedEvent {
 
 /// Emitted when a vote is cast on a dispute.
 ///
-/// Published with topic `(AgoraEvent::DisputeVoted,)`.
+/// Published with topic `(WordpoolEvent::DisputeVoted,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct DisputeVotedEvent {
@@ -622,7 +622,7 @@ pub struct DisputeVotedEvent {
 
 /// Emitted when a dispute is resolved.
 ///
-/// Published with topic `(AgoraEvent::DisputeResolved,)`.
+/// Published with topic `(WordpoolEvent::DisputeResolved,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct DisputeResolvedEvent {
@@ -641,7 +641,7 @@ pub struct DisputeResolvedEvent {
 /// and the event/ledger context. The indexer uses this event to keep the off-chain
 /// ledger in sync.
 ///
-/// Published with topic `(AgoraEvent::TicketRefunded,)`.
+/// Published with topic `(WordpoolEvent::TicketRefunded,)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct TicketRefundedEvent {

@@ -1,6 +1,6 @@
-# Contributing to Agora
+# Contributing to Wordpool
 
-Welcome to Agora! We're building a payment solution on the Stellar network, and we're excited to have you contribute. This guide will help you understand what's expected and how to make meaningful contributions.
+Welcome to Wordpool! We're building a payment solution on the Stellar network, and we're excited to have you contribute. This guide will help you understand what's expected and how to make meaningful contributions.
 
 ## 📋 Before You Start
 
@@ -13,7 +13,7 @@ When applying for an issue:
 
 ### Project Structure
 ```
-Agora-stellr/
+Wordpool-stellr/
 ├── README.md
 ├── contract/      # Smart contracts
 └── frontend/ root      # User interface
@@ -32,7 +32,7 @@ PRs are automatically routed for review based on [.github/CODEOWNERS](.github/CO
 ## 🎨 Frontend Contributions
 
 ### Design Reference
-- **Figma Design**: [Agora Figma](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1) 
+- **Figma Design**: [Wordpool Figma](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1) 
 
 ### Standards and Best Practices
 - Follow professional frontend standards
@@ -73,8 +73,8 @@ PRs are automatically routed for review based on [.github/CODEOWNERS](.github/CO
 
 ### 1. Fork and Clone
 ```bash
-git clone https://github.com/YOUR_USERNAME/Agora-stellr.git
-cd Agora
+git clone https://github.com/YOUR_USERNAME/Wordpool-stellr.git
+cd Wordpool
 ```
 
 ### 2. Create a Branch
@@ -118,7 +118,7 @@ If you encounter blockers or need clarification:
 
 ## 🎯 Our Mission
 
-Help us push Agora on the Stellar network fast by:
+Help us push Wordpool on the Stellar network fast by:
 - Writing clean, maintainable code
 - Following best practices and standards
 - Communicating effectively
@@ -127,7 +127,7 @@ Help us push Agora on the Stellar network fast by:
 
 ## 🌊 Let's Build Together
 
-Every contribution matters. Whether you're fixing a bug, adding a feature, or improving documentation, you're helping build something meaningful on Agora.
+Every contribution matters. Whether you're fixing a bug, adding a feature, or improving documentation, you're helping build something meaningful on Wordpool.
 
 **Questions?** Reach out to the maintainers in your draft PRs.
 

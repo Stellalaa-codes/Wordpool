@@ -20,10 +20,10 @@
 - **Node.js** ≥ 20 (see `.nvmrc` in the repo root)
 - **pnpm** ≥ 9 — install with `npm i -g pnpm`
 - A Chromium-based browser (Chrome or Brave) — required for the Freighter extension
-- The Agora repo cloned and dependencies installed:
+- The Wordpool repo cloned and dependencies installed:
   ```bash
-  git clone https://github.com/Agora-Events/agora.git
-  cd agora
+  git clone https://github.com/Wordpool-Events/Wordpool.git
+  cd Wordpool
   pnpm install
   ```
 
@@ -31,7 +31,7 @@
 
 ## 2. Install & Configure Freighter
 
-Freighter is the browser wallet used to sign Stellar transactions on Agora.
+Freighter is the browser wallet used to sign Stellar transactions on Wordpool.
 
 ### 2.1 Install the Extension
 
@@ -82,7 +82,7 @@ A `200 OK` response with a transaction hash confirms the account is funded. You 
 
 A **trustline** tells the Stellar network that your account is willing to hold a specific asset. Without a USDC trustline, ticket payments cannot reach your wallet.
 
-Agora handles this automatically in the `TicketModal` UI — if your wallet lacks a trustline, an **"Add USDC Trustline (Testnet)"** button will appear before you reach the purchase confirmation step. Clicking it sends a `ChangeTrust` transaction via Freighter.
+Wordpool handles this automatically in the `TicketModal` UI — if your wallet lacks a trustline, an **"Add USDC Trustline (Testnet)"** button will appear before you reach the purchase confirmation step. Clicking it sends a `ChangeTrust` transaction via Freighter.
 
 ### Manual Setup (CLI)
 
@@ -190,7 +190,7 @@ pnpm dev
 
 ## 7. Testnet Contract IDs & Token Issuers
 
-> **Note:** Contract IDs below are reference values for the Agora Testnet deployment. Check `contract/.env.devnet` or ask a maintainer for the currently active addresses if these are stale.
+> **Note:** Contract IDs below are reference values for the Wordpool Testnet deployment. Check `contract/.env.devnet` or ask a maintainer for the currently active addresses if these are stale.
 
 | Name | Address |
 |---|---|

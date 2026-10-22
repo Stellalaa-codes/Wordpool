@@ -142,7 +142,7 @@ export default function ProfileScreen() {
           <View style={styles.infoRow}>
             <Text style={styles.infoLabel}>Stellar Address</Text>
             <Text style={styles.infoValue} numberOfLines={1} ellipsizeMode="middle">
-              {publicKey || user?.walletAddress || 'GDAGORA...'}
+              {publicKey || user?.walletAddress || 'GDWordpool...'}
             </Text>
           </View>
 

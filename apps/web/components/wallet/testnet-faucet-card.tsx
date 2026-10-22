@@ -5,7 +5,7 @@
  *
  * Lets developers and beta testers fund a Stellar Testnet keypair with XLM
  * via the Friendbot faucet and automatically establishes a USDC trustline,
- * all without leaving the Agora interface.
+ * all without leaving the Wordpool interface.
  *
  * Acceptance criteria:
  * - Clicking "Fund Wallet" calls https://friendbot.stellar.org?addr={publicKey}.

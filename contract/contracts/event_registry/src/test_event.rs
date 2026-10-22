@@ -206,7 +206,7 @@ mod tests {
     #[test]
     fn update_metadata_emits_metadata_updated_event() {
         use crate::events::MetadataUpdatedEvent;
-        use crate::topics::AgoraEvent;
+        use crate::topics::WordpoolEvent;
         use soroban_sdk::testutils::Events as _;
         use soroban_sdk::TryIntoVal;
 
@@ -230,8 +230,8 @@ mod tests {
         let (emitter, topics, data) = events.get(0).unwrap();
         assert_eq!(emitter, client.address);
 
-        let topic: AgoraEvent = topics.get(0).unwrap().try_into_val(&env).unwrap();
-        assert_eq!(topic, AgoraEvent::MetadataUpdated);
+        let topic: WordpoolEvent = topics.get(0).unwrap().try_into_val(&env).unwrap();
+        assert_eq!(topic, WordpoolEvent::MetadataUpdated);
 
         let payload: MetadataUpdatedEvent = data.try_into_val(&env).unwrap();
         assert_eq!(payload.event_id, event_id);

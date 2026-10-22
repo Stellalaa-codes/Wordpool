@@ -65,8 +65,8 @@ describe('storeTicketSecret', () => {
     await storeTicketSecret(PAYMENT_ID, secret);
 
     // Should have two entries in the mock store
-    const secretKey = `agora.vault.secret.${PAYMENT_ID}`;
-    const pubkeyKey = `agora.vault.pubkey.${PAYMENT_ID}`;
+    const secretKey = `Wordpool.vault.secret.${PAYMENT_ID}`;
+    const pubkeyKey = `Wordpool.vault.pubkey.${PAYMENT_ID}`;
     expect(mockStore.has(secretKey)).toBe(true);
     expect(mockStore.has(pubkeyKey)).toBe(true);
   });

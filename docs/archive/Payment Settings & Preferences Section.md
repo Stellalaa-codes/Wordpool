@@ -1,7 +1,7 @@
 # Payment Settings & Preferences Design - Issue #253
 
 ## Overview
-This document outlines the design solution for the Payment Settings and Preferences interfaces in the Agora Events platform. The design provides users with a comprehensive control panel for managing their financial information and UI preferences.
+This document outlines the design solution for the Payment Settings and Preferences interfaces in the Wordpool Events platform. The design provides users with a comprehensive control panel for managing their financial information and UI preferences.
 
 ## Design Scope
 
@@ -31,7 +31,7 @@ This document outlines the design solution for the Payment Settings and Preferen
    - Notification preferences configuration
 
 ## Design Guidelines
-All designs follow the established Figma design system guidelines for the Agora platform, ensuring:
+All designs follow the established Figma design system guidelines for the Wordpool platform, ensuring:
 - Consistent visual language and component usage
 - Accessibility standards compliance
 - Responsive design for all device sizes
@@ -39,11 +39,11 @@ All designs follow the established Figma design system guidelines for the Agora 
 
 ## Implementation Notes
 - Can be implemented as sub-tabs within the main Settings page or as a dedicated page
-- Maintains visual consistency with existing Agora platform components
+- Maintains visual consistency with existing Wordpool platform components
 - Prioritizes user security for financial information handling
 - Clear and intuitive navigation between related settings
 
 ## Figma Design
-[[Link to Figma design to be added upon approval](https://www.figma.com/design/iVKQ7uzd627y1JQ4Ie3KqA/Agora-event-Settings---Payment-Settings---Preferences-Section?node-id=0-1&t=w1bAHdHsy3CxTquj-1)]
+[[Link to Figma design to be added upon approval](https://www.figma.com/design/iVKQ7uzd627y1JQ4Ie3KqA/Wordpool-event-Settings---Payment-Settings---Preferences-Section?node-id=0-1&t=w1bAHdHsy3CxTquj-1)]
 
 ---

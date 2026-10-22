@@ -376,7 +376,7 @@ mod tests {
         // `SELECT 1` probe must report the database as unreachable.
         let pool = sqlx::postgres::PgPoolOptions::new()
             .acquire_timeout(Duration::from_millis(250))
-            .connect_lazy("postgres://agora:agora@127.0.0.1:1/agora")
+            .connect_lazy("postgres://Wordpool:Wordpool@127.0.0.1:1/Wordpool")
             .expect("lazy pool should be constructible");
         assert!(!ping_database(&pool).await);
     }
@@ -385,7 +385,7 @@ mod tests {
     async fn test_health_db_endpoint_returns_503_when_unreachable() {
         let pool = sqlx::postgres::PgPoolOptions::new()
             .acquire_timeout(Duration::from_millis(250))
-            .connect_lazy("postgres://agora:agora@127.0.0.1:1/agora")
+            .connect_lazy("postgres://Wordpool:Wordpool@127.0.0.1:1/Wordpool")
             .expect("lazy pool should be constructible");
 
         let router = Router::new()

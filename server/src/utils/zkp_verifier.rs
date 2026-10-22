@@ -93,13 +93,13 @@ use thiserror::Error;
 // strings are protocol constants: changing one invalidates every commitment
 // and proof in circulation, so they are versioned (`/v1/`) rather than edited.
 
-const DOMAIN_GENERATOR_H: &[u8] = b"agora/zkp/v1/generator-h";
-const DOMAIN_TICKET_SCALAR: &[u8] = b"agora/zkp/v1/ticket-scalar";
-const DOMAIN_SECRET_SCALAR: &[u8] = b"agora/zkp/v1/secret-scalar";
-const DOMAIN_NULLIFIER_BASE: &[u8] = b"agora/zkp/v1/nullifier-base";
-const DOMAIN_MERKLE_LEAF: &[u8] = b"agora/zkp/v1/merkle-leaf";
-const DOMAIN_MERKLE_NODE: &[u8] = b"agora/zkp/v1/merkle-node";
-const DOMAIN_TRANSCRIPT: &[u8] = b"agora/zkp/v1/fiat-shamir";
+const DOMAIN_GENERATOR_H: &[u8] = b"Wordpool/zkp/v1/generator-h";
+const DOMAIN_TICKET_SCALAR: &[u8] = b"Wordpool/zkp/v1/ticket-scalar";
+const DOMAIN_SECRET_SCALAR: &[u8] = b"Wordpool/zkp/v1/secret-scalar";
+const DOMAIN_NULLIFIER_BASE: &[u8] = b"Wordpool/zkp/v1/nullifier-base";
+const DOMAIN_MERKLE_LEAF: &[u8] = b"Wordpool/zkp/v1/merkle-leaf";
+const DOMAIN_MERKLE_NODE: &[u8] = b"Wordpool/zkp/v1/merkle-node";
+const DOMAIN_TRANSCRIPT: &[u8] = b"Wordpool/zkp/v1/fiat-shamir";
 
 /// Wire-format version of [`RingProof`]. Bumped on any incompatible change to
 /// the byte layout *or* to the Fiat–Shamir transcript.
@@ -1310,7 +1310,7 @@ mod tests {
 /// so a change to either implementation fails loudly on one side or the other.
 ///
 /// Regenerate with:
-/// `cargo test -p agora-server zkp_conformance -- --ignored --nocapture`
+/// `cargo test -p Wordpool-server zkp_conformance -- --ignored --nocapture`
 #[cfg(test)]
 mod conformance {
     use super::*;
@@ -1333,7 +1333,7 @@ mod conformance {
     impl ProverRng for VectorRng {
         fn next_scalar(&mut self) -> Scalar {
             let scalar = hash_to_scalar(
-                b"agora/zkp/v1/test-rng",
+                b"Wordpool/zkp/v1/test-rng",
                 &[self.label.as_bytes(), &self.counter.to_be_bytes()],
             );
             self.counter += 1;
@@ -1350,7 +1350,7 @@ mod conformance {
         let mut ring = Vec::with_capacity(RING_SIZE);
         let mut witness = None;
         for i in 0..RING_SIZE {
-            let t = ticket_scalar(&format!("AGORA-TICKET-{i:03}"));
+            let t = ticket_scalar(&format!("Wordpool-TICKET-{i:03}"));
             let s = secret_scalar(format!("conformance-secret-{i}").as_bytes());
             if i == WITNESS_INDEX {
                 witness = Some(Witness {

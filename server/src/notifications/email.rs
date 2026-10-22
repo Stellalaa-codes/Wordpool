@@ -63,7 +63,7 @@ impl SmtpEmailProvider {
     /// Initialize provider from standard environment variables:
     /// - `SMTP_HOST` (required, or defaults to `"stub"`)
     /// - `SMTP_PORT` (default `587`)
-    /// - `SMTP_FROM` / `SMTP_FROM_ADDRESS` (default `"noreply@agora.events"`)
+    /// - `SMTP_FROM` / `SMTP_FROM_ADDRESS` (default `"noreply@Wordpool.events"`)
     /// - `SMTP_USER` / `SMTP_USERNAME` (optional)
     /// - `SMTP_PASS` / `SMTP_PASSWORD` (optional)
     /// - `SMTP_USE_TLS` (default `true`, set `"false"` or `"0"` to disable)
@@ -75,7 +75,7 @@ impl SmtpEmailProvider {
             .unwrap_or(587);
         let from_address = env::var("SMTP_FROM")
             .or_else(|_| env::var("SMTP_FROM_ADDRESS"))
-            .unwrap_or_else(|_| "noreply@agora.events".to_string());
+            .unwrap_or_else(|_| "noreply@Wordpool.events".to_string());
 
         let user = env::var("SMTP_USER").or_else(|_| env::var("SMTP_USERNAME")).ok();
         let pass = env::var("SMTP_PASS").or_else(|_| env::var("SMTP_PASSWORD")).ok();
@@ -190,7 +190,7 @@ mod tests {
 
     #[test]
     fn test_smtp_provider_custom_options() {
-        let provider = SmtpEmailProvider::new("mail.internal", "bot@agora.events")
+        let provider = SmtpEmailProvider::new("mail.internal", "bot@Wordpool.events")
             .with_port(2525)
             .with_tls(false)
             .with_credentials("user1", "pass123");
@@ -205,11 +205,11 @@ mod tests {
 
     #[tokio::test]
     async fn test_smtp_provider_stub_behavior() {
-        let provider = SmtpEmailProvider::new("stub", "no-reply@agora.events");
+        let provider = SmtpEmailProvider::new("stub", "no-reply@Wordpool.events");
         let notification = Notification {
             recipient: "user@example.com".to_string(),
             subject: "Welcome".to_string(),
-            body: "Hello from Agora!".to_string(),
+            body: "Hello from Wordpool!".to_string(),
         };
 
         let res = provider.send(&notification).await;
@@ -218,7 +218,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_smtp_provider_invalid_recipient() {
-        let provider = SmtpEmailProvider::new("smtp.example.com", "no-reply@agora.events");
+        let provider = SmtpEmailProvider::new("smtp.example.com", "no-reply@Wordpool.events");
         let notification = Notification {
             recipient: "not an email @@invalid".to_string(),
             subject: "Test".to_string(),

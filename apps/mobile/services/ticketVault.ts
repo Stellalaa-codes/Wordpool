@@ -24,10 +24,10 @@
  *
  * ## What is stored
  *
- * Key: `agora.vault.secret.<paymentId>`  (per-ticket, biometric-gated)
+ * Key: `Wordpool.vault.secret.<paymentId>`  (per-ticket, biometric-gated)
  * Value: base64url-encoded raw 32-byte purchase secret
  *
- * Key: `agora.vault.pubkey.<paymentId>`  (per-ticket public key, no biometric needed)
+ * Key: `Wordpool.vault.pubkey.<paymentId>`  (per-ticket public key, no biometric needed)
  * Value: base64url-encoded 32-byte Ed25519 public key (safe to read freely)
  *
  * The private key is never written to disk; it is re-derived from the secret
@@ -57,8 +57,8 @@ import { deriveTicketKeyPair, toBase64Url, fromBase64Url } from '../lib/crypto';
 
 // ── Key name helpers ──────────────────────────────────────────────────────────
 
-const SECRET_KEY_PREFIX = 'agora.vault.secret.';
-const PUBKEY_KEY_PREFIX = 'agora.vault.pubkey.';
+const SECRET_KEY_PREFIX = 'Wordpool.vault.secret.';
+const PUBKEY_KEY_PREFIX = 'Wordpool.vault.pubkey.';
 
 function secretStoreKey(paymentId: string): string {
   return `${SECRET_KEY_PREFIX}${paymentId}`;
@@ -75,7 +75,7 @@ function pubkeyStoreKey(paymentId: string): string {
  * expo-local-authentication before calling getTicketSecret().
  */
 const BIOMETRIC_STORE_OPTIONS: SecureStore.SecureStoreOptions = {
-  keychainService: 'agora_ticket_vault',
+  keychainService: 'Wordpool_ticket_vault',
   // On iOS: this causes the Keychain item to require biometric/passcode before
   // being read. The OS presents its own native prompt; we don't draw our own UI
   // for this path.
@@ -84,7 +84,7 @@ const BIOMETRIC_STORE_OPTIONS: SecureStore.SecureStoreOptions = {
 
 /** Options for the public-key store — no biometric required, freely readable. */
 const PUBLIC_STORE_OPTIONS: SecureStore.SecureStoreOptions = {
-  keychainService: 'agora_ticket_vault_pub',
+  keychainService: 'Wordpool_ticket_vault_pub',
 };
 
 // ── Vault write ───────────────────────────────────────────────────────────────

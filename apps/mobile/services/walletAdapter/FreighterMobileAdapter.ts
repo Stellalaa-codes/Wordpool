@@ -66,7 +66,7 @@ export class FreighterMobileAdapter implements MobileWalletAdapter {
 
     const freighterUrl = `web+stellar:connect?callback=${encodeURIComponent(
       redirectUrl
-    )}&requestId=${requestId}&app_name=Agora`;
+    )}&requestId=${requestId}&app_name=Wordpool`;
 
     return new Promise<string>(async (resolve, reject) => {
       this.pendingResolvers.set(requestId, { resolve, reject });
@@ -77,7 +77,7 @@ export class FreighterMobileAdapter implements MobileWalletAdapter {
           this.pendingResolvers.delete(requestId);
           // If in development/testing or wallet not responding, provide simulation or timeout
           if (__DEV__) {
-            const devKey = 'GDEVFREIGHTERDEMO7TESTNETACCOUNTFORAGORAWALLET00000000000';
+            const devKey = 'GDEVFREIGHTERDEMO7TESTNETACCOUNTFORWordpoolWALLET00000000000';
             this.connectedPublicKey = devKey;
             resolve(devKey);
           } else {

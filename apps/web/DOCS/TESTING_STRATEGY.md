@@ -2,7 +2,7 @@
 
 ## Overview
 
-Agora's web application uses **Vitest** as its testing framework with **jsdom** environment for component testing. This document outlines our testing strategy, setup, and best practices.
+Wordpool's web application uses **Vitest** as its testing framework with **jsdom** environment for component testing. This document outlines our testing strategy, setup, and best practices.
 
 ## Testing Stack
 

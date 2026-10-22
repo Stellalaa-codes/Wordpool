@@ -16,10 +16,10 @@ import OfflineFallbackScreen from '@/components/OfflineFallbackScreen';
 SplashScreen.preventAutoHideAsync();
 
 /**
- * Builds a react-navigation theme from the current Agora theme tokens.
+ * Builds a react-navigation theme from the current Wordpool theme tokens.
  * Re-runs whenever colorScheme changes so the navigator updates instantly.
  */
-function useAgoraNavTheme() {
+function useWordpoolNavTheme() {
   const { colorScheme } = useThemeContext();
 
   return useMemo(() => {
@@ -43,7 +43,7 @@ function AppNavigation() {
   const { isAuthenticated } = useAuth();
   const segments = useSegments();
   const router = useRouter();
-  const navTheme = useAgoraNavTheme();
+  const navTheme = useWordpoolNavTheme();
   const { colorScheme } = useThemeContext();
 
   useEffect(() => {

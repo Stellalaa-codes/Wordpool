@@ -18,7 +18,7 @@ import { BleManager, Device } from 'react-native-ble-plx';
 import NetInfo from '@react-native-community/netinfo';
 import { Buffer } from 'buffer';
 
-/** Custom 128-bit service UUID identifying Agora gate scanners. */
+/** Custom 128-bit service UUID identifying Wordpool gate scanners. */
 export const MESH_SERVICE_UUID = '6f1d1a00-b5de-4196-b91a-1a0c6f6a2e10';
 /** Characteristic the mesh log is exchanged over (read + notify). */
 export const MESH_LOG_CHARACTERISTIC_UUID = '6f1d1a01-b5de-4196-b91a-1a0c6f6a2e10';

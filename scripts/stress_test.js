@@ -1,5 +1,5 @@
 // ==============================================================================
-// Agora k6 Stress / Load Test — browse -> queue -> checkout -> scan (Issue #1178)
+// Wordpool k6 Stress / Load Test — browse -> queue -> checkout -> scan (Issue #1178)
 // ==============================================================================
 // Note on file extension: the issue's target location names this
 // `scripts/stress_test.rs`, but k6 scripts run on k6's embedded Goja
@@ -9,12 +9,12 @@
 // lives under `server/benches/` and `server/tests/` per the rest of the
 // issue's target locations.
 //
-// Simulates the realistic funnel a real Agora attendee walks through:
+// Simulates the realistic funnel a real Wordpool attendee walks through:
 //   1. browse   — list/search events, view an event, view its ticket tiers
 //   2. queue    — solve the SHA-256 proof-of-work gate and join the virtual
-//                 waiting room (agora_server::handlers::waiting_room)
+//                 waiting room (Wordpool_server::handlers::waiting_room)
 //   3. checkout — generate a signed QR payload for a ticket
-//                 (agora_server::handlers::qr_payload). Actual on-chain
+//                 (Wordpool_server::handlers::qr_payload). Actual on-chain
 //                 payment happens client-side via the Soroban SDK against
 //                 the `ticket_payment` contract, outside this REST surface,
 //                 so it is out of scope for an HTTP load generator.
@@ -23,11 +23,11 @@
 //
 // Usage:
 //   k6 run scripts/stress_test.js
-//   BASE_URL=https://staging.agora.example VUS=50 DURATION=5m k6 run scripts/stress_test.js
+//   BASE_URL=https://staging.Wordpool.example VUS=50 DURATION=5m k6 run scripts/stress_test.js
 //   k6 run --summary-export=summary.json scripts/stress_test.js
 //
 // Env vars:
-//   BASE_URL   Agora API base URL          (default: http://localhost:3001)
+//   BASE_URL   Wordpool API base URL          (default: http://localhost:3001)
 //   VUS        peak virtual users          (default: 20)
 //   DURATION   sustained load duration     (default: 2m)
 //   RAMP_TIME  ramp up/down duration       (default: 30s)
@@ -58,14 +58,14 @@ const MAX_POW_ATTEMPTS = Number(__ENV.MAX_POW_ATTEMPTS || 2_000_000);
 // reads these back out of the k6 summary JSON.
 // ---------------------------------------------------------------------------
 
-const browseDuration = new Trend('agora_browse_duration', true);
-const queueDuration = new Trend('agora_queue_duration', true);
-const checkoutDuration = new Trend('agora_checkout_duration', true);
-const scanDuration = new Trend('agora_scan_duration', true);
-const powSolveDuration = new Trend('agora_pow_solve_duration', true);
-const powAttempts = new Trend('agora_pow_attempts');
-const funnelCompleted = new Counter('agora_funnel_completed_total');
-const funnelErrors = new Rate('agora_funnel_error_rate');
+const browseDuration = new Trend('Wordpool_browse_duration', true);
+const queueDuration = new Trend('Wordpool_queue_duration', true);
+const checkoutDuration = new Trend('Wordpool_checkout_duration', true);
+const scanDuration = new Trend('Wordpool_scan_duration', true);
+const powSolveDuration = new Trend('Wordpool_pow_solve_duration', true);
+const powAttempts = new Trend('Wordpool_pow_attempts');
+const funnelCompleted = new Counter('Wordpool_funnel_completed_total');
+const funnelErrors = new Rate('Wordpool_funnel_error_rate');
 
 // ---------------------------------------------------------------------------
 // k6 scenario / threshold configuration
@@ -97,13 +97,13 @@ export const options = {
   thresholds: {
     http_req_failed: ['rate<0.05'],
     http_req_duration: ['p(95)<1500', 'p(99)<3000'],
-    agora_browse_duration: ['p(95)<800'],
-    agora_funnel_error_rate: ['rate<0.10'],
+    Wordpool_browse_duration: ['p(95)<800'],
+    Wordpool_funnel_error_rate: ['rate<0.10'],
   },
 };
 
 // ---------------------------------------------------------------------------
-// Proof-of-work solver — mirrors agora_server::services::pow::verify_pow
+// Proof-of-work solver — mirrors Wordpool_server::services::pow::verify_pow
 // exactly: SHA-256(challenge || nonce) must have `difficulty` leading hex
 // zeros, where nonce is the decimal string form of an increasing counter
 // (see server/src/services/pow.rs::solve_pow).

@@ -15,7 +15,7 @@ describe("ShareButton", () => {
   const originalShare = navigator.share;
   const originalCanShare = navigator.canShare;
   const originalClipboard = navigator.clipboard;
-  const pageUrl = "https://agora.events/events/42";
+  const pageUrl = "https://Wordpool.events/events/42";
 
   beforeEach(() => {
     vi.clearAllMocks();

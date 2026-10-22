@@ -15,7 +15,7 @@ import ShareButton from "@/components/events/ShareButton";
 import { T } from "@/components/ui/t";
 import { AddToCalendar } from "@/components/events/add-to-calendar";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://agora.events";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://Wordpool.events";
 const BACKEND_URL =
   process.env.BACKEND_URL ??
   process.env.NEXT_PUBLIC_API_URL ??
@@ -140,7 +140,7 @@ export async function generateMetadata({
   return buildMetadata({
     title: event.title,
     description: truncateDescription(
-      `Join us for ${event.title} on ${event.date} in ${event.location}. ${event.price === "Free" ? "Free entry." : `Tickets from $${event.price}.`} Secure your spot on Agora.`
+      `Join us for ${event.title} on ${event.date} in ${event.location}. ${event.price === "Free" ? "Free entry." : `Tickets from $${event.price}.`} Secure your spot on Wordpool.`
     ),
     image: ogImageUrl,
     path: `/events/${id}`,

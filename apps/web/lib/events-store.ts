@@ -45,7 +45,7 @@ const eventsStore: EventRecord[] = [
     ticketPrice: 0,
     totalTickets: 200,
     mintedTickets: 90,
-    hostEmail: "host@agora.dev",
+    hostEmail: "host@Wordpool.dev",
   },
   {
     id: "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
@@ -54,14 +54,14 @@ const eventsStore: EventRecord[] = [
     startsAt: "2026-03-01T17:00:00.000Z",
     location: "Online",
     category: "Party",
-    organizerName: "Agora Builders",
+    organizerName: "Wordpool Builders",
     organizerWallet: "GDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
     imageUrl: "/images/event2.png",
     ticketPrice: 15,
     totalTickets: 120,
     mintedTickets: 120,
     followersOnly: true,
-    hostEmail: "community@agora.dev",
+    hostEmail: "community@Wordpool.dev",
   },
   {
     id: "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
@@ -76,7 +76,7 @@ const eventsStore: EventRecord[] = [
     ticketPrice: 30,
     totalTickets: 400,
     mintedTickets: 40,
-    hostEmail: "payments@agora.dev",
+    hostEmail: "payments@Wordpool.dev",
   },
 ];
 

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
-const STORAGE_KEY = "agora:followed-organizers";
+const STORAGE_KEY = "Wordpool:followed-organizers";
 
 type FollowButtonProps = {
   organizerId: string;

@@ -57,7 +57,7 @@ export const GET = withErrorHandler(async (request: NextRequest) => {
         acc.set(event.organizerName, {
           id: event.organizerName.toLowerCase().replace(/\s+/g, "-"),
           title: event.organizerName,
-          description: `Organizer of ${event.category} events on Agora.`,
+          description: `Organizer of ${event.category} events on Wordpool.`,
           image: "/icons/stellar-west-africa.svg",
           wallet: event.organizerWallet,
         });

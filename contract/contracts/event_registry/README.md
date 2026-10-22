@@ -140,7 +140,7 @@ The contract emits events for all significant state changes:
 
 The `TicketRefunded` event is emitted whenever a single ticket is refunded. This event carries complete information required by the Soroban indexer to maintain an accurate off-chain ledger:
 
-**Topics:** `(AgoraEvent::TicketRefunded,)`
+**Topics:** `(WordpoolEvent::TicketRefunded,)`
 
 **Event Structure:**
 ```rust

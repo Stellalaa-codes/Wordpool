@@ -1,6 +1,6 @@
 # Development Setup Guide
 
-This is the fastest way to go from a fresh clone to a full local Agora development environment.
+This is the fastest way to go from a fresh clone to a full local Wordpool development environment.
 
 It covers all four main areas of the repo:
 
@@ -54,8 +54,8 @@ If you still need Soroban CLI, install it from the Stellar/Soroban docs before w
 From the repo root:
 
 ```bash
-git clone https://github.com/Agora-Events/agora.git
-cd agora
+git clone https://github.com/Wordpool-Events/Wordpool.git
+cd Wordpool
 pnpm install
 ```
 
@@ -86,7 +86,7 @@ cp server/.env.example server/.env
 Default local backend database value:
 
 ```text
-DATABASE_URL=postgres://user:password@localhost:5432/agora
+DATABASE_URL=postgres://user:password@localhost:5432/Wordpool
 ```
 
 ### Optional unless you are deploying contracts to a network
@@ -119,11 +119,11 @@ This starts the full stack with these defaults:
 
 | Service | Container Name | Port | Environment |
 |---------|---------------|------|-------------|
-| PostgreSQL | `agora_postgres` | `5432` | `POSTGRES_USER=user`, `POSTGRES_PASSWORD=password`, `POSTGRES_DB=agora` |
-| Redis | `agora_redis` | `6379` | AOF persistence enabled |
-| Stellar RPC | `agora_stellar_rpc` | `8000` | Test network passphrase |
-| Backend (Rust) | `agora_backend` | `3001` | Connects to postgres + redis + stellar-rpc |
-| Frontend (Next.js) | `agora_frontend` | `3000` | `NEXT_PUBLIC_API_URL=http://localhost:3001/api/v1` |
+| PostgreSQL | `Wordpool_postgres` | `5432` | `POSTGRES_USER=user`, `POSTGRES_PASSWORD=password`, `POSTGRES_DB=Wordpool` |
+| Redis | `Wordpool_redis` | `6379` | AOF persistence enabled |
+| Stellar RPC | `Wordpool_stellar_rpc` | `8000` | Test network passphrase |
+| Backend (Rust) | `Wordpool_backend` | `3001` | Connects to postgres + redis + stellar-rpc |
+| Frontend (Next.js) | `Wordpool_frontend` | `3000` | `NEXT_PUBLIC_API_URL=http://localhost:3001/api/v1` |
 
 Container names and ports can be customized with environment variables (see `make help`).
 
@@ -283,7 +283,7 @@ You should also be able to open:
 services only start once their dependencies are actually ready:
 
 - `server`: `curl -fsS http://localhost:3001/api/v1/health`
-- `postgres`: `pg_isready -U user -d agora`
+- `postgres`: `pg_isready -U user -d Wordpool`
 - `redis`: `redis-cli ping`
 
 The `server` service uses `depends_on` with `condition: service_healthy`, so it

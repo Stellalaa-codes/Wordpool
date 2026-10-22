@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
 import TermsAgreementModal from '../TermsAgreementModal';
 
-const termsText = 'These terms explain how Agora services may be used.'.repeat(20);
+const termsText = 'These terms explain how Wordpool services may be used.'.repeat(20);
 
 function renderModal(overrides = {}) {
   const props = {

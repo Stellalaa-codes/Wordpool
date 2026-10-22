@@ -17,12 +17,12 @@ use serde::Serialize;
 use serde_json::Value;
 use tower::ServiceExt;
 
-use agora_server::config::request_id::{
+use Wordpool_server::config::request_id::{
     propagate_request_id_layer, set_request_id_layer, REQUEST_ID_HEADER,
 };
-use agora_server::middleware::request_id_tracing::{propagate_request_id, trace_request_id};
-use agora_server::utils::error::ApiError;
-use agora_server::utils::response::success;
+use Wordpool_server::middleware::request_id_tracing::{propagate_request_id, trace_request_id};
+use Wordpool_server::utils::error::ApiError;
+use Wordpool_server::utils::response::success;
 
 #[derive(Serialize)]
 struct HealthResponse {

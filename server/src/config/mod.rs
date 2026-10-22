@@ -81,7 +81,7 @@ pub struct Config {
     /// Public base URL for uploaded files.
     pub s3_public_url: String,
 
-    /// Base URL for the application (e.g., https://agora.events).
+    /// Base URL for the application (e.g., https://Wordpool.events).
     pub base_url: String,
 
     /// JWT signing secret. Must be at least 32 bytes long.
@@ -181,7 +181,7 @@ impl Config {
         let s3_secret_access_key = env::var("S3_SECRET_ACCESS_KEY").unwrap_or_default();
         let s3_endpoint_url = env::var("S3_ENDPOINT_URL").ok();
         let s3_public_url = env::var("S3_PUBLIC_URL").unwrap_or_default();
-        let base_url = env::var("BASE_URL").unwrap_or_else(|_| "https://agora.events".to_string());
+        let base_url = env::var("BASE_URL").unwrap_or_else(|_| "https://Wordpool.events".to_string());
         let jwt_secret = env::var("JWT_SECRET").unwrap_or_default();
         let monitoring_token = env::var("MONITORING_TOKEN").ok();
         let admin_token = env::var("ADMIN_TOKEN").ok();
@@ -421,7 +421,7 @@ mod tests {
     /// Build a fully-valid `Config` without touching env vars.
     fn valid_config() -> Config {
         Config {
-            database_url: "postgres://user:pass@localhost:5432/agora".to_string(),
+            database_url: "postgres://user:pass@localhost:5432/Wordpool".to_string(),
             port: 3001,
             rust_env: "development".to_string(),
             cors_allowed_origins: "http://localhost:3000".to_string(),
@@ -434,7 +434,7 @@ mod tests {
             s3_secret_access_key: String::new(),
             s3_endpoint_url: None,
             s3_public_url: String::new(),
-            base_url: "https://agora.events".to_string(),
+            base_url: "https://Wordpool.events".to_string(),
             jwt_secret: "a".repeat(JWT_SECRET_MIN_BYTES),
             monitoring_token: None,
             admin_token: None,
@@ -917,7 +917,7 @@ mod tests {
     #[test]
     fn test_validate_invalid_base_url_scheme() {
         let mut cfg = valid_config();
-        cfg.base_url = "ws://agora.events".to_string();
+        cfg.base_url = "ws://Wordpool.events".to_string();
         let err = cfg.validate().unwrap_err();
         assert!(
             err.errors

@@ -18,7 +18,7 @@ import { ProgressBar } from './step-1-basics';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const API_BASE_URL = 'https://api.agora.events'; // replaced at build-time via env
+const API_BASE_URL = 'https://api.Wordpool.events'; // replaced at build-time via env
 
 // ─── Image Upload Helper ──────────────────────────────────────────────────────
 
@@ -263,7 +263,7 @@ export default function Step4Review() {
 
       Alert.alert(
         '🎉 Event Created!',
-        'Your event is now live on Agora.',
+        'Your event is now live on Wordpool.',
         [{ text: 'View Events', onPress: () => router.replace('/(tabs)/discover') }],
         { cancelable: false },
       );

@@ -52,8 +52,8 @@ beforeEach(() => {
   mockParams = { eventId: '1', eventTitle: 'Stellar Meridian 2026' };
   mockUseTicketCheckout.mockReturnValue(idleCheckoutState());
   mockUseAuth.mockReturnValue({
-    token: 'mock-jwt-token-agora',
-    user: { name: 'Agora User', email: 'user@example.com', walletAddress: 'GBUYERWALLETADDRESSTESTNETXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
+    token: 'mock-jwt-token-Wordpool',
+    user: { name: 'Wordpool User', email: 'user@example.com', walletAddress: 'GBUYERWALLETADDRESSTESTNETXXXXXXXXXXXXXXXXXXXXXXXXXXXX' },
     isAuthenticated: true,
     login: jest.fn(),
     logout: jest.fn(),
@@ -101,7 +101,7 @@ describe('CheckoutScreen', () => {
   it('warns and does not start checkout when no wallet is configured', () => {
     mockUseAuth.mockReturnValue({
       token: null,
-      user: { name: 'Agora User', email: '', walletAddress: 'GDAGORA...' },
+      user: { name: 'Wordpool User', email: '', walletAddress: 'GDWordpool...' },
       isAuthenticated: true,
       login: jest.fn(),
       logout: jest.fn(),

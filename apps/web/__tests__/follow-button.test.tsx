@@ -7,7 +7,7 @@ vi.mock("sonner", () => ({
 }));
 
 const ORGANIZER_ID = "stellar-west-africa";
-const STORAGE_KEY = "agora:followed-organizers";
+const STORAGE_KEY = "Wordpool:followed-organizers";
 
 describe("FollowButton", () => {
   beforeEach(() => {

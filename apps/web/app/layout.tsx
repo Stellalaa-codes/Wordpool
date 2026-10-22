@@ -20,15 +20,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agora.events"),
+  metadataBase: new URL("https://Wordpool.events"),
   title: {
-    template: "Agora | %s",
-    default: "Agora | Discover & Organize Events",
+    template: "Wordpool | %s",
+    default: "Wordpool | Discover & Organize Events",
   },
   description:
     "Discover, organize, and register for elite Web3 and Web2 events locally and globally.",
   openGraph: {
-    title: "Agora | Discover & Organize Events",
+    title: "Wordpool | Discover & Organize Events",
     description:
       "Discover, organize, and register for elite Web3 and Web2 events locally and globally.",
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Agora Events - Discover & Organize Events",
+        alt: "Wordpool Events - Discover & Organize Events",
       },
     ],
     type: "website",

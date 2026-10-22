@@ -4383,10 +4383,10 @@ fn test_set_staking_config_emits_events() {
     let all_events = env.events().all();
     // Find StakingTokenUpdated and MinStakeAmountUpdated in the emitted events
     let staking_token_event = all_events.iter().any(|(topics, _)| {
-        topics.get(0) == Some(soroban_sdk::Val::from(crate::topics::AgoraEvent::StakingTokenUpdated))
+        topics.get(0) == Some(soroban_sdk::Val::from(crate::topics::WordpoolEvent::StakingTokenUpdated))
     });
     let min_stake_event = all_events.iter().any(|(topics, _)| {
-        topics.get(0) == Some(soroban_sdk::Val::from(crate::topics::AgoraEvent::MinStakeAmountUpdated))
+        topics.get(0) == Some(soroban_sdk::Val::from(crate::topics::WordpoolEvent::MinStakeAmountUpdated))
     });
     assert!(staking_token_event, "StakingTokenUpdated event not emitted");
     assert!(min_stake_event, "MinStakeAmountUpdated event not emitted");

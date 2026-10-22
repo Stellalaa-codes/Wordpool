@@ -1,4 +1,4 @@
-   Compiling ticket-payment v0.0.0 (/home/ljtwp/Desktop/drips/agora/contract/contracts/ticket_payment)
+   Compiling ticket-payment v0.0.0 (/home/ljtwp/Desktop/drips/Wordpool/contract/contracts/ticket_payment)
 warning: unused import: `Ledger`
  --> contracts/ticket_payment/src/test.rs:6:39
   |
@@ -9,7 +9,7 @@ warning: unused import: `Ledger`
 
 warning: `ticket-payment` (lib test) generated 1 warning
     Finished `test` profile [unoptimized + debuginfo] target(s) in 1.27s
-     Running unittests src/lib.rs (/home/ljtwp/Desktop/drips/agora/contract/target/debug/deps/ticket_payment-fa94b33cf75b3a1c)
+     Running unittests src/lib.rs (/home/ljtwp/Desktop/drips/Wordpool/contract/target/debug/deps/ticket_payment-fa94b33cf75b3a1c)
 
 running 22 tests
 test test::test_initialize_invalid_address ... ok

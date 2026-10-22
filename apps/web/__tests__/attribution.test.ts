@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { captureAttribution, getCheckoutAttribution } from "@/utils/attribution";
 
-const STORAGE_KEY = "agora_checkout_attribution";
+const STORAGE_KEY = "Wordpool_checkout_attribution";
 
 describe("attribution", () => {
   beforeEach(() => {

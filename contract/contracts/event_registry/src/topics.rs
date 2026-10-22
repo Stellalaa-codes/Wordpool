@@ -7,7 +7,7 @@ use soroban_sdk::contracttype;
 /// publishing via `env.events().publish(...)`.
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
-pub enum AgoraEvent {
+pub enum WordpoolEvent {
     /// A new event has been registered on the platform.
     EventRegistered,
     /// An event's active/inactive status has been toggled by its organizer.

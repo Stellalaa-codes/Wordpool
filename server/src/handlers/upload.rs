@@ -174,7 +174,7 @@ pub async fn upload_image(
         &config.s3_secret_access_key,
         None,
         None,
-        "agora-static",
+        "Wordpool-static",
     );
 
     let mut s3_config = aws_sdk_s3::Config::builder()

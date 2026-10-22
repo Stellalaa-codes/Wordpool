@@ -1,6 +1,6 @@
-# Agora Soroban Contracts Overview
+# Wordpool Soroban Contracts Overview
 
-This directory contains the Soroban smart contracts for Agora's on-chain event and ticketing flow.
+This directory contains the Soroban smart contracts for Wordpool's on-chain event and ticketing flow.
 
 ## Tech Stack and Layout
 

@@ -1,4 +1,4 @@
-# Contributing to Agora Server
+# Contributing to Wordpool Server
 
 Backend is built with **Rust** and **Axum**, using **PostgreSQL** via **sqlx**.
 
@@ -27,7 +27,7 @@ cargo install sqlx-cli --no-default-features --features postgres
    ```
 
    This starts a PostgreSQL instance at `localhost:5432` with:
-   - User: `user` / Password: `password` / DB: `agora`
+   - User: `user` / Password: `password` / DB: `Wordpool`
 
 3. Run migrations:
 

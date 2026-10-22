@@ -1,6 +1,6 @@
 -- Outgoing webhook endpoints and delivery logs (Issue #1339)
 --
--- Organisers register HTTPS endpoints they want Agora to POST to whenever
+-- Organisers register HTTPS endpoints they want Wordpool to POST to whenever
 -- key events occur (ticket sold, event created, attendee checked in).
 -- Payloads are HMAC-SHA256 signed with the endpoint secret; recipients can
 -- verify the signature using that shared secret.

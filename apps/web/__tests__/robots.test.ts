@@ -20,7 +20,7 @@ describe("robots.ts", () => {
   it("advertises the sitemap on the canonical origin", () => {
     // Must match `metadataBase` in app/layout.tsx, or the sitemap and the
     // canonical URLs disagree about which origin is authoritative.
-    expect(result.sitemap).toBe("https://agora.events/sitemap.xml");
+    expect(result.sitemap).toBe("https://Wordpool.events/sitemap.xml");
   });
 
   it("does not disallow the routes we want indexed", () => {

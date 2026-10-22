@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  title: Agora Events API
-  description: API documentation for Agora Events platform including Auth, Events management, and Payments.
+  title: Wordpool Events API
+  description: API documentation for Wordpool Events platform including Auth, Events management, and Payments.
   version: 1.0.0
 servers:
   - url: /api

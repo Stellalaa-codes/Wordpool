@@ -23,7 +23,7 @@ use stellar_xdr::curr::{Limits, PublicKey, ReadXdr, ScAddress, ScMapEntry, ScVal
 
 /// The typed, high-level contract event kinds the indexer understands.
 ///
-/// The Soroban contracts emit an `AgoraEvent` enum whose symbols map onto
+/// The Soroban contracts emit an `WordpoolEvent` enum whose symbols map onto
 /// these kinds (both camel-case on-chain names and the snake_case entrypoint
 /// aliases referenced in the issue are recognised).
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]

@@ -1,6 +1,6 @@
 # Stellar Smart Contracts
 
-Agora utilizes Soroban smart contracts on the Stellar network to ensure transparent and secure event management and ticket processing.
+Wordpool utilizes Soroban smart contracts on the Stellar network to ensure transparent and secure event management and ticket processing.
 
 ## Overview
 
@@ -17,4 +17,4 @@ For detailed information on the contract architecture, build process, and deploy
 
 ## Reference
 
-- [Issue #33](https://github.com/Danielodingz/agora/issues/33): Initial contract architecture and specification.
+- [Issue #33](https://github.com/Danielodingz/Wordpool/issues/33): Initial contract architecture and specification.

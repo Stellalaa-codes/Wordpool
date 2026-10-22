@@ -3,7 +3,7 @@ import { buildMetadata } from "@/components/layout/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Help Center",
-  description: "Guides and articles to help you use Agora.",
+  description: "Guides and articles to help you use Wordpool.",
   path: "/help",
 });
 

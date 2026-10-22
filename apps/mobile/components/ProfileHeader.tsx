@@ -68,8 +68,8 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   const slideAnim = useRef(new Animated.Value(-6)).current;
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const displayName = username || 'Agora User';
-  const displayEmail = email || 'user@agora.events';
+  const displayName = username || 'Wordpool User';
+  const displayEmail = email || 'user@Wordpool.events';
   const truncatedKey = publicKey ? truncatePublicKey(publicKey) : 'No address';
 
   const hideToast = useCallback(() => {

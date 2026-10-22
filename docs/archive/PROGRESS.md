@@ -1,8 +1,8 @@
-# Agora Project - Progress & Implementation Summary
+# Wordpool Project - Progress & Implementation Summary
 
 **Last Updated:** April 28, 2026
 
-This document provides a comprehensive overview of everything that has been implemented in the Agora event and ticketing platform.
+This document provides a comprehensive overview of everything that has been implemented in the Wordpool event and ticketing platform.
 
 ---
 
@@ -24,7 +24,7 @@ This document provides a comprehensive overview of everything that has been impl
 
 ## Project Overview
 
-**Agora** is a comprehensive event and ticketing platform designed for organizers, creators, and communities to create events, sell tickets, and manage attendees with ease. The platform is built on the **Stellar blockchain** and enables fast, low-cost, borderless payments using USDC.
+**Wordpool** is a comprehensive event and ticketing platform designed for organizers, creators, and communities to create events, sell tickets, and manage attendees with ease. The platform is built on the **Stellar blockchain** and enables fast, low-cost, borderless payments using USDC.
 
 ### Core Value Proposition
 
@@ -36,13 +36,13 @@ This document provides a comprehensive overview of everything that has been impl
 
 ### Live Demo
 
-**[https://agora-web-eta.vercel.app/](https://agora-web-eta.vercel.app/)**
+**[https://Wordpool-web-eta.vercel.app/](https://Wordpool-web-eta.vercel.app/)**
 
 ---
 
 ## Architecture
 
-Agora follows a **monorepo architecture** with three interconnected pillars:
+Wordpool follows a **monorepo architecture** with three interconnected pillars:
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -177,7 +177,7 @@ Agora follows a **monorepo architecture** with three interconnected pillars:
 ### Root Directory
 
 ```
-agora/
+Wordpool/
 ├── ARCHITECTURE.md                    # High-level architecture guide
 ├── DEVELOPMENT_SETUP.md              # Setup instructions
 ├── README.md                         # Project overview
@@ -270,7 +270,7 @@ utils/
 
 ```
 public/
-├── logo/                       # Agora branding
+├── logo/                       # Wordpool branding
 ├── icons/                      # Icon library
 ├── images/                     # Product images
 ├── backgrounds/                # Background images
@@ -474,7 +474,7 @@ services:
   postgres:
     image: postgres:15
     environment:
-      POSTGRES_DB: agora
+      POSTGRES_DB: Wordpool
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     ports:
@@ -485,7 +485,7 @@ services:
 
 **Connection String (Local):**
 ```
-postgres://user:password@localhost:5432/agora
+postgres://user:password@localhost:5432/Wordpool
 ```
 
 ---
@@ -512,7 +512,7 @@ design/
 
 #### **Figma Design File**
 
-**[Agora Event - Figma Design](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Agora-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1)**
+**[Wordpool Event - Figma Design](https://www.figma.com/design/cpRUhrSlBVxGElm18Fa2Uh/Wordpool-event?node-id=0-1&t=qBlO0jnjQHQaHn2Z-1)**
 
 This is the source of truth for UI/UX design. All new features should reference the Figma file for design consistency.
 
@@ -567,8 +567,8 @@ soroban --version
 #### 1. Clone & Install
 
 ```bash
-git clone https://github.com/Agora-Events/agora.git
-cd agora
+git clone https://github.com/Wordpool-Events/Wordpool.git
+cd Wordpool
 pnpm install
 ```
 
@@ -699,12 +699,12 @@ Distributed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
 ## Contact & Support
 
 For questions or support:
-- 📧 Email: support@agora.events
-- 💬 Discord: [Join Community](https://discord.gg/agora)
-- 🐛 Issues: [GitHub Issues](https://github.com/Agora-Events/agora/issues)
+- 📧 Email: support@Wordpool.events
+- 💬 Discord: [Join Community](https://discord.gg/Wordpool)
+- 🐛 Issues: [GitHub Issues](https://github.com/Wordpool-Events/Wordpool/issues)
 
 ---
 
-**© 2026 Agora. All rights reserved.**
+**© 2026 Wordpool. All rights reserved.**
 
 *Last Updated: April 28, 2026*

@@ -1,6 +1,6 @@
 # Component Catalog
 
-Welcome to the Agora UI Component Catalog! This document lists all reusable UI components, their props, and usage examples.
+Welcome to the Wordpool UI Component Catalog! This document lists all reusable UI components, their props, and usage examples.
 
 ## Navigation
 

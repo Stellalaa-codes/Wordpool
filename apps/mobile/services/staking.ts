@@ -126,7 +126,7 @@ async function callContract(
   const fee = await server.fetchBaseFee();
 
   // Reference args in method invocation payload
-  const memoText = `agora:${method}:${Object.keys(args).length}`;
+  const memoText = `Wordpool:${method}:${Object.keys(args).length}`;
 
   const tx = new TransactionBuilder(account, {
     fee: fee.toString(),

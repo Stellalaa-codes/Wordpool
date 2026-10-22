@@ -35,8 +35,8 @@ const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:8080';
 // Task names
 // ---------------------------------------------------------------------------
 
-export const LOCATION_TASK_NAME = 'AGORA_BACKGROUND_LOCATION';
-export const GEOFENCE_TASK_NAME = 'AGORA_GEOFENCE_MONITOR';
+export const LOCATION_TASK_NAME = 'Wordpool_BACKGROUND_LOCATION';
+export const GEOFENCE_TASK_NAME = 'Wordpool_GEOFENCE_MONITOR';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -49,7 +49,7 @@ export interface Coordinates {
 }
 
 export interface VenueGeofence {
-  /** Must match an Agora event UUID. */
+  /** Must match an Wordpool event UUID. */
   eventId: string;
   latitude: number;
   longitude: number;
@@ -267,7 +267,7 @@ class LocationService {
       deferredUpdatesInterval: 60_000,
       deferredUpdatesDistance: 100,
       foregroundService: {
-        notificationTitle: 'Agora is tracking your location',
+        notificationTitle: 'Wordpool is tracking your location',
         notificationBody: 'Tap to check in when you arrive at the venue.',
         notificationColor: '#7C3AED',
       },

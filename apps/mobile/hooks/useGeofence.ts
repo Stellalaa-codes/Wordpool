@@ -71,7 +71,7 @@ export interface UseGeofenceResult {
 // Notification setup
 // ---------------------------------------------------------------------------
 
-const PROXIMITY_CHANNEL_ID = 'agora-venue-proximity';
+const PROXIMITY_CHANNEL_ID = 'Wordpool-venue-proximity';
 const PROXIMITY_CATEGORY = 'VENUE_PROXIMITY';
 
 async function ensureNotificationSetup(): Promise<void> {

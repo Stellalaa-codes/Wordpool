@@ -11,7 +11,7 @@
 //! without Postgres.
 //!
 //! ```bash
-//! DATABASE_URL=postgres://user:password@localhost:5432/agora cargo bench --bench db_query_bench
+//! DATABASE_URL=postgres://user:password@localhost:5432/Wordpool cargo bench --bench db_query_bench
 //! ```
 //!
 //! All rows this benchmark writes live under a synthetic organizer created
@@ -20,7 +20,7 @@
 //! checkpoint row uses a `bench:` prefixed `chain_key` that can never
 //! collide with a real `soroban:*` chain.
 
-use agora_server::models::blockchain_checkpoint::CheckpointStore;
+use Wordpool_server::models::blockchain_checkpoint::CheckpointStore;
 use criterion::{black_box, Criterion};
 use sqlx::PgPool;
 use uuid::Uuid;
@@ -41,7 +41,7 @@ impl BenchFixture {
         let chain_key = format!("bench:checkpoint:{organizer_id}");
 
         sqlx::query(
-            "INSERT INTO organizers (id, name, contact_email) VALUES ($1, 'Bench Organizer', 'bench@agora.test')",
+            "INSERT INTO organizers (id, name, contact_email) VALUES ($1, 'Bench Organizer', 'bench@Wordpool.test')",
         )
         .bind(organizer_id)
         .execute(&pool)

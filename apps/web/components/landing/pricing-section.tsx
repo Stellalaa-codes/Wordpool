@@ -56,7 +56,7 @@ export function PricingSection() {
 
             <div className="flex-1 relative z-10">
               <h3 className="italic font-light text-black mb-6 text-xl">
-                agora basic
+                Wordpool basic
               </h3>
               <h2 className="text-4xl font-semibold mb-2 text-black">Free</h2>
               <div className="text-4xl font-semibold mb-8 text-black">
@@ -120,7 +120,7 @@ export function PricingSection() {
 
             <div className="relative z-10 flex-1">
               <h3 className="italic font-light text-white mb-6 text-xl">
-                agora plus
+                Wordpool plus
               </h3>
               <h2 className="text-4xl font-semibold mb-2 text-white">Pro</h2>
               <div className="text-4xl font-semibold mb-8 text-white">

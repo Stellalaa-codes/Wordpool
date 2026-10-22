@@ -3,7 +3,7 @@
 This document serves as the single reference for contributors making UI decisions, consolidating design tokens across the Tailwind configuration and UI components.
 
 ## Figma Reference
-- [Profile Page Design (Figma)](https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Agora-Profile-Page?node-id=0-1&t=uFO22ORvuFcXBCvh-1)
+- [Profile Page Design (Figma)](https://www.figma.com/design/qnXwOxdJD4SBC6yjdwsilN/Wordpool-Profile-Page?node-id=0-1&t=uFO22ORvuFcXBCvh-1)
 
 ## Colour Palette
 
@@ -62,7 +62,7 @@ Our primary font family is **Inter**.
 
 ## Shadows & Borders
 
-Agora incorporates Neo-Brutalism stylistic elements in its components, characterized by solid borders and hard offset shadows.
+Wordpool incorporates Neo-Brutalism stylistic elements in its components, characterized by solid borders and hard offset shadows.
 
 ### Shadows
 | Style | Tailwind Class |

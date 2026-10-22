@@ -13,7 +13,7 @@ interface ReferralSharingModalProps {
   isOpen: boolean;
   /** Callback fired when the modal requests to close */
   onClose: () => void;
-  /** The referral link to share (e.g. https://agora.app/events/1?ref=demo123) */
+  /** The referral link to share (e.g. https://Wordpool.app/events/1?ref=demo123) */
   referralUrl: string;
   /** Optional short message appended to platform share intents */
   shareText?: string;
@@ -137,7 +137,7 @@ export function ReferralSharingModal({
     }
     try {
       await navigator.share({
-        title: "Agora Events",
+        title: "Wordpool Events",
         text: shareText,
         url: referralUrl,
       });

@@ -79,7 +79,7 @@ describe('AuthScreen Validation and Login', () => {
       const state = useAuthStore.getState();
       expect(state.isAuthenticated).toBe(true);
       expect(state.user?.email).toBe('user@example.com');
-      expect(state.token).toBe('mock-jwt-token-agora');
+      expect(state.token).toBe('mock-jwt-token-Wordpool');
     }, { timeout: 1500 });
   });
 

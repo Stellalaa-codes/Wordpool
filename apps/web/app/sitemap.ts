@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://agora-web-eta.vercel.app";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://Wordpool-web-eta.vercel.app";
 
 const staticRoutes: MetadataRoute.Sitemap = [
   { url: BASE_URL, changeFrequency: "daily", priority: 1.0 },

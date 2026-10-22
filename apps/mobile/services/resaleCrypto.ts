@@ -46,10 +46,10 @@ import nacl from 'tweetnacl';
 import * as SecureStore from 'expo-secure-store';
 
 /** SecureStore key holding the device's base64 X25519 secret key. */
-const X25519_SECRET_STORE_KEY = 'agora.resale.x25519.secret';
+const X25519_SECRET_STORE_KEY = 'Wordpool.resale.x25519.secret';
 
 /** SecureStore key prefix for a ticket's check-in secret, by payment id. */
-const TICKET_SECRET_STORE_PREFIX = 'agora.ticket.secret.';
+const TICKET_SECRET_STORE_PREFIX = 'Wordpool.ticket.secret.';
 
 /** Raw byte lengths fixed by the NaCl box construction. */
 export const X25519_KEY_BYTES = 32;

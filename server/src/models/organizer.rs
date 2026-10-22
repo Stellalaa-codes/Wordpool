@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 use uuid::Uuid;
 
-/// Represents an event organizer on the Agora platform.
+/// Represents an event organizer on the Wordpool platform.
 ///
 /// Organizers are entities (individuals or organizations) that create and manage
 /// [`super::event::Event`]s. An organizer can own multiple events; deleting an

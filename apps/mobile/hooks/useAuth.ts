@@ -19,9 +19,9 @@ export const useAuthStore = create<AuthState>((set) => ({
   token: null,
   user: null,
   isAuthenticated: false,
-  login: (email: string, name: string = 'Agora User', walletAddress: string = 'GDAGORA...') => {
+  login: (email: string, name: string = 'Wordpool User', walletAddress: string = 'GDWordpool...') => {
     set({
-      token: 'mock-jwt-token-agora',
+      token: 'mock-jwt-token-Wordpool',
       user: { name, email, walletAddress },
       isAuthenticated: true,
     });
@@ -37,7 +37,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     set((state) => ({
       user: state.user
         ? { ...state.user, walletAddress }
-        : { name: 'Agora User', email: '', walletAddress },
+        : { name: 'Wordpool User', email: '', walletAddress },
     }));
   },
 }));
